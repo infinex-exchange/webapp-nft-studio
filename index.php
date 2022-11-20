@@ -49,6 +49,7 @@
 			                                <div class="pretty p-default p-round">
 										        <input type="radio" name="radio1">
 										        <div class="state p-primary">
+											        <label></label>
 										        </div>
 										    </div>
 		                                </div>
