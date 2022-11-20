@@ -22,14 +22,10 @@
                 <div class="col-12 col-lg-6 me-auto my-auto px-4 py-5">
                     <div class="row">
                         <div class="col-12 jumbotron">
-                            <h1>Vayamos Bridge</h1>
+                            <h3>Vayamos</h3>
+                            <h1>NFT Studio</h1>
                             <p>
-                                With Vayamos Bridge you can wrap any asset supported by Vayamos Exchange to BPX blockchain tokens.
-                                You can hold your wrapped tokens in your BPX wallet, trade them using offers and transfer them without fee.
-                                BPX tokens are pegged on a 1:1 basis to the underlying asset.
-                                You can redeem your wrapped tokens back to the original asset at any time.
-                                This cross-chain bridge improves interoperability between BPX and other blockchains
-                                and gives you direct access to the world of DeFi on the BPX blockchain.
+	                            NFT creation made simple
                             </p>
                         </div>
                         <div class="col-9 mx-auto d-none d-lg-block">
