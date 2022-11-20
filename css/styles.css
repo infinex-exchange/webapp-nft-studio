@@ -1,0 +1,5 @@
+/* Drop jumbotron background defined in NFT module */
+
+.jumbotron {
+	background-image: none !important;
+}

@@ -3,6 +3,7 @@
     <head>
         <?php include('../../../templates/head.php'); ?>
         <link rel="stylesheet" href="/nft/css/styles.css?<?php echo filemtime(__DIR__.'/../css/styles.css'); ?>">
+        <link rel="stylesheet" href="/nft/studio/css/styles.css?<?php echo filemtime(__DIR__.'/css/styles.css'); ?>">
         <title>Vayamos NFT Studio</title>
     </head>
     <body class="body-background">
