@@ -42,7 +42,7 @@
                         
                         <div class="row py-3">
                         
-                            <div class="col-12">
+                            <div class="col-12 pb-2">
 	                            <div class="p-2 background rounded">
 		                            <div class="row">
 		                                <div class="col-auto my-auto text-center" style="width: 60px">
@@ -57,7 +57,7 @@
 		                        </div>
 		                    </div>
 		                    
-		                    <div class="col-12">
+		                    <div class="col-12 pb-2">
 	                            <div class="p-2 background rounded">
 		                            <div class="row">
 		                                <div class="col-auto my-auto text-center" style="width: 60px">
