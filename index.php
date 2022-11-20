@@ -36,20 +36,27 @@
                 <div class="col-12 col-lg-5 p-0 my-auto">
                     <div class="p-2 p-lg-4 ui-card-light rounded">
                     
-                            <div class="row pt-3">
-                                <h3>Destination address:</h3>
+                            <div class="row pt-3 text-center">
+                                <h3>What are we creating today?</h3>
                             </div>
                             
                             <div class="row py-3">
-                                <div class="col-auto my-auto text-center" style="width: 60px">
-                                    <i style="color: var(--color-ultra)" class="fa-solid fa-infinity fa-2x"></i>
-                                </div>
-                                <div class="col small my-auto">
-                                    Once created bridge is valid forever and can be used unlimited number of times.
-                                    <br>
-                                    You don't have to worry about the address expiry date.
-                                </div>
-                            </div>
+	                            <div class="col-12">
+		                            <div class="p-2 background rounded">
+			                            <div class="row">
+			                                <div class="col-auto my-auto text-center" style="width: 60px">
+			                                    <i style="color: var(--color-ultra)" class="fa-solid fa-infinity fa-2x"></i>
+			                                </div>
+			                                <div class="col small my-auto">
+			                                    Once created bridge is valid forever and can be used unlimited number of times.
+			                                    <br>
+			                                    You don't have to worry about the address expiry date.
+			                                </div>
+			                            </div>
+			                        </div>
+			                    </div>
+			                </div>
+			                
                             <div class="row py-3">
                                 <div class="col-auto my-auto text-center" style="width: 60px">
                                     <i style="color: var(--color-ultra)" class="fa-solid fa-money-check-dollar fa-2x"></i>
