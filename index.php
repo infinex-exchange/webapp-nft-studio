@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <?php include('../../templates/head.php'); ?>
-        <link rel="stylesheet" href="/nft/css/styles.css?<?php echo filemtime(__DIR__.'/css/styles.css'); ?>">
-        <title>Vayamos NFT</title>
+        <?php include('../../../templates/head.php'); ?>
+        <link rel="stylesheet" href="/nft/css/styles.css?<?php echo filemtime(__DIR__.'/../css/styles.css'); ?>">
+        <link rel="stylesheet" href="/nft/studio/css/styles.css?<?php echo filemtime(__DIR__.'/css/styles.css'); ?>">
+        <title>Vayamos NFT Studio</title>
     </head>
     <body class="body-background">
     
         <!-- Preloader -->
-        <?php include('../../templates/preloader.html'); ?>
+        <?php include('../../../templates/preloader.html'); ?>
         
         <!-- Navbar -->
-        <?php include('../../templates/navbar.php'); ?>
-        <?php include(__DIR__.'/templates/navbar.php'); ?>
+        <?php include('../../../templates/navbar.php'); ?>
+        <?php include(__DIR__.'/../templates/navbar.php'); ?>
         
         <!-- Root container -->
         <div id="root" class="container-fluid container-1500 h-rest pt-2 p-0">
@@ -93,13 +94,13 @@
             </div>
         </div>
         
-        <?php include('../../templates/modals.php'); ?>
-        <script src="/nft/js/render_offer.js?<?php echo filemtime(__DIR__.'/js/render_offer.js'); ?>"></script>
-        <script src="/nft/js/index.js?<?php echo filemtime(__DIR__.'/js/index.js'); ?>"></script>
+        <?php include('../../../templates/modals.php'); ?>
+        <script src="/nft/js/render_offer.js?<?php echo filemtime(__DIR__.'/../js/render_offer.js'); ?>"></script>
+        <script src="/nft/js/index.js?<?php echo filemtime(__DIR__.'/../js/index.js'); ?>"></script>
         
         <!-- Footer -->
-        <?php include('../../templates/footer.html'); ?>
-        <?php include(__DIR__.'/templates/mobile_nav.php'); ?>
+        <?php include('../../../templates/footer.html'); ?>
+        <?php include(__DIR__.'/../templates/mobile_nav.php'); ?>
     
     </body>
 </html>
