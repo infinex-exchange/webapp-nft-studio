@@ -46,7 +46,11 @@
 	                            <div class="p-2 background rounded">
 		                            <div class="row">
 		                                <div class="col-auto my-auto text-center" style="width: 60px">
-		                                    <i style="color: var(--color-ultra)" class="fa-solid fa-infinity fa-2x"></i>
+			                                <div class="pretty p-default p-round">
+										        <input type="radio" name="radio1">
+										        <div class="state p-primary">
+										        </div>
+										    </div>
 		                                </div>
 		                                <div class="col small my-auto">
 		                                    Once created bridge is valid forever and can be used unlimited number of times.
