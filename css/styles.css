@@ -1,0 +1,10 @@
+/* Jumbotron background */
+
+@media (min-width: 992px) {
+    .studio-jumbotron {
+        background-image: url("/nft/studio/img/studio_jumbotron.png");
+        background-position: bottom right;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
