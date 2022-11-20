@@ -37,7 +37,7 @@
                     <div class="p-2 p-lg-4 ui-card-light rounded">
                     
                         <div class="row pt-3 text-center">
-                            <h3>What are we creating today?</h3>
+                            <h3>What are we doing today?</h3>
                         </div>
                         
                         <div class="row py-3">
@@ -54,8 +54,7 @@
 										    </div>
 		                                </div>
 		                                <div class="col small my-auto">
-		                                    Once created bridge is valid forever and can be used unlimited number of times.
-		                                    <br>
+		                                    <h6>Create new NFT collection</h6>
 		                                    You don't have to worry about the address expiry date.
 		                                </div>
 		                            </div>
@@ -74,8 +73,7 @@
 										    </div>
 		                                </div>
 		                                <div class="col small my-auto">
-		                                    Once created bridge is valid forever and can be used unlimited number of times.
-		                                    <br>
+		                                    <h6>Add NFT to an existing collection</h6>
 		                                    You don't have to worry about the address expiry date.
 		                                </div>
 		                            </div>
@@ -94,8 +92,7 @@
 										    </div>
 		                                </div>
 		                                <div class="col small my-auto">
-		                                    Once created bridge is valid forever and can be used unlimited number of times.
-		                                    <br>
+		                                    <h6>Create single NFT without collection</h6>
 		                                    You don't have to worry about the address expiry date.
 		                                </div>
 		                            </div>
