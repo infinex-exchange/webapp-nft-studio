@@ -1,0 +1,25 @@
+Options -MultiViews -Indexes
+
+RewriteEngine on
+
+RewriteRule ^wallet/?$ wallet/overview.php [L]
+RewriteRule ^wallet/deposit/([^/]+)/?$ wallet/deposit.php [L]
+RewriteRule ^wallet/deposit/?$ wallet/deposit.php [L]
+RewriteRule ^wallet/withdraw/([^/]+)/?$ wallet/withdraw.php [L]
+RewriteRule ^wallet/withdraw/?$ wallet/withdraw.php [L]
+RewriteRule ^wallet/transfer/([^/]+)/?$ wallet/transfer.php [L]
+RewriteRule ^wallet/transfer/?$ wallet/transfer.php [L]
+RewriteRule ^wallet/transactions/?$ wallet/transactions.php [L]
+RewriteRule ^wallet/addressbook/?$ wallet/addressbook.php [L]
+
+RewriteRule ^details/([^/]+)/?$ details.php [L]
+
+RewriteRule ^sell/([^/]+)/?$ sell.php [L]
+RewriteRule ^sell/?$ sell.php [L]
+
+RewriteRule ^offer/([^/]+)/?$ offer.php [L]
+
+RewriteRule ^offers/?$ offers.php [L]
+
+RewriteRule ^my-sales/?$ my_sales.php [L]
+RewriteRule ^my-purchases/?$ my_purchases.php [L]
