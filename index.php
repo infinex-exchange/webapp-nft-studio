@@ -104,7 +104,7 @@
             
             </div>
             
-            <div class="row m-0 px-4 py-5 index-section gy-4">
+            <div class="row m-0 px-4 py-5">
                 <div class="col-12 col-lg-9">
                     <h3>
                         <i class="fa-regular fa-money-bill-1"></i>
