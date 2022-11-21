@@ -4,6 +4,8 @@
     background-image: url("/nft/studio/img/studio_jumbotron.jpg");
     background-size: cover;
     background-position: center;
+    padding-top: 45px;
+    padding-bottom: 45px;
 }
 
 @media (max-width: 991px) {
