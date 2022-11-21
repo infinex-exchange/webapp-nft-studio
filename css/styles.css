@@ -1,5 +1,7 @@
-/* Drop jumbotron background defined in NFT module */
+/* Jumbotron */
 
-.jumbotron {
-	background-image: none !important;
+@media (min-width: 992px) {
+    .jumbotron {
+        background-image: url("/nft/studio/img/studio_jumbotron.png") !important;
+    }
 }

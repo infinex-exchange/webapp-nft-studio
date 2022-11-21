@@ -20,16 +20,17 @@
         
             <div class="jumbotron row m-0 px-4 py-5">
                 <div class="col-12">
-                    <h1>Vayamos Mining</h1>
-                    <p>Access cryptocurrency mining profits without building your own infrastructure.<br>
-                    Start mining in cloud with everyday payouts!</p>
+                    <h1>NFT Studio</h1>
+                    <p>
+	                    NFT creation made simple
+                    </p>
                 </div>
             </div>
             
             <div class="row gx-0 gx-lg-3 gy-3 m-0">
                 
                 <div class="col-12">
-        	        <div class="p-2 p-lg-4 background rounded">
+        	        <div class="p-2 p-lg-4 ui-card-light rounded">
         	            <div class="row">
         	                <div class="col-12 pt-2 pb-4 text-center">
                                 <h3>Ending soon</h3>
