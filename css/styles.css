@@ -8,6 +8,6 @@
 
 @media (max-width: 991px) {
     .jumbotron-studio {
-        background-size: contain;
+        background-position: left;
     }
 }
