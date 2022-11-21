@@ -10,6 +10,6 @@
 
 @media (max-width: 991px) {
     .jumbotron-studio {
-        background-position: left;
+        background-position-x: 50px;
     }
 }
