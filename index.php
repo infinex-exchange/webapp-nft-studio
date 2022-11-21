@@ -22,9 +22,9 @@
                 <div class="col-12">
                     <h2 class="d-none d-lg-block">Vayamos</h2>
                     <h1>NFT Studio</h1>
-                    <p class="strong">
+                    <strong>
 	                    NFT creation made simple
-                    </p>
+                    </strong>
                 </div>
             </div>
             
