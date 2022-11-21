@@ -20,6 +20,7 @@
         
             <div class="jumbotron-studio row m-0 px-4">
                 <div class="col-12">
+                    <h2>Vayamos</h2>
                     <h1>NFT Studio</h1>
                     <p>
 	                    NFT creation made simple
