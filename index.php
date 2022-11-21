@@ -33,11 +33,69 @@
         	        <div class="p-2 p-lg-4 ui-card-light rounded">
         	            <div class="row">
         	                <div class="col-12 pt-2 pb-4 text-center">
-                                <h3>Ending soon</h3>
+                                <h3>What are we doing today?</h3>
         		            </div>
-        		            <div class="col-12">
-                                <div id="last-minute-data" class="row">
-                                </div>
+        		            <div class="col-12 col-lg-4">
+                                
+                                <div class="p-2 background hoverable rounded">
+		                            <div class="row">
+		                                <div class="col-auto my-auto text-center" style="width: 60px">
+			                                <div class="pretty p-bigger p-default p-round">
+										        <input type="radio" name="radio1">
+										        <div class="state p-primary">
+											        <label></label>
+										        </div>
+										    </div>
+		                                </div>
+		                                <div class="col small my-auto">
+		                                    <h6>Create new NFT collection</h6>
+		                                    You don't have to worry about the address expiry date.
+		                                </div>
+		                            </div>
+		                        </div>
+                                
+        		            </div>
+                            
+                            <div class="col-12 col-lg-4">
+                                
+                                <div class="p-2 background hoverable rounded">
+		                            <div class="row">
+		                                <div class="col-auto my-auto text-center" style="width: 60px">
+			                                <div class="pretty p-bigger p-default p-round">
+										        <input type="radio" name="radio1">
+										        <div class="state p-primary">
+											        <label></label>
+										        </div>
+										    </div>
+		                                </div>
+		                                <div class="col small my-auto">
+		                                    <h6>Add NFT to an existing collection</h6>
+		                                    You don't have to worry about the address expiry date.
+		                                </div>
+		                            </div>
+		                        </div>
+                                
+        		            </div>
+                            
+                            <div class="col-12 col-lg-4">
+                                
+                                <div class="p-2 background hoverable rounded">
+		                            <div class="row">
+		                                <div class="col-auto my-auto text-center" style="width: 60px">
+			                                <div class="pretty p-bigger p-default p-round">
+										        <input type="radio" name="radio1">
+										        <div class="state p-primary">
+											        <label></label>
+										        </div>
+										    </div>
+		                                </div>
+		                                <div class="col small my-auto">
+		                                    <h6>Create single NFT without collection</h6>
+		                                    You don't have to worry about the address expiry date.
+		                                </div>
+		                            </div>
+		                        </div>
+                                
         		            </div>
         	            </div>
         	        </div>
