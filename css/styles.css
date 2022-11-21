@@ -5,3 +5,9 @@
     background-size: cover;
     background-position: center;
 }
+
+@media (min-width: 992px) {
+    .jumbotron-studio {
+        background-size: contain;
+    }
+}
