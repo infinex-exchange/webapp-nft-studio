@@ -11,5 +11,7 @@
 @media (max-width: 991px) {
     .jumbotron-studio {
         background-position-x: -150px;
+        padding-top: 45px;
+        padding-bottom: 45px;
     }
 }
