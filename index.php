@@ -113,7 +113,7 @@
                     <span class="secondary">
 	                    The price of the mining plan includes all maintenance fees and electricity costs. No additional fees are charged from the mined amount. You get exactly as much crypto as you could mine on your own hardware with the same power.
                     </span>
-                    <h3>
+                    <h3 class="pt-5">
                         <i class="fa-solid fa-microchip"></i>
                         Maintenance free
                     </h3>
