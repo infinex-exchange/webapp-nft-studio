@@ -105,7 +105,7 @@
             </div>
             
             <div class="row m-0 px-4">
-                <div class="col-12 col-lg-9 py-3">
+                <div class="col-12 col-lg-9 py-5">
                     <h3>
                         <i class="fa-regular fa-money-bill-1"></i>
                         No additional costs
@@ -121,7 +121,7 @@
                         You don't need to have any technical knowledge to start. Just buy a mining plan and watch your profits. Our specialists take care of the proper configuration and maintenance of the mining equipment 24 hours a day.
                     </span>
                 </div>
-                <div class="col-8 col-lg-3 py-3 mx-auto">
+                <div class="col-8 col-lg-3 py-5 mx-auto">
                     <img src="/nft/studio/img/painting.png" class="img-fluid">
                 </div>
             </div>
