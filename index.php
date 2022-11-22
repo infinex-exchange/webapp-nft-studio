@@ -70,8 +70,13 @@
 										    </div>
 		                                </div>
 		                                <div class="col small my-auto">
-		                                    <h5>Add NFT to an existing collection</h5>
-		                                    <?php include(__DIR__.'/../templates/select_col.php'); ?>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <h5>Add NFT to an existing collection</h5>
+                                                </div>
+                                                <div class="col-12 pt-2">
+		                                            <?php include(__DIR__.'/../templates/select_col.php'); ?>
+                                                </div>
 		                                </div>
 		                            </div>
 		                        </div>
