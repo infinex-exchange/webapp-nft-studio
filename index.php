@@ -40,7 +40,7 @@
                                 
                                 <div class="p-2 background hoverable rounded">
 		                            <div class="row">
-		                                <div class="col-auto my-auto text-center" style="width: 60px">
+		                                <div class="col-auto my-auto text-center" style="width: 30px">
 			                                <div class="pretty p-bigger p-default p-round">
 										        <input type="radio" name="radio1">
 										        <div class="state p-primary">
@@ -61,7 +61,7 @@
                                 
                                 <div class="p-2 background hoverable rounded">
 		                            <div class="row">
-		                                <div class="col-auto my-auto text-center" style="width: 60px">
+		                                <div class="col-auto my-auto text-center" style="width: 30px">
 			                                <div class="pretty p-bigger p-default p-round">
 										        <input type="radio" name="radio1">
 										        <div class="state p-primary">
@@ -71,7 +71,7 @@
 		                                </div>
 		                                <div class="col small my-auto">
 		                                    <h5>Add NFT to an existing collection</h5>
-		                                    You don't have to worry about the address expiry date.
+		                                    <?php include(__DIR__.'/../templates/select_col.php'); ?>
 		                                </div>
 		                            </div>
 		                        </div>
@@ -82,7 +82,7 @@
                                 
                                 <div class="p-2 background hoverable rounded">
 		                            <div class="row">
-		                                <div class="col-auto my-auto text-center" style="width: 60px">
+		                                <div class="col-auto my-auto text-center" style="width: 30px">
 			                                <div class="pretty p-bigger p-default p-round">
 										        <input type="radio" name="radio1">
 										        <div class="state p-primary">
