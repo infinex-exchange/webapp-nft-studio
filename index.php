@@ -38,7 +38,7 @@
         		            </div>
         		            <div class="col-12 col-lg-4 pb-3">
                                 
-                                <div class="p-3 background wizard-item rounded h-100">
+                                <div class="p-3 background wizard-item rounded h-100" data-wizard-mode="col-new">
 		                            <div class="row">
 		                                <div class="col-auto my-auto text-center" style="width: 30px">
 			                                <div class="pretty p-bigger p-default p-round">
@@ -65,7 +65,7 @@
                             
                             <div class="col-12 col-lg-4 pb-3">
                                 
-                                <div class="p-3 background wizard-item ounded h-100">
+                                <div class="p-3 background wizard-item rounded h-100" data-wizard-mode="col-add">
 		                            <div class="row">
 		                                <div class="col-auto my-auto text-center" style="width: 30px">
 			                                <div class="pretty p-bigger p-default p-round">
@@ -92,7 +92,7 @@
                             
                             <div class="col-12 col-lg-4 pb-3">
                                 
-                                <div class="p-3 background wizard-item active rounded h-100">
+                                <div class="p-3 background wizard-item active rounded h-100" data-wizard-mode="single">
 		                            <div class="row">
 		                                <div class="col-auto my-auto text-center" style="width: 30px">
 			                                <div class="pretty p-bigger p-default p-round">
