@@ -49,7 +49,7 @@
 										    </div>
 		                                </div>
 		                                <div class="col small my-auto">
-		                                    <h5>Create new NFT collection</h5>
+		                                    <h5>Create new collection</h5>
 		                                    Let's begin a new story!
 		                                </div>
 		                            </div>
@@ -72,7 +72,7 @@
 		                                <div class="col small my-auto">
                                             <div class="row">
                                                 <div class="col-12">
-                                                    <h5>Add NFT to an existing collection</h5>
+                                                    <h5>Add NFT to existing collection</h5>
                                                 </div>
                                                 <div class="col-12 pt-2">
 		                                            <?php include(__DIR__.'/../templates/select_col.php'); ?>
