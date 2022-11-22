@@ -49,8 +49,14 @@
 										    </div>
 		                                </div>
 		                                <div class="col small my-auto">
-		                                    <h5>Create new collection</h5>
-		                                    Select if you plan to create multiple similar NFTs
+                                            <div class="row">
+                                                <div class="col-12">
+		                                            <h5>Create new collection</h5>
+                                                </div>
+                                                <div class="col-12 pt-2">
+		                                            Select if you plan to create multiple similar NFTs
+                                                </div>
+                                            </div>
 		                                </div>
 		                            </div>
 		                        </div>
@@ -97,8 +103,14 @@
 										    </div>
 		                                </div>
 		                                <div class="col small my-auto">
-		                                    <h5>Create single NFT without collection</h5>
-		                                    A great choice for occasional NFTs
+                                            <div class="row">
+		                                        <div class="col-12">
+                                                    <h5>Create single NFT without collection</h5>
+                                                </div>
+                                                <div class="col-12 pt-2">
+		                                            A great choice for occasional NFTs
+                                                </div>
+                                            </div>
 		                                </div>
 		                            </div>
 		                        </div>
