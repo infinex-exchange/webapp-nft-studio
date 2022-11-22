@@ -33,10 +33,10 @@
                 <div class="col-12">
         	        <div class="p-2 p-lg-4 ui-card-light rounded">
         	            <div class="row">
-        	                <div class="col-12 pt-2 pb-2 text-center">
+        	                <div class="col-12 pt-2 pb-3 text-center">
                                 <h3>What are we doing today?</h3>
         		            </div>
-        		            <div class="col-12 col-lg-4 pb-2">
+        		            <div class="col-12 col-lg-4 pb-3">
                                 
                                 <div class="p-2 background rounded h-100">
 		                            <div class="row">
@@ -57,7 +57,7 @@
                                 
         		            </div>
                             
-                            <div class="col-12 col-lg-4 pb-2">
+                            <div class="col-12 col-lg-4 pb-3">
                                 
                                 <div class="p-2 background rounded h-100">
 		                            <div class="row">
