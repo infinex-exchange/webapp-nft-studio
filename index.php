@@ -50,7 +50,7 @@
 		                                </div>
 		                                <div class="col small my-auto">
 		                                    <h5>Create new collection</h5>
-		                                    Let's begin a new story!
+		                                    Select if you plan to create multiple similar NFTs
 		                                </div>
 		                            </div>
 		                        </div>
