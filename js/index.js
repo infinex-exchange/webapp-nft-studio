@@ -8,4 +8,8 @@ $(document).ready(function() {
         $('.wizard-item').removeClass('active');
         $('.wizard-item[data-wizard-mode="' + wizardMode + '"]').addClass('active');
     });
+    
+    $('.wizard-item').click(function() {
+        $(this).find('input[name="radio-wizard"]').trigger('click');
+    });
 });
