@@ -20,7 +20,7 @@ $(document).ready(function() {
 $(document).on('authChecked', function() {
     if(!window.loggedIn) return;
     
-    initColSelector();
+    initSelectCol();
     
     $(document).trigger('renderingStage');
 });
