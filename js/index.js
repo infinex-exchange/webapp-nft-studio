@@ -10,6 +10,6 @@ $(document).ready(function() {
     });
     
     $('.wizard-item').click(function() {
-        $(this).find('input[name="radio-wizard"]').trigger('change');
+        $(this).find('input[name="radio-wizard"]').prop('checked', true).trigger('change');
     });
 });
