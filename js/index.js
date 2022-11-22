@@ -6,6 +6,6 @@ $(document).ready(function() {
         var wizardMode = $(this).val();
         
         $('.wizard-item').removeClass('active');
-        $('.wizard-item[data-wizard-mode="' + wizardMode + '"']).addClass('active');
+        $('.wizard-item[data-wizard-mode="' + wizardMode + '"]').addClass('active');
     });
 });
