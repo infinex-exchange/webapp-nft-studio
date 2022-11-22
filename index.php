@@ -50,7 +50,7 @@
 		                                </div>
 		                                <div class="col small my-auto">
 		                                    <h5>Create new NFT collection</h5>
-		                                    Let's begin a new story...
+		                                    Let's begin a new story!
 		                                </div>
 		                            </div>
 		                        </div>
