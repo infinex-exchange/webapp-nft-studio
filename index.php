@@ -84,7 +84,7 @@
                                 
         		            </div>
                             
-                            <div class="col-12 col-lg-4">
+                            <div class="col-12 col-lg-4 pb-3">
                                 
                                 <div class="p-2 background rounded h-100">
 		                            <div class="row">
