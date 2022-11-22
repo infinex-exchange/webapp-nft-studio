@@ -50,7 +50,7 @@
 		                                </div>
 		                                <div class="col small my-auto">
 		                                    <h5>Create new NFT collection</h5>
-		                                    You don't have to worry about the address expiry date.
+		                                    Let's begin a new story...
 		                                </div>
 		                            </div>
 		                        </div>
@@ -98,7 +98,7 @@
 		                                </div>
 		                                <div class="col small my-auto">
 		                                    <h5>Create single NFT without collection</h5>
-		                                    You don't have to worry about the address expiry date.
+		                                    A great choice for occasional NFTs
 		                                </div>
 		                            </div>
 		                        </div>
