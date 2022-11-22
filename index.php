@@ -38,11 +38,11 @@
         		            </div>
         		            <div class="col-12 col-lg-4 pb-3">
                                 
-                                <div class="p-3 background rounded h-100">
+                                <div class="p-3 background wizard-item rounded h-100">
 		                            <div class="row">
 		                                <div class="col-auto my-auto text-center" style="width: 30px">
 			                                <div class="pretty p-bigger p-default p-round">
-										        <input type="radio" name="radio1">
+										        <input type="radio" name="radio-wizard" value="col-new">
 										        <div class="state p-primary">
 											        <label></label>
 										        </div>
@@ -65,11 +65,11 @@
                             
                             <div class="col-12 col-lg-4 pb-3">
                                 
-                                <div class="p-3 background rounded h-100">
+                                <div class="p-3 background wizard-item ounded h-100">
 		                            <div class="row">
 		                                <div class="col-auto my-auto text-center" style="width: 30px">
 			                                <div class="pretty p-bigger p-default p-round">
-										        <input type="radio" name="radio1">
+										        <input type="radio" name="radio-wizard" value="col-add">
 										        <div class="state p-primary">
 											        <label></label>
 										        </div>
@@ -92,11 +92,11 @@
                             
                             <div class="col-12 col-lg-4 pb-3">
                                 
-                                <div class="p-3 background rounded h-100">
+                                <div class="p-3 background wizard-item active rounded h-100">
 		                            <div class="row">
 		                                <div class="col-auto my-auto text-center" style="width: 30px">
 			                                <div class="pretty p-bigger p-default p-round">
-										        <input type="radio" name="radio1">
+										        <input type="radio" name="radio-wizard" value="single" checked>
 										        <div class="state p-primary">
 											        <label></label>
 										        </div>

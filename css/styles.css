@@ -15,3 +15,13 @@
         padding-bottom: 45px;
     }
 }
+
+/* Wizard item */
+
+.wizard-item {
+    cursor: pointer;
+}
+
+.wizard-item.active {
+    border: 1px solid var(--color-primary);
+}
