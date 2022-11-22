@@ -77,6 +77,7 @@
                                                 <div class="col-12 pt-2">
 		                                            <?php include(__DIR__.'/../templates/select_col.php'); ?>
                                                 </div>
+                                            </div>
 		                                </div>
 		                            </div>
 		                        </div>
