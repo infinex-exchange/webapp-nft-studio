@@ -38,7 +38,7 @@
         		            </div>
         		            <div class="col-12 col-lg-4">
                                 
-                                <div class="p-2 background rounded">
+                                <div class="p-2 background rounded h-100">
 		                            <div class="row">
 		                                <div class="col-auto my-auto text-center" style="width: 30px">
 			                                <div class="pretty p-bigger p-default p-round">
@@ -59,7 +59,7 @@
                             
                             <div class="col-12 col-lg-4">
                                 
-                                <div class="p-2 background rounded">
+                                <div class="p-2 background rounded h-100">
 		                            <div class="row">
 		                                <div class="col-auto my-auto text-center" style="width: 30px">
 			                                <div class="pretty p-bigger p-default p-round">
@@ -86,7 +86,7 @@
                             
                             <div class="col-12 col-lg-4">
                                 
-                                <div class="p-2 background rounded">
+                                <div class="p-2 background rounded h-100">
 		                            <div class="row">
 		                                <div class="col-auto my-auto text-center" style="width: 30px">
 			                                <div class="pretty p-bigger p-default p-round">
