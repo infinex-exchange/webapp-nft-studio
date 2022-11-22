@@ -13,7 +13,20 @@ $(document).ready(function() {
     });
     
     $('#btn-continue').click(function() {
-        //
+        switch($('input[name="radio-wizard"]:checked').val()) {
+            case 'col-new':
+                window.location.href = '/projects/add-collection';
+                break;
+            
+            case 'col-add':
+                var colid = $('#select-col').data('colid');
+                if(colid == '') break;
+                window.location.href = '/projects/add-nft?col=' + colid;
+                break;
+            
+            default: // single
+                window.location.href = '/projects/add-nft?col=';
+        }
     });
 });
 
