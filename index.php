@@ -105,7 +105,7 @@
                                 
         		            </div>
                             
-                            <div class="col-12 col-lg-4 mx-auto">
+                            <div class="col-12 col-lg-4 mx-auto pt-2">
                                 <button type="button" class="btn btn-primary w-100">
                                     <i class="fa-solid fa-rocket"></i>
                                     Continue
