@@ -133,8 +133,8 @@
             <div class="row m-0 px-4">
                 <div class="col-12 col-lg-9 py-5">
                     <h3>
-                        <i class="fa-solid fa-atom"></i>
-                        Create NFTs without technical skills
+                        <i class="fa-solid fa-circle-check"></i>
+                        Don't need technical skills
                     </h3>
                     <span class="secondary">
 	                    We've simplified the NFT creation process to the maximum.
@@ -142,11 +142,12 @@
                         Just fill in the wizard fields and enjoy the ready-made NFT.
                     </span>
                     <h3 class="pt-5">
-                        <i class="fa-solid fa-microchip"></i>
-                        Maintenance free
+                        <i class="fa-solid fa-circle-check"></i>
+                        Without additional software
                     </h3>
                     <span class="secondary">
-                        You don't need to have any technical knowledge to start. Just buy a mining plan and watch your profits. Our specialists take care of the proper configuration and maintenance of the mining equipment 24 hours a day.
+                        The entire NFT creation process takes place in the browser window.
+                        From uploading the file to putting the finished NFT up for sale.
                     </span>
                 </div>
                 <div class="col-8 col-lg-3 py-5 mx-auto">
