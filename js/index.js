@@ -15,17 +15,17 @@ $(document).ready(function() {
     $('#btn-continue').click(function() {
         switch($('input[name="radio-wizard"]:checked').val()) {
             case 'col-new':
-                window.location.href = '/projects/collection/add';
+                window.location.href = '/nft/studio/collection/add';
                 break;
             
             case 'col-add':
                 var colid = $('#select-col').data('colid');
                 if(colid == '') break;
-                window.location.href = '/projects/nft/add?col=' + colid;
+                window.location.href = '/nft/studio/nft/add?col=' + colid;
                 break;
             
             default: // single
-                window.location.href = '/projects/nft/add';
+                window.location.href = '/nft/studio/nft/add';
         }
     });
 });

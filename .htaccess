@@ -3,5 +3,5 @@ Options -MultiViews -Indexes
 RewriteEngine on
 
 RewriteRule ^projects/?$ projects.php [L]
-RewriteRule ^projects/collection/([^/]+)/?$ collection.php [L]
-RewriteRule ^projects/nft/([^/]+)/?$ nft.php [L]
+RewriteRule ^collection/([^/]+)/?$ collection.php [L]
+RewriteRule ^nft/([^/]+)/?$ nft.php [L]
