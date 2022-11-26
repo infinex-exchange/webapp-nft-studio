@@ -133,11 +133,13 @@
             <div class="row m-0 px-4">
                 <div class="col-12 col-lg-9 py-5">
                     <h3>
-                        <i class="fa-regular fa-money-bill-1"></i>
-                        No additional costs
+                        <i class="fa-solid fa-atom"></i>
+                        Create NFTs without technical skills
                     </h3>
                     <span class="secondary">
-	                    The price of the mining plan includes all maintenance fees and electricity costs. No additional fees are charged from the mined amount. You get exactly as much crypto as you could mine on your own hardware with the same power.
+	                    We've simplified the NFT creation process to the maximum.
+                        You don't have to worry about hosting, generating hashes, etc.
+                        Just fill in the wizard fields and enjoy the ready-made NFT.
                     </span>
                     <h3 class="pt-5">
                         <i class="fa-solid fa-microchip"></i>
