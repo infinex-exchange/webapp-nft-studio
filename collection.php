@@ -5,7 +5,7 @@
         <script src="/js/ajax_scroll.js?<?php echo filemtime(__DIR__.'/../../../js/ajax_scroll.js'); ?>"></script>
         <link rel="stylesheet" href="/nft/css/styles.css?<?php echo filemtime(__DIR__.'/../css/styles.css'); ?>">
         <link rel="stylesheet" href="/nft/studio/css/styles.css?<?php echo filemtime(__DIR__.'/css/styles.css'); ?>">
-        <title>Collection | Vayamos NFT Studio</title>
+        <title>Collection | Infinex NFT Studio</title>
     </head>
     <body>
     

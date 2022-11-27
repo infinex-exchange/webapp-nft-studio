@@ -5,7 +5,7 @@
         <script src="/js/ajax_scroll.js?<?php echo filemtime(__DIR__.'/../../../js/ajax_scroll.js'); ?>"></script>
         <link rel="stylesheet" href="/nft/css/styles.css?<?php echo filemtime(__DIR__.'/../css/styles.css'); ?>">
         <link rel="stylesheet" href="/nft/studio/css/styles.css?<?php echo filemtime(__DIR__.'/css/styles.css'); ?>">
-        <title>Vayamos NFT Studio</title>
+        <title>Infinex NFT Studio</title>
     </head>
     <body class="body-background">
     
@@ -21,7 +21,7 @@
         
             <div class="jumbotron-studio row m-0 px-4">
                 <div class="col-12">
-                    <h2 class="d-none d-lg-block">Vayamos</h2>
+                    <h2 class="d-none d-lg-block">Infinex</h2>
                     <h1>NFT Studio</h1>
                     <strong>
 	                    NFT creation made simple
