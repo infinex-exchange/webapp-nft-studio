@@ -11,6 +11,7 @@ $(document).on('authChecked', function() {
     
     initSelectNet(null, '/nft/wallet/networks', false);
     
+    $(document).trigger('renderingStage');
     $.ajax({
         url: config.apiUrl + '/nft/studio/collections',
         type: 'POST',
