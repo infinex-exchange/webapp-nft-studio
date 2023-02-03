@@ -5,7 +5,7 @@
         <script src="/js/ajax_scroll.js?<?php echo filemtime(__DIR__.'/../../../js/ajax_scroll.js'); ?>"></script>
         <link rel="stylesheet" href="/nft/css/styles.css?<?php echo filemtime(__DIR__.'/../css/styles.css'); ?>">
         <link rel="stylesheet" href="/nft/studio/css/styles.css?<?php echo filemtime(__DIR__.'/css/styles.css'); ?>">
-        <title>Collection | Infinex NFT Studio</title>
+        <title>Infinex NFT Studio</title>
     </head>
     <body>
     
@@ -29,113 +29,62 @@
             
             
             <div class="row">
-                <h3>Create offer</h3>
+                <h3 class="title-create d-none">Create collection</h3>
+                <h3 class="title-edit d-none">Edit collection</h3>
             </div>
             
             
             
             <div class="row">               
-                <div class="col-12 col-lg-6 mt-4">
-                    <div class="row">
-                        <div class="col-12 pb-1">
-                            <h5 class="secondary">Sell NFT:</h5>
-                        </div>
-                        <div class="col-12">
-                            <?php include(__DIR__.'/../templates/select_nft.php'); ?>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-12 col-lg-6 mt-4">
-                    <div class="row">
-                        <div class="col-12 pb-1">
-                            <h5 class="secondary">For coin:</h5>
-                        </div>
-                        <div class="col-12">
-                            <?php include(__DIR__.'/../../../templates/select_coin.php'); ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            
-            
-            
-            <div class="row mt-4 mt-lg-5">
                 <div class="col-12 pb-1">
-                    <h5 class="secondary">Buy now price:</h6>
+                    <h5 class="secondary">Collection name:</h5>
                 </div>
                 <div class="col-12 col-lg-6">
-                    <div class="input-ps-group">
-                        <input id="price-buynow" type="text" class="form-control step2-ro" data-tsval="" data-rval="" readonly>
-                        <span class="suffix assetid"></span>
-                    </div>
+                    <input id="col-name" type="text" class="form-control">
                 </div>
-                <div class="col-12 col-lg-6 my-auto small secondary">
-                    Leave blank if you want auction only
-                </div>
-            </div>
-            
-            
-            
-            
-            <div class="row mt-4 mt-lg-5">
-                <div class="col-12 pb-1">
-                    <h5 class="secondary">Auction initial price:</h6>
+                
+                <div class="col-12 pt-3 pb-1">
+                    <h5 class="secondary">Network:</h5>
                 </div>
                 <div class="col-12 col-lg-6">
-                    <div class="input-ps-group">
-                        <input id="price-initial" type="text" class="form-control step2-ro" data-tsval="" data-rval="" readonly>
-                        <span class="suffix assetid"></span>
-                    </div>
+                    <?php include('../../../templates/select_net.php'); ?>
                 </div>
-                <div class="col-12 col-lg-6 my-auto small secondary">
-                    Leave blank if you want sell at fixed price only
-                </div>
-            </div>
-            
-            
-            
-            
-            <div class="row mt-4 mt-lg-5">
-                <div class="col-12 pb-1">
-                    <h5 class="secondary">Duration:</h5>
-                </div>
-                
-                <div class="col-12 col-lg-6">
-                    <input id="duration-raw" type="range" class="form-range" min="0" max="6" step="1" value="5">
-                </div>
-                
-                <div class="col-6 d-none d-lg-block"></div>
-                
-                <div class="col-12 col-lg-6 text-center">
-                    <span class="small secondary" id="duration-desc"></span>
-                </div>
-            </div>
-            
-            
-            
-            
-            <div id="fees-wrapper" class="row d-none mt-4 mt-lg-5">
-                <div class="col-12 pb-2">
-                    <h5 class="secondary">Fees:</h5>
-                </div>
-                <div class="col-12 pb-2">
-                    <h6 class="secondary">Royalty fee:</h6>
-                    <span id="royalty-fee"></span>%
+    
+                <div class="col-12 pt-3 pb-1">
+                    <h5 class="secondary">Description:</h5>
                 </div>
                 <div class="col-12">
-                    <h6 class="secondary">Platform fee:</h6>
-                    <span id="platform-fee"></span>%
+                    <textarea id="col-description" class="w-100" rows="10"></textarea>
                 </div>
-            </div>
-            
-    
-            
-            
-            <div class="row mt-4 mt-lg-5">
+                
+                <div class="col-12 pt-3 pb-1">
+                    <h5 class="secondary">Website:</h5>
+                </div>
                 <div class="col-12 col-lg-6">
-                    <button id="submit" type="submit" class="btn btn-primary w-100">Create offer</button>
+                    <input id="col-website" type="text" class="form-control">
+                </div>
+                
+                <div class="col-12 pt-3 pb-1">
+                    <h5 class="secondary">Twitter:</h5>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <input id="col-twitter" type="text" class="form-control">
+                </div>
+                
+                <div class="col-12 pt-3 pb-1">
+                    <h5 class="secondary">Icon:</h5>
+                </div>
+                <div class="col-12 col-lg-6">
+                </div>
+                
+                <div class="col-12 pt-3 pb-1">
+                    <h5 class="secondary">Banner:</h5>
+                </div>
+                <div class="col-12 col-lg-6">
+                </div>
+                
+                <div class="col-12 pt-3">
+                    <button id="col-submit" type="button" class="btn btn-primary">Submit</button>
                 </div>
             </div>
         
