@@ -10,7 +10,7 @@ $(document).ready(function() {
         var name = $('#nft-name').val();
         var scolid = $('#select-col').data('colid');
         var netid = $('#select-net').data('network');
-        var description = $('#col-description').val();
+        var description = $('#nft-description').val();
         
         if(
             !validateNftName(name) ||
