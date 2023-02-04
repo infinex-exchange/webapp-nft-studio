@@ -60,7 +60,7 @@ function renderProject(data) {
     
     if(data.collection) {
         colHeader = `
-            <div class="row nested-hoverable collection-item">
+            <div class="row nested-hoverable collection-item" onClick="editCol(${data.collection.scolid})">
 	            <div class="col-12">
 	                <small class="secondary">COLLECTION</small>
 	                <br>
@@ -88,4 +88,12 @@ function renderProject(data) {
 	});
     
     return colHeader + nftString + colFooter;
+}
+
+function editCollection(scolid) {
+    location.href = '/nft/studio/collection/' + scolid;
+}
+
+function editNft(snftid) {
+    location.href = '/nft/studio/nft/' + snftid;
 }
