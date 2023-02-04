@@ -33,7 +33,7 @@ $(document).ready(function() {
 $(document).on('authChecked', function() {
     if(!window.loggedIn) return;
     
-    initSelectCol();
+    initSelectCol('/nft/studio/collections');
     
     $(document).trigger('renderingStage');
 });
