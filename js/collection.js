@@ -90,7 +90,7 @@ $(document).on('authChecked', function() {
             type: 'POST',
             data: JSON.stringify({
                 api_key: window.apiKey,
-                scolid: scolid
+                scolid: parseInt(scolid)
             }),
             contentType: "application/json",
             dataType: "json",
