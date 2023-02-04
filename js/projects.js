@@ -77,7 +77,7 @@ function renderProject(data) {
 	
 	$.each(data.nfts, function(k, nft) {
 		nftString += `
-            <div class="row nested-hoverable nft-item">
+            <div class="row nested-hoverable nft-item" onClick="editNft(${nft.snftid})">
 	            <div class="col-12">
 	                <small class="secondary">NFT</small>
 	                <br>
