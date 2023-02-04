@@ -5,3 +5,5 @@ RewriteEngine on
 RewriteRule ^projects/?$ projects.php [L]
 RewriteRule ^collection/([^/]+)/?$ collection.php [L]
 RewriteRule ^nft/([^/]+)/?$ nft.php [L]
+RewriteRule ^queue/?$ queue.php [L]
+RewriteRule ^royalties/?$ royalties.php [L]
