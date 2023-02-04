@@ -1,5 +1,6 @@
 $(document).ready(function() {
     window.renderingStagesTarget = 2;
+    window.editScolid = null;
     
     $('#select-net').on('dataLoaded', function() {
         $(document).trigger('renderingStage');
@@ -13,7 +14,10 @@ $(document).ready(function() {
         var twitter = $('#col-twitter').val();
         
         if(
-            //
+            !validateNftName(name) ||
+            (description != '' && !validateNftDesc(description)) ||
+            (website != '' && !validateVotingWebsite(website)) ||
+            (twitter != '' && !validateTwitter(twitter))
         ) {
             msgBox('Please fill in the form correctly')
             return;
@@ -21,9 +25,29 @@ $(document).ready(function() {
         
         var data = new Object();
         data['api_key'] = window.apiKey;
+        data['name'] = name;
+        
+        if(window.editScolid)
+            data['scolid'] = window.editScolid;
+        
+        if(netid != '')
+            data['netid'] = netid;
+        
+        if(description != '')
+            data['description'] = description;
+        
+        if(website != '')
+            data['website'] = website;
+        
+        if(twitter != '')
+            data['twitter'] = twitter;
+        
+        var endpoint = 'add';
+        if(window.editScolid)
+            endpoint = 'update';
 
         $.ajax({
-            url: config.apiUrl + '/p2p/my_offers/add',
+            url: config.apiUrl + '/nft/studio/collections/' + endpoint,
             type: 'POST',
             data: JSON.stringify(data),
             contentType: "application/json",
@@ -32,7 +56,7 @@ $(document).ready(function() {
         .retry(config.retry)
         .done(function (data) {
             if(data.success) {
-                msgBoxRedirect('The offer has been successfully created', '/p2p');
+                location.href = '/nft/studio/projects';
             } else {
                 msgBox(data.error);
             }
@@ -78,6 +102,8 @@ $(document).on('authChecked', function() {
                     msgBoxRedirect('Cannot edit this collection');
                     return;
                 }
+                
+                window.editScolid = data.scolid;
                 
                 $(document).trigger('renderingStage');
             }
