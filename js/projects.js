@@ -54,10 +54,24 @@ $(document).on('authChecked', function() {
 });
 
 function renderProject(data) {
+    var colHeader = '';
+    
+    if(data.collection) {
+        colHeader = `
+            ${data.collection.name}
+	    `;
+	}
+	
+	else {
+        colHeader = `
+            No collection
+	    `;
+	}
+    
     return `
         <div class="row">
             <div class="col-12">
-                ${data.collection.name}
+                ${colHeader}
             </div>
         </div>
     `;
