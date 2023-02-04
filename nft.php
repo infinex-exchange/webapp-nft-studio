@@ -102,7 +102,8 @@
         </div>
         </div>
         
-        <script src="/nft/studio/js/collection.js?<?php echo filemtime(__DIR__.'/js/collection.js'); ?>"></script>
+        <script src="/nft/studio/js/validate.js?<?php echo filemtime(__DIR__.'/js/validate.js'); ?>"></script>
+        <script src="/nft/studio/js/nft.js?<?php echo filemtime(__DIR__.'/js/nft.js'); ?>"></script>
         
         <?php include(__DIR__.'/../../../templates/modals.php'); ?>
         <?php include(__DIR__.'/templates/mobile_nav.php'); ?>
