@@ -19,9 +19,9 @@ $(document).ready(function() {
                 break;
             
             case 'col-add':
-                var colid = $('#select-col').data('colid');
-                if(colid == '') break;
-                window.location.href = '/nft/studio/nft/add?col=' + colid;
+                var scolid = $('#select-col').data('colid');
+                if(scolid == '') break;
+                window.location.href = '/nft/studio/nft/add?col=' + scolid;
                 break;
             
             default: // single
