@@ -8,7 +8,7 @@ $(document).ready(function() {
     
     $('#col-submit').click(function() {
         var name = $('#col-name').val();
-        var netid = $('#select-net').data('netid');
+        var netid = $('#select-net').data('network');
         var description = $('#col-description').val();
         var website = $('#col-website').val();
         var twitter = $('#col-twitter').val();
