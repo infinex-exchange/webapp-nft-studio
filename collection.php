@@ -36,7 +36,7 @@
             
             
             <div class="row">               
-                <div class="col-12 pb-1">
+                <div class="col-12 pt-3 pb-1">
                     <h5 class="secondary">Collection name:</h5>
                 </div>
                 <div class="col-12 col-lg-6">
@@ -97,6 +97,7 @@
         </div>
         </div>
         
+        <script src="/nft/studio/js/validate.js?<?php echo filemtime(__DIR__.'/js/validate.js'); ?>"></script>
         <script src="/nft/studio/js/collection.js?<?php echo filemtime(__DIR__.'/js/collection.js'); ?>"></script>
         
         <?php include(__DIR__.'/../../../templates/modals.php'); ?>
