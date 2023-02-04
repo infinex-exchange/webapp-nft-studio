@@ -73,7 +73,38 @@ $(document).on('authChecked', function() {
     if(snftid == 'add') {
         $('.title-create').removeClass('d-none');
         document.title = 'Create NFT | ' + document.title;
-        $(document).trigger('renderingStage');
+        
+        var urlParams = new URLSearchParams(window.location.search);
+        var addScolid = urlParams.get('col');
+        
+        if(addScolid != null) {
+            $.ajax({
+                url: config.apiUrl + '/nft/studio/collections/get',
+                type: 'POST',
+                data: JSON.stringify({
+                    api_key: window.apiKey,
+                    scolid: parseInt(addScolid)
+                }),
+                contentType: "application/json",
+                dataType: "json",
+            })
+            .retry(config.retry)
+            .done(function (data) {
+                if(data.success) {
+                    $('#select-col').val(data.name).data('colid', data.scolid);
+                    $(document).trigger('renderingStage');
+                }
+                else {
+                    msgBoxRedirect(data.error);
+                }
+            })
+            .fail(function (jqXHR, textStatus, errorThrown) {
+                msgBoxNoConn(true);
+            });
+        }
+        else {
+            $(document).trigger('renderingStage');
+        }
     }
     
     else {
