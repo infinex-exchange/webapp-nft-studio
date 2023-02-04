@@ -55,24 +55,37 @@ $(document).on('authChecked', function() {
 
 function renderProject(data) {
     var colHeader = '';
+    var colFooter = '';
+    var nftString = '';
     
     if(data.collection) {
         colHeader = `
-            ${data.collection.name}
+            <div class="row hoverable collection-item">
+	            <div class="col-12">
+	                <small class="secondary">COLLECTION</small>
+	                <br>
+	                <strong>${data.collection.name}</strong>
+	            </div>
+	            <div class="col-12">
+	    `;
+	    
+	    colFooter = `
+			    </div>
+	        </div>
 	    `;
 	}
 	
-	else {
-        colHeader = `
-            No collection
+	$.each(data.nfts, function(k, nft) {
+		nftString += `
+            <div class="row hoverable nft-item">
+	            <div class="col-12">
+	                <small class="secondary">NFT</small>
+	                <br>
+	                <strong>${nft.name}</strong>
+	            </div>
+	        </div>
 	    `;
-	}
+	});
     
-    return `
-        <div class="row">
-            <div class="col-12">
-                ${colHeader}
-            </div>
-        </div>
-    `;
+    return colHeader + nftString + colFooter;
 }
