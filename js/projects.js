@@ -90,7 +90,7 @@ function renderProject(data) {
     return colHeader + nftString + colFooter;
 }
 
-function editCollection(scolid) {
+function editCol(scolid) {
     location.href = '/nft/studio/collection/' + scolid;
 }
 
