@@ -60,7 +60,7 @@ function renderProject(data) {
     
     if(data.collection) {
         colHeader = `
-            <div class="row hoverable collection-item">
+            <div class="row nested-hoverable collection-item">
 	            <div class="col-12">
 	                <small class="secondary">COLLECTION</small>
 	                <br>
@@ -77,7 +77,7 @@ function renderProject(data) {
 	
 	$.each(data.nfts, function(k, nft) {
 		nftString += `
-            <div class="row hoverable nft-item">
+            <div class="row nested-hoverable nft-item">
 	            <div class="col-12">
 	                <small class="secondary">NFT</small>
 	                <br>
