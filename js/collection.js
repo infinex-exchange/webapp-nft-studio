@@ -105,6 +105,20 @@ $(document).on('authChecked', function() {
                 
                 window.editScolid = data.scolid;
                 
+                $('#col-name').val(data.name);
+                
+                if(data.netid)
+                    $('#select-net').val(data.netid).data('network', data.netid);
+                
+                if(data.description)
+                    $('#col-description').val(data.description);
+                
+                if(data.website)
+                    $('#col-website').val(data.website);
+                
+                if(data.twitter)
+                    $('#col-twitter').val(data.twitter);
+                
                 $(document).trigger('renderingStage');
             }
             else {
