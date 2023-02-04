@@ -108,7 +108,7 @@ $(document).on('authChecked', function() {
                 $('#col-name').val(data.name);
                 
                 if(data.netid)
-                    $('#select-net').val(data.netid).data('network', data.netid);
+                    $('#select-net').val(data.net_name).data('network', data.netid);
                 
                 if(data.description)
                     $('#col-description').val(data.description);
