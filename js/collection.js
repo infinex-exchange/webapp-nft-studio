@@ -151,7 +151,7 @@ $(document).on('authChecked', function() {
                 .retry(config.retry)
                 .done(function (data) {
                     if(data.success) {
-                        $.each(data.projects, function(k, v) {
+                        $.each(data.nfts, function(k, v) {
                             thisAS.append(renderNft(v));
                         });
                         
@@ -160,8 +160,11 @@ $(document).on('authChecked', function() {
                         if(thisAS.offset == 0)
                             $(document).trigger('renderingStage');
                             
-                        if(data.projects.length != 50)
+                        if(data.nfts.length != 50)
                             thisAS.noMoreData();
+                        
+                        if(data.nfts.length != 0)
+                            $('.title-nfts').removeClass('d-none');
                     } else {
                         msgBoxRedirect(data.error);
                         thisAS.done();
