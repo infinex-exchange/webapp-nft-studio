@@ -5,7 +5,25 @@ function renderProject(data) {
 }
 
 function renderCollection(data) {
-    var lEdit = '/nft/studio/collection/' + data.scolid;
+    var buttons = `
+		<a href="/nft/studio/collection/${data.scolid}" class="btn btn-primary btn-sm ms-0">
+			<i class="fa-solid fa-pen-to-square"></i>
+			Edit
+		</a>
+	`;
+    
+    if(data.status == 'DRAFT') {
+        buttons += `
+			<button type="button" class="btn btn-primary btn-sm" onClick="enqueueCollection(${data.scolid})">
+				<i class="fa-solid fa-check"></i>
+				Mint
+			</button>
+			<button type="button" class="btn btn-primary btn-sm" onClick="removeCollection(${data.colid})">
+				<i class="fa-solid fa-trash-can"></i>
+				Remove
+			</button>
+		`;
+    }
     
     return `
       <div class="row hoverable separate px-1 py-2">
@@ -15,14 +33,7 @@ function renderCollection(data) {
               <strong>${data.name}</strong>
           </div>
           <div class="col-12">
-              <a href="${lEdit}" class="btn btn-primary btn-sm ms-0">
-                  <i class="fa-solid fa-pen-to-square"></i>
-                  Edit
-              </a>
-              <button type="button" class="btn btn-primary btn-sm" onClick="enqueueCollection(${data.scolid})">
-                  <i class="fa-solid fa-check"></i>
-                  Mint
-              </button>
+              ${buttons}
           </div>
       </div>
   `;
