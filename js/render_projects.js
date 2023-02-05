@@ -27,12 +27,12 @@ function renderCollection(data) {
     
     return `
       <div class="row hoverable separate px-1 py-2">
-          <div class="col-12">
+          <div class="col-2">
+          </div>
+          <div class="col-10">
               <small class="secondary">COLLECTION</small>
               <br>
               <strong>${data.name}</strong>
-          </div>
-          <div class="col-12">
               ${buttons}
           </div>
       </div>
