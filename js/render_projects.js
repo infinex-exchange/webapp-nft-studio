@@ -47,8 +47,8 @@ function renderCollection(data) {
 	    badgeNet = `
 		    <div class="col-auto py-2">
 				<div class="rounded ui-card-light px-2 py-1">
-		            <img src="${data.net_name}" width="16" height="16">
-		            ${data.net_icon}
+		            <img src="${data.net_icon}" width="16" height="16">
+		            ${data.net_name}
 			    </div>
 		    </div>
 		`;
@@ -110,8 +110,8 @@ function renderNft(data) {
 	    badgeNet = `
 		    <div class="col-auto py-2">
 				<div class="rounded ui-card-light px-2 py-1">
-		            <img src="${data.net_name}" width="16" height="16">
-		            ${data.net_icon}
+		            <img src="${data.net_icon}" width="16" height="16">
+		            ${data.net_name}
 			    </div>
 		    </div>
 		`;
