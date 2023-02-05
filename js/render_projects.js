@@ -51,3 +51,44 @@ function renderNft(data) {
       </div>
   `;
 }
+
+function intEnqueue(endpoint, data) {
+    $.ajax({
+        url: config.apiUrl + endpoint
+        type: 'POST',
+        data: JSON.stringify(data),
+        contentType: "application/json",
+        dataType: "json",
+    })
+    .retry(config.retry)
+    .done(function (data) {
+        if(data.success) {
+            location.href = '/nft/studio/queue';
+        } else {
+            msgBox(data.error);
+        }
+    })
+    .fail(function (jqXHR, textStatus, errorThrown) {
+        msgBoxNoConn(false);
+    });
+}
+
+function enqueueCollection(scolid) {
+    intEnqueue(
+        '/nft/studio/collection/queue',
+        {
+            api_key: window.apiKey,
+            scolid: scolid
+        }
+    );
+}
+
+function enqueueNft(snftid) {
+    intEnqueue(
+        '/nft/studio/nft/queue',
+        {
+            api_key: window.apiKey,
+            snftid: snftid
+        }
+    );
+}
