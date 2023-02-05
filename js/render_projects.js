@@ -29,7 +29,7 @@ function renderCollection(data) {
     
     return `
       <div class="row hoverable separate px-1 py-2">
-          <div class="col-3 my-auto">
+          <div class="col-3 my-auto pe-0">
 	          <img src="${preview}" class="img-fluid">
           </div>
           <div class="col-9 my-auto">
@@ -73,10 +73,10 @@ function renderNft(data) {
     
     return `
       <div class="row hoverable separate px-1 py-2">
-	      <div class="col-3 my-auto">
+	      <div class="col-3 my-auto pe-0">
 	          <img src="${preview}" class="img-fluid">
           </div>
-	      <div class="col-9 my-auto ps-0">
+	      <div class="col-9 my-auto">
 		      <div class="row">
 		          <div class="col-12">
 		              <small class="secondary">NFT</small>
