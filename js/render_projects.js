@@ -38,7 +38,7 @@ function renderCollection(data) {
 		              <small class="secondary">COLLECTION</small>
 		          </div>
 		          <div class="col-12">
-		              <strong>${data.name}</strong>
+		              <h5>${data.name}</h5>
 		          </div>
 		          <div class="col-12">
 		              ${buttons}
@@ -82,7 +82,7 @@ function renderNft(data) {
 		              <small class="secondary">NFT</small>
 		          </div>
 		          <div class="col-12">
-		              <strong>${data.name}</strong>
+		              <h5>${data.name}</h5>
 		          </div>
 		          <div class="col-12">
 			          ${buttons}
