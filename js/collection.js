@@ -88,7 +88,7 @@ $(document).on('authChecked', function() {
     }
     
     else {
-        $('.title-edit').removeClass('d-none');
+        $('.edit-only').removeClass('d-none');
         document.title = 'Edit collection | ' + document.title;
         
         $.ajax({
@@ -124,6 +124,8 @@ $(document).on('authChecked', function() {
                 
                 if(data.twitter)
                     $('#col-twitter').val(data.twitter);
+                
+                $('#btn-add-nft').attr('src', '/nft/studio/nft/add?col=' + window.editScolid;
                 
                 $(document).trigger('renderingStage');
             }

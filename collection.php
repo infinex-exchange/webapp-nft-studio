@@ -97,9 +97,18 @@
         
         </div>
         
-        <div class="col-12">
+        <div class="col-12 edit-only d-none">
             <div class="row">
-                <h3 class="title-nfts d-none pt-4">NFTs in this collection:</h3>
+                <h3 class="pt-4">NFTs in this collection:</h3>
+            </div>
+            
+            <div class="row">
+	            <div class="col-12">
+		            <a href="#" id="btn-add-nft" class="btn btn-primary btn-sm">
+		                <i class="fa-solid fa-plus"></i>
+		                Add NFT
+		            </a>
+	            </div>
             </div>
             
             <div id="nfts-data">
