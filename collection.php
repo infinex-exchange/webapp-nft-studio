@@ -84,7 +84,14 @@
                 </div>
                 
                 <div class="col-12 pt-3">
-                    <button id="col-submit" type="button" class="btn btn-primary">Submit</button>
+                    <button id="col-submit" type="button" class="btn btn-primary">
+                        <i class="fa-solid fa-floppy-disk"></i>
+                        Save changes
+                    </button>
+                    <button id="col-submit-and-mint" type="button" class="btn btn-primary">
+                        <i class="fa-solid fa-check"></i>
+                        Mint
+                    </button>
                 </div>
             </div>
         

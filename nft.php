@@ -89,7 +89,14 @@
                 </div>
                 
                 <div class="col-12 pt-3">
-                    <button id="nft-submit" type="button" class="btn btn-primary">Submit</button>
+                    <button id="nft-submit" type="button" class="btn btn-primary">
+                        <i class="fa-solid fa-floppy-disk"></i>
+                        Save changes
+                    </button>
+                    <button id="nft-submit-and-mint" type="button" class="btn btn-primary">
+                        <i class="fa-solid fa-check"></i>
+                        Mint
+                    </button>
                 </div>
             </div>
         
