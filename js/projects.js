@@ -69,12 +69,12 @@ function renderProject(data) {
 	                <strong>${data.collection.name}</strong>
 	            </div>
 	            <div class="col-12">
-		            <a href="${lEdit}" class="btn btn-primary btn-sm">
+		            <a href="${lEdit}" class="btn btn-primary btn-sm ms-0">
                         <i class="fa-solid fa-pen-to-square"></i>
                         Edit
                     </a>
 	            </div>
-	            <div class="col-12 px-3">
+	            <div class="col-12 px-4">
 	    `;
 	    
 	    colFooter = `
@@ -94,7 +94,7 @@ function renderProject(data) {
 	                <strong>${nft.name}</strong>
 	            </div>
 	            <div class="col-12">
-	                <a href="${lEdit}" class="btn btn-primary btn-sm">
+	                <a href="${lEdit}" class="btn btn-primary btn-sm ms-0">
                         <i class="fa-solid fa-pen-to-square"></i>
                         Edit
                     </a>
