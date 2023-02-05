@@ -54,7 +54,7 @@ function renderCollection(data) {
 		          <div class="col-12">
 		              <h4>${data.name}</h4>
 		          </div>
-		          <div class="col-12">
+		          <div class="col-auto py-2">
 			          <div class="rounded ui-card-light px-2 py-1">
 				          <i class="fa-solid ${mapStatusToIcon[data.status]}"></i>
 				          ${mapStatusToText[data.status]}
@@ -104,7 +104,7 @@ function renderNft(data) {
 		          <div class="col-12">
 		              <h4>${data.name}</h4>
 		          </div>
-		          <div class="col-auto">
+		          <div class="col-auto py-2">
 			          <div class="rounded ui-card-light px-2 py-1">
 				          <i class="fa-solid ${mapStatusToIcon[data.status]}"></i>
 				          ${mapStatusToText[data.status]}
