@@ -62,7 +62,7 @@ function renderProject(data) {
         var lEdit = '/nft/studio/collection/' + data.collection.scolid;
         
         colHeader = `
-            <div class="row nested-hoverable collection-item">
+            <div class="row nested-hoverable collection-item separate px-1 py-2">
 	            <div class="col-12">
 	                <small class="secondary">COLLECTION</small>
 	                <br>
@@ -87,7 +87,7 @@ function renderProject(data) {
 	    var lEdit = '/nft/studio/nft/' + nft.snftid;
 	    
 		nftString += `
-            <div class="row nested-hoverable nft-item">
+            <div class="row nested-hoverable nft-item separate px-1 py-2">
 	            <div class="col-12">
 	                <small class="secondary">NFT</small>
 	                <br>
