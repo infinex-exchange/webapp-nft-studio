@@ -6,11 +6,13 @@ $(document).ready(function() {
         $(document).trigger('renderingStage');
     });
     
-    $('#nft-submit').click(function() {
+    $('#nft-submit, #nft-submit-and-mint').click(function() {
         var name = $('#nft-name').val();
         var scolid = $('#select-col').data('colid');
         var netid = $('#select-net').data('network');
         var description = $('#nft-description').val();
+        
+        var mint = $(this).is('#nft-submit-and-mint');
         
         if(
             !validateNftName(name) ||
@@ -50,7 +52,10 @@ $(document).ready(function() {
         .retry(config.retry)
         .done(function (data) {
             if(data.success) {
-                location.href = '/nft/studio/projects';
+                if(mint)
+                    enqueueNft(window.editSnftid ? window.editSnftid : data.snftid);
+                else
+                    location.href = '/nft/studio/projects';
             } else {
                 msgBox(data.error);
             }
