@@ -14,13 +14,13 @@ function renderCollection(data) {
     
     if(data.status == 'DRAFT') {
         buttons += `
+            <button type="button" class="btn btn-primary btn-sm" onClick="removeCollection(${data.scolid})">
+				<i class="fa-solid fa-trash-can"></i>
+				Remove
+			</button>
 			<button type="button" class="btn btn-primary btn-sm" onClick="enqueueCollection(${data.scolid})">
 				<i class="fa-solid fa-check"></i>
 				Mint
-			</button>
-			<button type="button" class="btn btn-primary btn-sm" onClick="removeCollection(${data.scolid})">
-				<i class="fa-solid fa-trash-can"></i>
-				Remove
 			</button>
 		`;
     }
@@ -48,13 +48,13 @@ function renderNft(data) {
 				<i class="fa-solid fa-pen-to-square"></i>
 				Edit
 			</a>
-			<button type="button" class="btn btn-primary btn-sm" onClick="enqueueNft(${data.snftid})">
-				<i class="fa-solid fa-check"></i>
-				Mint
-			</button>
 			<button type="button" class="btn btn-primary btn-sm" onClick="removeNft(${data.snftid})">
 				<i class="fa-solid fa-trash-can"></i>
 				Remove
+			</button>
+			<button type="button" class="btn btn-primary btn-sm" onClick="enqueueNft(${data.snftid})">
+				<i class="fa-solid fa-check"></i>
+				Mint
 			</button>
 		`;
     }
