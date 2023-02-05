@@ -60,7 +60,7 @@ function renderProject(data) {
     
     if(data.collection) {
         colHeader = `
-            <div class="row nested-hoverable collection-item" onClick="editCol(${data.collection.scolid})">
+            <div class="row nested-hoverable collection-item" onClick="editCol(event, ${data.collection.scolid})">
 	            <div class="col-12">
 	                <small class="secondary">COLLECTION</small>
 	                <br>
@@ -77,7 +77,7 @@ function renderProject(data) {
 	
 	$.each(data.nfts, function(k, nft) {
 		nftString += `
-            <div class="row nested-hoverable nft-item" onClick="editNft(${nft.snftid})">
+            <div class="row nested-hoverable nft-item" onClick="editNft(event, ${nft.snftid})">
 	            <div class="col-12">
 	                <small class="secondary">NFT</small>
 	                <br>
@@ -90,10 +90,12 @@ function renderProject(data) {
     return colHeader + nftString + colFooter;
 }
 
-function editCol(scolid) {
+function editCol(e, scolid) {
+	e.stopPropagation();
     location.href = '/nft/studio/collection/' + scolid;
 }
 
-function editNft(snftid) {
+function editNft(e, snftid) {
+    e.stopPropagation();
     location.href = '/nft/studio/nft/' + snftid;
 }
