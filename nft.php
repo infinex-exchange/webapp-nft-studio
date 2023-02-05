@@ -95,7 +95,7 @@
                     </button>
                     <button id="nft-submit-and-mint" type="button" class="btn btn-primary">
                         <i class="fa-solid fa-check"></i>
-                        Mint
+                        Save and mint
                     </button>
                 </div>
             </div>
