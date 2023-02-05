@@ -125,7 +125,7 @@ $(document).on('authChecked', function() {
                 if(data.twitter)
                     $('#col-twitter').val(data.twitter);
                 
-                $('#btn-add-nft').attr('src', '/nft/studio/nft/add?col=' + window.editScolid;
+                $('#btn-add-nft').attr('src', '/nft/studio/nft/add?col=' + window.editScolid);
                 
                 $(document).trigger('renderingStage');
             }
