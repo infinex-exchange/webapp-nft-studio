@@ -29,6 +29,14 @@
             
             <div class="row">
                 <div class="col-12 p-1 p-lg-2">
+                    <a href="/nft/studio/collection/add" class="btn btn-primary btn-sm ms-0">
+		                <i class="fa-solid fa-plus"></i>
+		                Add collection
+		            </a>
+		            <a href="/nft/studio/nft/add" class="btn btn-primary btn-sm">
+		                <i class="fa-solid fa-plus"></i>
+		                Add NFT
+		            </a>
                 </div>
             </div>
             
