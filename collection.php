@@ -30,7 +30,7 @@
 
             <div class="row">
                 <h3 class="title-create d-none">Create collection</h3>
-                <h3 class="title-edit d-none">Edit collection</h3>
+                <h3 class="edit-only d-none">Edit collection</h3>
             </div>
             
             
