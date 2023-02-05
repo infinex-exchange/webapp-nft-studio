@@ -90,7 +90,7 @@
             
             
             <div class="row">
-                <h3 class="title-nfts d-none pt-3">NFTs in this collection:</h3>
+                <h3 class="title-nfts d-none pt-4">NFTs in this collection:</h3>
             </div>
             
             
