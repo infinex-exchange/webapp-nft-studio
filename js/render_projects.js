@@ -46,7 +46,7 @@ function renderCollection(data) {
     if(data.net_name)
 	    badgeNet = `
 		    <div class="col-auto py-2">
-				<div class="small secondary rounded ui-card-light px-2 py-1">
+				<div class="small secondary rounded ui-card-light m-0 px-2 py-1">
 		            <img src="${data.net_icon}" width="16" height="16">
 		            ${data.net_name}
 			    </div>
@@ -67,7 +67,7 @@ function renderCollection(data) {
 		              <h4>${data.name}</h4>
 		          </div>
 		          <div class="col-auto py-2">
-			          <div class="small secondary rounded ui-card-light px-2 py-1">
+			          <div class="small secondary rounded ui-card-light m-0 px-2 py-1">
 				          <i class="fa-solid ${mapStatusToIcon[data.status]}"></i>
 				          ${mapStatusToText[data.status]}
 			          </div>
@@ -109,7 +109,7 @@ function renderNft(data) {
     if(data.net_name)
 	    badgeNet = `
 		    <div class="col-auto py-2">
-				<div class="small secondary rounded ui-card-light px-2 py-1">
+				<div class="small secondary rounded ui-card-light m-0 px-2 py-1">
 		            <img src="${data.net_icon}" width="16" height="16">
 		            ${data.net_name}
 			    </div>
@@ -130,7 +130,7 @@ function renderNft(data) {
 		              <h4>${data.name}</h4>
 		          </div>
 		          <div class="col-auto py-2">
-			          <div class="small secondary rounded ui-card-light px-2 py-1">
+			          <div class="small secondary rounded ui-card-light m-0 px-2 py-1">
 				          <i class="fa-solid ${mapStatusToIcon[data.status]}"></i>
 				          ${mapStatusToText[data.status]}
 			          </div>
