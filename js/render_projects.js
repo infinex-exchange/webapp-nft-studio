@@ -45,11 +45,9 @@ function renderCollection(data) {
     
     if(data.net_name)
 	    badgeNet = `
-		    <div class="col-auto py-2 pe-0">
-				<div class="small secondary rounded ui-card-light px-2 py-1">
-		            <img src="${data.net_icon}" width="16" height="16">
-		            ${data.net_name}
-			    </div>
+		    <div class="col-12 small secondary">
+	            <img src="${data.net_icon}" width="16" height="16">
+	            ${data.net_name}
 		    </div>
 		`;
     
@@ -108,11 +106,9 @@ function renderNft(data) {
     
     if(data.net_name)
 	    badgeNet = `
-		    <div class="col-auto py-2 pe-0">
-				<div class="small secondary rounded ui-card-light px-2 py-1">
-		            <img src="${data.net_icon}" width="16" height="16">
-		            ${data.net_name}
-			    </div>
+		    <div class="col-12 small secondary">
+	            <img src="${data.net_icon}" width="16" height="16">
+	            ${data.net_name}
 		    </div>
 		`;
     
