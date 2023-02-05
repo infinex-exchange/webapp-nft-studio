@@ -54,7 +54,7 @@ function renderNft(data) {
 
 function intEnqueue(endpoint, data) {
     $.ajax({
-        url: config.apiUrl + endpoint
+        url: config.apiUrl + endpoint,
         type: 'POST',
         data: JSON.stringify(data),
         contentType: "application/json",
