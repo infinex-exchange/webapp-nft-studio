@@ -64,12 +64,12 @@ function renderCollection(data) {
 		          <div class="col-12">
 		              <h4>${data.name}</h4>
 		          </div>
-		          <div class="col-12 small secondary">
+		          <div class="col-12 small secondary pt-2">
 			          <i class="fa-solid ${mapStatusToIcon[data.status]}"></i>
 			          ${mapStatusToText[data.status]}
 		          </div>
 		          ${badgeNet}
-		          <div class="col-12">
+		          <div class="col-12 pt-2">
 		              ${buttons}
 		          </div>
 		      </div>
@@ -123,12 +123,12 @@ function renderNft(data) {
 		          <div class="col-12">
 		              <h4>${data.name}</h4>
 		          </div>
-		          <div class="col-12 small secondary">
+		          <div class="col-12 small secondary pt-2">
 			          <i class="fa-solid ${mapStatusToIcon[data.status]}"></i>
 			          ${mapStatusToText[data.status]}
 		          </div>
 		          ${badgeNet}
-		          <div class="col-12">
+		          <div class="col-12 pt-2">
 			          ${buttons}
 		          </div>
 	          </div>
