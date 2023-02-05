@@ -41,6 +41,18 @@ function renderCollection(data) {
     
     var preview = '/nft/img/no_preview.png';
     
+    var badgeNet = '';
+    
+    if(data.net_name)
+	    badgeNet = `
+		    <div class="col-auto py-2">
+				<div class="rounded ui-card-light px-2 py-1">
+		            <img src="${data.net_name}" width="16" height="16">
+		            ${data.net_icon}
+			    </div>
+		    </div>
+		`;
+    
     return `
       <div class="row hoverable separate px-1 py-2">
           <div class="col-3 my-auto pe-0">
@@ -51,7 +63,7 @@ function renderCollection(data) {
                   <div class="col-12">
 		              <small class="secondary">COLLECTION</small>
 		          </div>
-		          <div class="col-auto">
+		          <div class="col-12">
 		              <h4>${data.name}</h4>
 		          </div>
 		          <div class="col-auto py-2">
@@ -60,6 +72,7 @@ function renderCollection(data) {
 				          ${mapStatusToText[data.status]}
 			          </div>
 		          </div>
+		          ${badgeNet}
 		          <div class="col-12">
 		              ${buttons}
 		          </div>
@@ -91,6 +104,18 @@ function renderNft(data) {
     
     var preview = '/nft/img/no_preview.png';
     
+    var badgeNet = '';
+    
+    if(data.net_name)
+	    badgeNet = `
+		    <div class="col-auto py-2">
+				<div class="rounded ui-card-light px-2 py-1">
+		            <img src="${data.net_name}" width="16" height="16">
+		            ${data.net_icon}
+			    </div>
+		    </div>
+		`;
+    
     return `
       <div class="row hoverable separate px-1 py-2">
 	      <div class="col-3 my-auto pe-0">
@@ -101,7 +126,7 @@ function renderNft(data) {
 		          <div class="col-12">
 		              <small class="secondary">NFT</small>
 		          </div>
-		          <div class="col-auto">
+		          <div class="col-12">
 		              <h4>${data.name}</h4>
 		          </div>
 		          <div class="col-auto py-2">
@@ -110,6 +135,7 @@ function renderNft(data) {
 				          ${mapStatusToText[data.status]}
 			          </div>
 		          </div>
+		          ${badgeNet}
 		          <div class="col-12">
 			          ${buttons}
 		          </div>
