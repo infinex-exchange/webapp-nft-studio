@@ -64,11 +64,9 @@ function renderCollection(data) {
 		          <div class="col-12">
 		              <h4>${data.name}</h4>
 		          </div>
-		          <div class="col-auto py-2 pe-0">
-			          <div class="small secondary rounded ui-card-light px-2 py-1">
-				          <i class="fa-solid ${mapStatusToIcon[data.status]}"></i>
-				          ${mapStatusToText[data.status]}
-			          </div>
+		          <div class="col-12 small secondary">
+			          <i class="fa-solid ${mapStatusToIcon[data.status]}"></i>
+			          ${mapStatusToText[data.status]}
 		          </div>
 		          ${badgeNet}
 		          <div class="col-12">
@@ -125,11 +123,9 @@ function renderNft(data) {
 		          <div class="col-12">
 		              <h4>${data.name}</h4>
 		          </div>
-		          <div class="col-auto py-2 pe-0">
-			          <div class="small secondary rounded ui-card-light px-2 py-1">
-				          <i class="fa-solid ${mapStatusToIcon[data.status]}"></i>
-				          ${mapStatusToText[data.status]}
-			          </div>
+		          <div class="col-12 small secondary">
+			          <i class="fa-solid ${mapStatusToIcon[data.status]}"></i>
+			          ${mapStatusToText[data.status]}
 		          </div>
 		          ${badgeNet}
 		          <div class="col-12">
