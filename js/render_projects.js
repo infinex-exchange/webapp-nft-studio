@@ -19,6 +19,10 @@ function renderCollection(data) {
                   <i class="fa-solid fa-pen-to-square"></i>
                   Edit
               </a>
+              <button type="button" class="btn btn-primary btn-sm" onClick="enqueueCollection(${data.scolid})">
+                  <i class="fa-solid fa-check"></i>
+                  To minting queue
+              </button>
           </div>
       </div>
   `;
@@ -39,6 +43,10 @@ function renderNft(data) {
                   <i class="fa-solid fa-pen-to-square"></i>
                   Edit
               </a>
+              <button type="button" class="btn btn-primary btn-sm" onClick="enqueueNft(${data.snftid})">
+                  <i class="fa-solid fa-check"></i>
+                  To minting queue
+              </button>
           </div>
       </div>
   `;
