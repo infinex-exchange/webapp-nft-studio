@@ -51,7 +51,7 @@ function renderCollection(data) {
                   <div class="col-12">
 		              <small class="secondary">COLLECTION</small>
 		          </div>
-		          <div class="col-12">
+		          <div class="col-auto">
 		              <h4>${data.name}</h4>
 		          </div>
 		          <div class="col-auto py-2">
@@ -101,7 +101,7 @@ function renderNft(data) {
 		          <div class="col-12">
 		              <small class="secondary">NFT</small>
 		          </div>
-		          <div class="col-12">
+		          <div class="col-auto">
 		              <h4>${data.name}</h4>
 		          </div>
 		          <div class="col-auto py-2">
