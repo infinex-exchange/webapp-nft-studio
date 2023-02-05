@@ -18,7 +18,7 @@ function renderCollection(data) {
 				<i class="fa-solid fa-check"></i>
 				Mint
 			</button>
-			<button type="button" class="btn btn-primary btn-sm" onClick="removeCollection(${data.colid})">
+			<button type="button" class="btn btn-primary btn-sm" onClick="removeCollection(${data.scolid})">
 				<i class="fa-solid fa-trash-can"></i>
 				Remove
 			</button>
@@ -40,7 +40,24 @@ function renderCollection(data) {
 }
 
 function renderNft(data) {
-    var lEdit = '/nft/studio/nft/' + data.snftid;
+    var buttons = '';
+    
+    if(data.status == 'DRAFT') {
+        buttons += `
+            <a href="/nft/studio/nft/${data.snftid}" class="btn btn-primary btn-sm ms-0">
+				<i class="fa-solid fa-pen-to-square"></i>
+				Edit
+			</a>
+			<button type="button" class="btn btn-primary btn-sm" onClick="enqueueNft(${data.snftid})">
+				<i class="fa-solid fa-check"></i>
+				Mint
+			</button>
+			<button type="button" class="btn btn-primary btn-sm" onClick="removeNft(${data.snftid})">
+				<i class="fa-solid fa-trash-can"></i>
+				Remove
+			</button>
+		`;
+    }
     
     return `
       <div class="row hoverable separate px-1 py-2">
@@ -50,14 +67,7 @@ function renderNft(data) {
               <strong>${data.name}</strong>
           </div>
           <div class="col-12">
-              <a href="${lEdit}" class="btn btn-primary btn-sm ms-0">
-                  <i class="fa-solid fa-pen-to-square"></i>
-                  Edit
-              </a>
-              <button type="button" class="btn btn-primary btn-sm" onClick="enqueueNft(${data.snftid})">
-                  <i class="fa-solid fa-check"></i>
-                  Mint
-              </button>
+	          ${buttons}
           </div>
       </div>
   `;
