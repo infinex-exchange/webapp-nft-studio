@@ -23,11 +23,11 @@
         <!-- Main column -->
         <div class="col-12 ui-card ui-column">
         <div class="row">
+        
+        
+        
         <div class="col-12 col-lg-8">
-            
-            
-            
-            
+
             <div class="row">
                 <h3 class="title-create d-none">Create collection</h3>
                 <h3 class="title-edit d-none">Edit collection</h3>
@@ -87,18 +87,19 @@
                     <button id="col-submit" type="button" class="btn btn-primary">Submit</button>
                 </div>
             </div>
-            
-            
+        
+        </div>
+        
+        <div class="col-12">
             <div class="row">
                 <h3 class="title-nfts d-none pt-4">NFTs in this collection:</h3>
             </div>
             
-            
             <div id="nfts-data">
             </div>
+        </div>
         
         <!-- / Main column -->
-        </div>
         </div>
         </div>
             
