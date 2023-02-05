@@ -87,6 +87,15 @@
                     <button id="col-submit" type="button" class="btn btn-primary">Submit</button>
                 </div>
             </div>
+            
+            
+            <div class="row">
+                <h3 class="title-nfts d-none">NFTs in this collection:</h3>
+            </div>
+            
+            
+            <div id="nfts-data">
+            </div>
         
         <!-- / Main column -->
         </div>
@@ -99,6 +108,7 @@
         
         <script src="/js/validate.js?<?php echo filemtime(__DIR__.'/../../../js/validate.js'); ?>"></script>
         <script src="/nft/studio/js/validate.js?<?php echo filemtime(__DIR__.'/js/validate.js'); ?>"></script>
+        <script src="/nft/studio/js/render_projects.js?<?php echo filemtime(__DIR__.'/js/render_projects.js'); ?>"></script>
         <script src="/nft/studio/js/collection.js?<?php echo filemtime(__DIR__.'/js/collection.js'); ?>"></script>
         
         <?php include(__DIR__.'/../../../templates/modals.php'); ?>

@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    window.renderingStagesTarget = 2;
+    window.renderingStagesTarget = 3;
     window.editScolid = null;
     
     $('#select-net').on('dataLoaded', function() {
@@ -79,6 +79,7 @@ $(document).on('authChecked', function() {
         $('.title-create').removeClass('d-none');
         document.title = 'Create collection | ' + document.title;
         $(document).trigger('renderingStage');
+        $(document).trigger('renderingStage'); // NFTs in collection
     }
     
     else {
@@ -128,5 +129,53 @@ $(document).on('authChecked', function() {
         .fail(function (jqXHR, textStatus, errorThrown) {
             msgBoxNoConn(true);
         });
+        
+        window.nftsAs = new AjaxScroll(
+            $('#nfts-data'),
+            $('#nfts-data-preloader'),
+            {
+    	        api_key: window.apiKey,
+                scolid: parseInt(scolid)
+            },
+            function() {
+                this.data.offset = this.offset;
+                var thisAS = this;
+                
+                $.ajax({
+                    url: config.apiUrl + '/nft/studio/nfts',
+                    type: 'POST',
+                    data: JSON.stringify(thisAS.data),
+                    contentType: "application/json",
+                    dataType: "json",
+                })
+                .retry(config.retry)
+                .done(function (data) {
+                    if(data.success) {
+                        $.each(data.projects, function(k, v) {
+                            thisAS.append(renderNft(v));
+                        });
+                        
+                        thisAS.done();
+                
+                        if(thisAS.offset == 0)
+                            $(document).trigger('renderingStage');
+                            
+                        if(data.projects.length != 50)
+                            thisAS.noMoreData();
+                    } else {
+                        msgBoxRedirect(data.error);
+                        thisAS.done();
+                        thisAS.noMoreData();
+                    }
+                })
+                .fail(function (jqXHR, textStatus, errorThrown) {
+                    msgBoxNoConn(true);
+                    thisAS.done();
+                    thisAS.noMoreData();
+                });
+            },
+            true,
+            true
+        );
     }
 });
