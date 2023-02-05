@@ -33,7 +33,7 @@ function renderCollection(data) {
 	          <img src="${preview}" class="img-fluid">
           </div>
           <div class="col-9 my-auto">
-              <div class="row m-0">
+              <div class="row">
                   <div class="col-12">
 		              <small class="secondary">COLLECTION</small>
 		          </div>
