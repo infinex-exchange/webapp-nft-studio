@@ -34,7 +34,7 @@ function renderCollection(data) {
 			</button>
 			<button type="button" class="btn btn-primary btn-sm" onClick="enqueueCollection(${data.scolid})">
 				<i class="fa-solid fa-check"></i>
-				Mint
+				To mint
 			</button>
 		`;
     }
@@ -93,7 +93,7 @@ function renderNft(data) {
 			</button>
 			<button type="button" class="btn btn-primary btn-sm" onClick="enqueueNft(${data.snftid})">
 				<i class="fa-solid fa-check"></i>
-				Mint
+				To mint
 			</button>
 		`;
     }
