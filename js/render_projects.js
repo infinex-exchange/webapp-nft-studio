@@ -5,14 +5,14 @@ function renderProject(data) {
 }
 
 function renderCollection(data) {
-    var lEdit = '/nft/studio/collection/' + data.collection.scolid;
+    var lEdit = '/nft/studio/collection/' + data.scolid;
     
     return `
       <div class="row hoverable separate px-1 py-2">
           <div class="col-12">
               <small class="secondary">COLLECTION</small>
               <br>
-              <strong>${data.collection.name}</strong>
+              <strong>${data.name}</strong>
           </div>
           <div class="col-12">
               <a href="${lEdit}" class="btn btn-primary btn-sm ms-0">
@@ -25,21 +25,21 @@ function renderCollection(data) {
 }
 
 function renderNft(data) {
-    var lEdit = '/nft/studio/collection/' + data.collection.scolid;
+    var lEdit = '/nft/studio/nft/' + data.snftid;
     
     return `
-        <div class="row nested-hoverable collection-item separate px-1 py-2">
-            <div class="col-12">
-                <small class="secondary">COLLECTION</small>
-                <br>
-                <strong>${data.collection.name}</strong>
-            </div>
-            <div class="col-12">
-                <a href="${lEdit}" class="btn btn-primary btn-sm ms-0">
-                    <i class="fa-solid fa-pen-to-square"></i>
-                    Edit
-                </a>
-            </div>
-        </div>
-    `;
+      <div class="row hoverable separate px-1 py-2">
+          <div class="col-12">
+              <small class="secondary">NFT</small>
+              <br>
+              <strong>${data.name}</strong>
+          </div>
+          <div class="col-12">
+              <a href="${lEdit}" class="btn btn-primary btn-sm ms-0">
+                  <i class="fa-solid fa-pen-to-square"></i>
+                  Edit
+              </a>
+          </div>
+      </div>
+  `;
 }
