@@ -59,12 +59,20 @@ function renderProject(data) {
     var nftString = '';
     
     if(data.collection) {
+        var lEdit = '/nft/studio/collection/' + data.collection.scolid;
+        
         colHeader = `
             <div class="row nested-hoverable collection-item">
 	            <div class="col-12">
 	                <small class="secondary">COLLECTION</small>
 	                <br>
 	                <strong>${data.collection.name}</strong>
+	            </div>
+	            <div class="col-12">
+		            <a href="${lEdit}" class="btn btn-primary btn-small">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                        Edit
+                    </a>
 	            </div>
 	            <div class="col-12">
 	    `;
@@ -76,12 +84,20 @@ function renderProject(data) {
 	}
 	
 	$.each(data.nfts, function(k, nft) {
+	    var lEdit = '/nft/studio/nft/' + nft.snftid;
+	    
 		nftString += `
             <div class="row nested-hoverable nft-item">
 	            <div class="col-12">
 	                <small class="secondary">NFT</small>
 	                <br>
 	                <strong>${nft.name}</strong>
+	            </div>
+	            <div class="col-12">
+	                <a href="${lEdit}" class="btn btn-primary btn-small">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                        Edit
+                    </a>
 	            </div>
 	        </div>
 	    `;
