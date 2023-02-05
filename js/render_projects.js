@@ -1,3 +1,17 @@
+var mapStatusToIcon = {
+	DRAFT: 'fa-compass-drafting',
+	QUEUED: 'fa-bars-progress',
+	PENDING: 'fa-spinner',
+	MINTED: 'fa-circle-check'
+};
+
+var mapStatusToText = {
+	DRAFT: 'Draft',
+	QUEUED: 'In queue',
+	PENDING: 'Minting...',
+	MINTED: 'Minted'
+};
+
 function renderProject(data) {
     if(data.type == 'COLLECTION')
         return renderCollection(data);
@@ -39,6 +53,12 @@ function renderCollection(data) {
 		          </div>
 		          <div class="col-12">
 		              <h4>${data.name}</h4>
+		          </div>
+		          <div class="col-12">
+			          <div class="rounded ui-card-light px-2 py-1">
+				          <i class="fa-solid ${mapStatusToIcon[data.status]}"></i>
+				          ${mapStatusToText[data.status]}
+			          </div>
 		          </div>
 		          <div class="col-12">
 		              ${buttons}
@@ -83,6 +103,12 @@ function renderNft(data) {
 		          </div>
 		          <div class="col-12">
 		              <h4>${data.name}</h4>
+		          </div>
+		          <div class="col-12">
+			          <div class="rounded ui-card-light px-2 py-1">
+				          <i class="fa-solid ${mapStatusToIcon[data.status]}"></i>
+				          ${mapStatusToText[data.status]}
+			          </div>
 		          </div>
 		          <div class="col-12">
 			          ${buttons}
