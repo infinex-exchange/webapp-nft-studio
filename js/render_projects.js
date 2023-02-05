@@ -30,10 +30,17 @@ function renderCollection(data) {
           <div class="col-2">
           </div>
           <div class="col-10">
-              <small class="secondary">COLLECTION</small>
-              <br>
-              <strong>${data.name}</strong>
-              ${buttons}
+              <div class="row">
+                  <div class="col-12">
+		              <small class="secondary">COLLECTION</small>
+		          </div>
+		          <div class="col-12">
+		              <strong>${data.name}</strong>
+		          </div>
+		          <div class="col-12">
+		              ${buttons}
+		          </div>
+		      </div>
           </div>
       </div>
   `;
