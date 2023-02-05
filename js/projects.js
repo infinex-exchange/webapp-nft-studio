@@ -74,7 +74,7 @@ function renderProject(data) {
                         Edit
                     </a>
 	            </div>
-	            <div class="col-12">
+	            <div class="col-12 px-3">
 	    `;
 	    
 	    colFooter = `
