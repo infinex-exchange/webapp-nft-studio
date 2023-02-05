@@ -82,7 +82,7 @@ function renderNft(data) {
 		              <small class="secondary">NFT</small>
 		          </div>
 		          <div class="col-12">
-		              <h5>${data.name}</h5>
+		              <h4>${data.name}</h4>
 		          </div>
 		          <div class="col-12">
 			          ${buttons}
