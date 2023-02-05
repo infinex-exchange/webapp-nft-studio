@@ -42,6 +42,7 @@
         </div>
         </div>
         
+        <script src="/nft/studio/js/render_projects.js?<?php echo filemtime(__DIR__.'/js/render_projects.js'); ?>"></script>
         <script src="/nft/studio/js/projects.js?<?php echo filemtime(__DIR__.'/js/projects.js'); ?>"></script>
         
         <?php include(__DIR__.'/../../../templates/modals.php'); ?>

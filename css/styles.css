@@ -26,17 +26,6 @@
     border: 1px solid var(--color-primary);
 }
 
-/* Nested hoverable */
-
-.nested-hoverable:hover {
-    background-color: var(--color-bg-light);
-    cursor: pointer;
-}
-
-.nested-hoverable .nested-hoverable:hover {
-    background-color: var(--color-input);
-}
-
 /* Separate items */
 
 .separate ~ .separate {
