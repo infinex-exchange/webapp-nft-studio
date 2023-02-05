@@ -76,7 +76,7 @@ function renderNft(data) {
 	      <div class="col-3 my-auto">
 	          <img src="${preview}" class="img-fluid">
           </div>
-	      <div class="col-9 my-auto ms-0">
+	      <div class="col-9 my-auto ps-0">
 		      <div class="row">
 		          <div class="col-12">
 		              <small class="secondary">NFT</small>
