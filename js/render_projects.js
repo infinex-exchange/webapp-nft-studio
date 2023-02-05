@@ -38,7 +38,7 @@ function renderCollection(data) {
 		              <small class="secondary">COLLECTION</small>
 		          </div>
 		          <div class="col-12">
-		              <h5>${data.name}</h5>
+		              <h4>${data.name}</h4>
 		          </div>
 		          <div class="col-12">
 		              ${buttons}
