@@ -78,12 +78,16 @@ function renderCollection(data) {
   `;
 }
 
-function renderNft(data) {
+function renderNft(data, back = null) {
+    var backSuffix = '';
+    if(back)
+        backSuffix = '?back=' + back;
+    
     var buttons = '';
     
     if(data.status == 'DRAFT') {
         buttons += `
-            <a href="/nft/studio/nft/${data.snftid}" class="btn btn-primary btn-sm ms-0">
+            <a href="/nft/studio/nft/${data.snftid}${backSuffix}" class="btn btn-primary btn-sm ms-0">
 				<i class="fa-solid fa-pen-to-square"></i>
 				Edit
 			</a>
