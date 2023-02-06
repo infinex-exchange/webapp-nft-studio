@@ -159,7 +159,7 @@ $(document).on('authChecked', function() {
                 .done(function (data) {
                     if(data.success) {
                         $.each(data.nfts, function(k, v) {
-                            thisAS.append(renderNft(v));
+                            thisAS.append(renderNft(v, 'col'));
                         });
                         
                         thisAS.done();
