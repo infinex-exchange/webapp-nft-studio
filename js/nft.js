@@ -55,7 +55,7 @@ $(document).ready(function() {
                 if(mint)
                     enqueueNft(window.editSnftid ? window.editSnftid : data.snftid);
                 else
-                    location.href = '/nft/studio/projects';
+                    location.href = window.backUrl;
             } else {
                 msgBox(data.error);
             }
@@ -75,11 +75,13 @@ $(document).on('authChecked', function() {
     var pathArray = window.location.pathname.split('/');
     var snftid = pathArray[pathArray.length - 1];
     
+    var urlParams = new URLSearchParams(window.location.search);
+    window.backUrl = '/nft/studio/projects';
+    
     if(snftid == 'add') {
         $('.title-create').removeClass('d-none');
         document.title = 'Create NFT | ' + document.title;
         
-        var urlParams = new URLSearchParams(window.location.search);
         var addScolid = urlParams.get('col');
         
         if(addScolid != null) {
@@ -97,6 +99,10 @@ $(document).on('authChecked', function() {
             .done(function (data) {
                 if(data.success) {
                     $('#select-col').val(data.name).data('colid', data.scolid);
+                    
+                    if(urlParams.get('back') == 'col')
+                        window.backUrl = '/nft/studio/collection/' + data.scolid;
+                        
                     $(document).trigger('renderingStage');
                 }
                 else {
@@ -138,8 +144,12 @@ $(document).on('authChecked', function() {
                 
                 $('#nft-name').val(data.name);
                 
-                if(data.scolid)
+                if(data.scolid) {
                     $('#select-col').val(data.col_name).data('colid', data.scolid);
+                    
+                    if(urlParams.get('back') == 'col')
+                        window.backUrl = '/nft/studio/collection/' + data.scolid;
+                }
                 
                 if(data.netid)
                     $('#select-net').val(data.net_name).data('network', data.netid);
