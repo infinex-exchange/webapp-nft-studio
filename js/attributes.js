@@ -19,7 +19,7 @@ function addAttribute(key = '', value = '') {
     `);
     
     $('.attribute-remove').off('click').on('click', function() {
-        $(this).parent('.attribute-item').remove();
+        console.log($(this).parent('.attribute-item'));
     });
 }
 
