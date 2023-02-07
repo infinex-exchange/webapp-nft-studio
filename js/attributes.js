@@ -8,11 +8,16 @@ function addAttribute(key = '', value = '') {
             <div class="col-4">
                 <input type="text" class="form-control attribute-key" value="${key}">
             </div>
+            <div class="col-auto my-auto">
+                <strong>=</strong>
+            </div>
             <div class="col-4">
                 <input type="text" class="form-control attribute-value" value="${value}">
             </div>
-            <div class="col-auto ms-auto my-auto" onClick="removeAttribute(this)">
-                <i class="fa-solid fa-xmark nav-link"></i>
+            <div class="col-auto ms-auto my-auto">
+                <a href="#_" class="nav-link" onClick="removeAttribute(this)">
+                    <i class="fa-solid fa-xmark"></i>
+                </a>
             </div>
         </div>
     `);
