@@ -32,7 +32,7 @@ $(document).ready(function() {
         if(window.editScolid)
             data['scolid'] = window.editScolid;
         
-        data['netid'] = netid;
+        data['netid'] = netid != '' ? netid : null;
         data['description'] = description;
         data['website'] = website;
         data['twitter'] = twitter;

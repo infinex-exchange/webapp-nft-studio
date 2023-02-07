@@ -31,8 +31,8 @@ $(document).ready(function() {
         if(window.editSnftid)
             data['snftid'] = window.editSnftid;
         
-        data['scolid'] = scolid;
-        data['netid'] = netid;
+        data['scolid'] = scolid != '' ? scolid : null;
+        data['netid'] = netid != '' ? netid : null;
         data['description'] = description;
         data['attributes'] = attributes;
         
