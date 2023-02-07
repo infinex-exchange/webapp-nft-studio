@@ -15,7 +15,9 @@ function addAttribute(key = '', value = '') {
                 <input type="text" class="form-control attribute-value" value="${value}">
             </div>
             <div class="col-auto ms-auto my-auto">
-                <i class="fa-solid fa-xmark nav-link" onClick="removeAttribute(this)"></i>
+                <a href="#_" class="nav-link">
+                    <i class="fa-solid fa-xmark nav-link" onClick="removeAttribute(this)"></i>
+                </a>
             </div>
         </div>
     `);
