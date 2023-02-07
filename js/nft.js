@@ -176,7 +176,7 @@ function addAttribute(key = '', value = '') {
             <div class="my-auto" style="width: calc(50% - 20px)">
                 <input type="text" class="form-control attribute-key" value="${key}">
             </div>
-            <div class="my-auto" style="width: 10px">
+            <div class="my-auto p-0" style="width: 10px">
                 <strong>=</strong>
             </div>
             <div class="my-auto" style="width: calc(50% - 20px)">
