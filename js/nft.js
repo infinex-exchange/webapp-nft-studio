@@ -31,17 +31,10 @@ $(document).ready(function() {
         if(window.editSnftid)
             data['snftid'] = window.editSnftid;
         
-        if(scolid != '')
-            data['scolid'] = scolid;
-        
-        if(netid != '')
-            data['netid'] = netid;
-        
-        if(description != '')
-            data['description'] = description;
-        
-        if(attributes.length)
-            data['attributes'] = attributes;
+        data['scolid'] = scolid;
+        data['netid'] = netid;
+        data['description'] = description;
+        data['attributes'] = attributes;
         
         var endpoint = 'add';
         if(window.editSnftid)
