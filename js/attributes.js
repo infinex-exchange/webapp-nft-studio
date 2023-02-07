@@ -1,5 +1,5 @@
 function removeAttribute(elem) {
-    $(elem).parent('.attribute-item').remove();
+    console.log($(elem).parent('.attribute-item'));
 }
 
 function addAttribute(key = '', value = '') {
