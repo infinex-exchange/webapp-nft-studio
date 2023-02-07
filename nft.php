@@ -80,6 +80,10 @@
                     <h5 class="secondary">Royalty percentage:</h5>
                 </div>
                 <div class="col-12 col-lg-6">
+                    <input id="nft-royalty-perc" type="range" class="form-range" min="0" max="90" step="0.01" value="0">
+                </div>
+                <div class="col-12 col-lg-6">
+                    <span class="small secondary range-value" for="nft-royalty-perc"></span>
                 </div>
                 
                 <div class="col-12 pt-3 pb-1">
