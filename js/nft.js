@@ -176,13 +176,13 @@ function addAttribute(key = '', value = '') {
             <div class="my-auto" style="width: calc(50% - 30px)">
                 <input type="text" class="form-control attribute-key" value="${key}">
             </div>
-            <div class="my-auto p-0" style="width: 10px">
+            <div class="my-auto text-center p-0" style="width: 10px">
                 <strong>=</strong>
             </div>
             <div class="my-auto" style="width: calc(50% - 30px)">
                 <input type="text" class="form-control attribute-value" value="${value}">
             </div>
-            <div class="my-auto p-0" style="width: 20px">
+            <div class="my-auto text-center" style="width: 20px">
                 <a href="#_" class="nav-link attribute-remove">
                     <i class="fa-solid fa-xmark"></i>
                 </a>
