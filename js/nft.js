@@ -211,8 +211,10 @@ function getAttributes() {
         var key = $(this).find('.attribute-key').val();
         var value = $(this).find('.attribute-value').val();
         
-        if(key == '' && value == '')
+        if(key == '' && value == '') {
+            $(this).remove();
             return;
+        }
         
         attributes.push({
             key: key,
