@@ -8,7 +8,7 @@ function addAttribute(key = '', value = '') {
             <div class="col-5">
                 <input type="text" class="form-control attribute-key" value="${key}">
             </div>
-            <div class="col-auto mx-0 my-auto">
+            <div class="col-auto px-0 my-auto">
                 <strong>=</strong>
             </div>
             <div class="col-5">
