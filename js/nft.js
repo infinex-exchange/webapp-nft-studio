@@ -12,6 +12,7 @@ $(document).ready(function() {
         var netid = $('#select-net').data('network');
         var description = $('#nft-description').val();
         var attributes = getAttributes();
+        var royalty = $('#nft-royalty-perc').val();
         
         var mint = $(this).is('#nft-submit-and-mint');
         
@@ -35,6 +36,7 @@ $(document).ready(function() {
         data['netid'] = netid != '' ? netid : null;
         data['description'] = description;
         data['attributes'] = attributes;
+        data['royalty_perc'] = royalty;
         
         var endpoint = 'add';
         if(window.editSnftid)
@@ -141,6 +143,7 @@ $(document).on('authChecked', function() {
                 window.editSnftid = data.snftid;
                 
                 $('#nft-name').val(data.name);
+                $('#nft-royalty-perc').val(data.royalty_perc).trigger('_input');
                 
                 if(data.scolid) {
                     $('#select-col').val(data.col_name).data('colid', data.scolid);
