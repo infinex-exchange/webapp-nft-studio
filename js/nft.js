@@ -173,13 +173,13 @@ $(document).on('authChecked', function() {
 function addAttribute(key = '', value = '') {
     $('#attributes').append(`
         <div class="row attribute-item">
-            <div class="my-auto" style="width: calc(50% - 30px)">
+            <div class="mx-0 my-auto" style="width: calc(50% - 30px)">
                 <input type="text" class="form-control attribute-key" value="${key}">
             </div>
-            <div class="my-auto text-center p-0" style="width: 10px">
+            <div class="mx-0 my-auto text-center" style="width: 10px">
                 <strong>=</strong>
             </div>
-            <div class="my-auto" style="width: calc(50% - 30px)">
+            <div class="mx-0 my-auto" style="width: calc(50% - 30px)">
                 <input type="text" class="form-control attribute-value" value="${value}">
             </div>
             <div class="mx-0 my-auto text-center" style="width: 20px">
