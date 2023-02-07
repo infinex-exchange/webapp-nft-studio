@@ -11,12 +11,14 @@ $(document).ready(function() {
         var scolid = $('#select-col').data('colid');
         var netid = $('#select-net').data('network');
         var description = $('#nft-description').val();
+        var attributes = getAttributes();
         
         var mint = $(this).is('#nft-submit-and-mint');
         
         if(
             !validateNftName(name) ||
-            (description != '' && !validateNftDesc(description))
+            (description != '' && !validateNftDesc(description)) ||
+            attributes === false
         ) {
             msgBox('Please fill in the form correctly')
             return;
@@ -37,6 +39,9 @@ $(document).ready(function() {
         
         if(description != '')
             data['description'] = description;
+        
+        if(attributes.length)
+            data['attributes'] = attributes;
         
         var endpoint = 'add';
         if(window.editSnftid)
