@@ -208,9 +208,15 @@ function getAttributes() {
     var error = false;
     
     $('.attribute-item').each(function() {
+        var key = $(this).find('.attribute-key').val();
+        var value = $(this).find('.attribute-value').val();
+        
+        if(key == '' && value == '')
+            return;
+        
         attributes.push({
-            key: $(this).find('.attribute-key').val(),
-            value: $(this).find('.attribute-value').val()
+            key: key,
+            value: value
         });
     });
     
