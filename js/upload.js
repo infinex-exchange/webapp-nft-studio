@@ -1,7 +1,7 @@
 function initUpload(elem, utType, isImage, currentUrl) {
 	var preview = `
 		<span class="preview-empty d-none">
-			<i class="fa-solid fa-xmark"></i>
+		    <i class="fa-regular fa-file-circle-xmark fa-2x"></i>
 			No file selected
 		</span>
 	`;
@@ -14,7 +14,7 @@ function initUpload(elem, utType, isImage, currentUrl) {
 	else
 		preview += `
 			<a href="#" class="preview-link d-none" target="_blank">
-				<i class="fa-solid fa-file-lines"></i>
+				<i class="fa-solid fa-file-lines fa-2x"></i>
 				<span class="preview-ext"></span> file
 			</a>
 		`;
