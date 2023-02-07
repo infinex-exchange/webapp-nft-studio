@@ -221,6 +221,11 @@ function getAttributes() {
             return;
         }
         
+        if(key == '' || value == '') {
+            error = true;
+            return;
+        }
+        
         attributes.push({
             key: key,
             value: value
