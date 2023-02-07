@@ -25,15 +25,13 @@ function initUpload(elem, utType, isImage, currentUrl) {
 				<div class="col-12 py-2 text-center">
 					${preview}
 				</div>
-				<div class="col-auto ms-auto">
+				<div class="col-auto mx-auto">
 					<button type="button" class="btn-upload btn btn-primary btn-sm">
 				        <i class="fa-solid fa-upload"></i>
 			            <span class="text-upload d-none">Upload</span>
 			            <span class="text-replace d-none">Replace</span>
 			        </button>
-		        </div>
-		        <div class="btn-remove-wrapper col-auto me-auto d-none">
-			        <button type="button" class="btn-remove btn btn-primary btn-sm">
+			        <button type="button" class="btn-remove d-none btn btn-primary btn-sm">
 				        <i class="fa-solid fa-trash-can"></i>
 				        Remove
 			        </button>
