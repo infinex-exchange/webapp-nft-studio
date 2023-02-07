@@ -67,7 +67,7 @@
                 <div class="col-12 pt-3 pb-1">
                     <h5 class="secondary">Attributes:</h5>
                 </div>
-                <div class="col-12 col-lg-6" id="attributes">
+                <div class="col-12 col-lg-9" id="attributes">
                 </div>
                 <div class="col-12">
 		            <button type="button" class="btn btn-primary btn-sm" onClick="addAttribute()">
