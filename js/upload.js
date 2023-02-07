@@ -22,7 +22,7 @@ function initUpload(elem, utType, isImage, currentUrl) {
 	$(elem).append(`
 		<div class="upload-control ui-card-light border">
 			<div class="row">
-				<div class="col-12">
+				<div class="col-12 py-2 text-center">
 					${preview}
 				</div>
 				<div class="col-auto ms-auto">
