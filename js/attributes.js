@@ -4,14 +4,14 @@ function removeAttribute(elem) {
 
 function addAttribute(key = '', value = '') {
     $('#attributes').append(`
-        <div class="row hoverable attribute-item">
+        <div class="row attribute-item">
             <div class="col-4">
                 <input type="text" class="form-control attribute-key" value="${key}">
             </div>
             <div class="col-4">
                 <input type="text" class="form-control attribute-value" value="${value}">
             </div>
-            <div class="col-auto ms-auto my-auto" onClick="removeAttribute(this)">
+            <div class="col-auto ms-auto my-auto hoverable" onClick="removeAttribute(this)">
                 <i class="fa-solid fa-xmark"></i>
             </div>
         </div>
