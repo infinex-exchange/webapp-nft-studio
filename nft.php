@@ -117,7 +117,6 @@
         
         <script src="/nft/studio/js/validate.js?<?php echo filemtime(__DIR__.'/js/validate.js'); ?>"></script>
         <script src="/nft/studio/js/render_projects.js?<?php echo filemtime(__DIR__.'/js/render_projects.js'); ?>"></script>
-        <script src="/nft/studio/js/attributes.js?<?php echo filemtime(__DIR__.'/js/attributes.js'); ?>"></script>
         <script src="/nft/studio/js/nft.js?<?php echo filemtime(__DIR__.'/js/nft.js'); ?>"></script>
         
         <?php include(__DIR__.'/../../../templates/modals.php'); ?>
