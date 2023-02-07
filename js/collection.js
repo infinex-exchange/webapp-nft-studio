@@ -76,6 +76,8 @@ $(document).on('authChecked', function() {
     if(scolid == 'add') {
         $('.title-create').removeClass('d-none');
         document.title = 'Create collection | ' + document.title;
+        initUpload('#col-icon', 'nft-col-icon', true, null);
+        initUpload('#col-banner', 'nft-col-banner', true, null);
         $(document).trigger('renderingStage');
         $(document).trigger('renderingStage'); // NFTs in collection
     }
@@ -119,6 +121,9 @@ $(document).on('authChecked', function() {
                     $('#col-twitter').val(data.twitter);
                 
                 $('#btn-add-nft').attr('href', '/nft/studio/nft/add?col=' + window.editScolid + '&back=col');
+                
+                initUpload('#col-icon', 'nft-col-icon', true, data.icon_preview);
+		        initUpload('#col-banner', 'nft-col-banner', true, data.banner_preview);
                 
                 $(document).trigger('renderingStage');
             }
