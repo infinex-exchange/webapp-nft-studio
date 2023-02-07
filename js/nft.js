@@ -46,8 +46,6 @@ $(document).ready(function() {
         var endpoint = 'add';
         if(window.editSnftid)
             endpoint = 'update';
-        
-        console.log(data);
 
         $.ajax({
             url: config.apiUrl + '/nft/studio/nfts/' + endpoint,
