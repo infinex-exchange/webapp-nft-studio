@@ -1,5 +1,5 @@
 function removeAttribute(elem) {
-    $(this).parent('.attribute-item').remove();
+    $(elem).parent('.attribute-item').remove();
 }
 
 function addAttribute(key = '', value = '') {
@@ -11,8 +11,8 @@ function addAttribute(key = '', value = '') {
             <div class="col-4">
                 <input type="text" class="form-control attribute-value" value="${value}">
             </div>
-            <div class="col-auto ms-auto my-auto hoverable" onClick="removeAttribute(this)">
-                <i class="fa-solid fa-xmark"></i>
+            <div class="col-auto ms-auto my-auto" onClick="removeAttribute(this)">
+                <i class="fa-solid fa-xmark nav-link"></i>
             </div>
         </div>
     `);
