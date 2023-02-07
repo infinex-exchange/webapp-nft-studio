@@ -67,8 +67,14 @@
                 <div class="col-12 pt-3 pb-1">
                     <h5 class="secondary">Attributes:</h5>
                 </div>
-                <div class="col-12 col-lg-6">
+                <div class="col-12 col-lg-6" id="attributes">
                 </div>
+                <div class="col-12">
+		            <button type="button" class="btn btn-primary btn-sm" onClick="addAttribute()">
+		                <i class="fa-solid fa-plus"></i>
+		                Add attribute
+		            </button>
+	            </div>
                 
                 <div class="col-12 pt-3 pb-1">
                     <h5 class="secondary">Royalty percentage:</h5>
@@ -111,6 +117,7 @@
         
         <script src="/nft/studio/js/validate.js?<?php echo filemtime(__DIR__.'/js/validate.js'); ?>"></script>
         <script src="/nft/studio/js/render_projects.js?<?php echo filemtime(__DIR__.'/js/render_projects.js'); ?>"></script>
+        <script src="/nft/studio/js/attributes.js?<?php echo filemtime(__DIR__.'/js/attributes.js'); ?>"></script>
         <script src="/nft/studio/js/nft.js?<?php echo filemtime(__DIR__.'/js/nft.js'); ?>"></script>
         
         <?php include(__DIR__.'/../../../templates/modals.php'); ?>

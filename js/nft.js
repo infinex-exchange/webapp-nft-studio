@@ -157,6 +157,9 @@ $(document).on('authChecked', function() {
                 if(data.description)
                     $('#nft-description').val(data.description);
                 
+                if(data.attributes)
+                    setAttributes(data.attributes);
+                
                 $(document).trigger('renderingStage');
             }
             else {
