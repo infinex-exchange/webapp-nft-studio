@@ -92,10 +92,12 @@ function initUpload(elem, utType, isImage, currentUrl) {
             }
             else {
                 msgBox(data.error);
+                btnUpload.prop('disabled', false);
             }
         })
         .fail(function (jqXHR, textStatus, errorThrown) {
             msgBoxNoConn();
+            btnUpload.prop('disabled', false);
         });
     });
     
