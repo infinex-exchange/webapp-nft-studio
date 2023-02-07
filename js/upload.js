@@ -7,12 +7,12 @@ function initUpload(elem, utType, isImage, currentUrl) {
 	`;
 	
 	if(isImage)
-		preview = `
+		preview += `
 			<img class="img-fluid preview-img d-none" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
 		`;
 	
 	else
-		preview = `
+		preview += `
 			<a href="#" class="preview-link d-none" target="_blank">
 				<i class="fa-solid fa-file-lines"></i>
 				<span class="preview-ext"></span> file
