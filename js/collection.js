@@ -32,17 +32,10 @@ $(document).ready(function() {
         if(window.editScolid)
             data['scolid'] = window.editScolid;
         
-        if(netid != '')
-            data['netid'] = netid;
-        
-        if(description != '')
-            data['description'] = description;
-        
-        if(website != '')
-            data['website'] = website;
-        
-        if(twitter != '')
-            data['twitter'] = twitter;
+        data['netid'] = netid;
+        data['description'] = description;
+        data['website'] = website;
+        data['twitter'] = twitter;
         
         var endpoint = 'add';
         if(window.editScolid)
