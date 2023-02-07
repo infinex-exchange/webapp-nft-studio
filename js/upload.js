@@ -1,23 +1,23 @@
 function initUpload(elem, utType, isImage, currentUrl) {
-	var preview = '
+	var preview = `
 		<span class="preview-empty d-none">
 			<i class="fa-solid fa-xmark"></i>
 			No file selected
 		</span>
-	';
+	`;
 	
 	if(isImage)
-		preview = '
+		preview = `
 			<img class="img-fluid preview-img d-none" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-		';
+		`;
 	
 	else
-		preview = '
+		preview = `
 			<a href="#" class="preview-link d-none" target="_blank">
 				<i class="fa-solid fa-file-lines"></i>
 				<span class="preview-ext"></span> file
 			</a>
-		';
+		`;
 	
 	$(elem).append(`
 		<div class="upload-control ui-card-light border">
