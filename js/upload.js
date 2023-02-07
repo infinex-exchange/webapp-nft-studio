@@ -105,12 +105,12 @@ function initUpload(elem, utType, isImage, currentUrl) {
 	    var ticket = $(this).data('ticket-fresh');
 	    alert('uploading as ' + ticket);
 	    
-	    fileInput.data('ticket-used', ticket)
-	             .removeData('ticket-fresh');
+	    $(elem).data('ticket', ticket);
+	    fileInput.removeData('ticket-fresh');
 	    btnUpload.prop('disabled', false);
     });
     
     $(elem).find('.btn-remove').click(function() {
-	    fileInput.data('ticket-used', null);
+	    $(elem).data('ticket', null);
     });
 }
