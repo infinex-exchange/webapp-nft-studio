@@ -1,7 +1,3 @@
-function removeAttribute(elem) {
-    console.log($(elem).parent('.attribute-item'));
-}
-
 function addAttribute(key = '', value = '') {
     $('#attributes').append(`
         <div class="row attribute-item">
@@ -15,12 +11,16 @@ function addAttribute(key = '', value = '') {
                 <input type="text" class="form-control attribute-value" value="${value}">
             </div>
             <div class="col-auto ms-auto my-auto">
-                <a href="#_" class="nav-link">
-                    <i class="fa-solid fa-xmark nav-link" onClick="removeAttribute(this)"></i>
+                <a href="#_" class="nav-link attribute-remove">
+                    <i class="fa-solid fa-xmark"></i>
                 </a>
             </div>
         </div>
     `);
+    
+    $('.attribute-remove').off('click').on('click', function() {
+        $(elem).parent('.attribute-item').remove();
+    });
 }
 
 function setAttributes(attributes) {
