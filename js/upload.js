@@ -49,7 +49,7 @@ function initUpload(elem, utType, isImage, currentUrl) {
 	if(currentUrl) {
 		if(isImage)
 			$(elem).find('.preview-img').attr('src', currentUrl)
-			                            .removeClas('d-none');
+			                            .removeClass('d-none');
 		
 		else {
 			var extension = currentUrl.split('.').pop().toUpperCase();
