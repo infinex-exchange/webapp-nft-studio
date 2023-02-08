@@ -91,13 +91,13 @@
                 <div class="col-12 pt-3 pb-1">
                     <h5 class="secondary">NFT file:</h5>
                 </div>
-                <div class="col-12 col-lg-6">
+                <div id="nft-data" class="col-12 col-lg-6">
                 </div>
                 
                 <div class="col-12 pt-3 pb-1">
                     <h5 class="secondary">License file:</h5>
                 </div>
-                <div class="col-12 col-lg-6">
+                <div id="nft-license" class="col-12 col-lg-6">
                 </div>
                 
                 <div class="col-12 pt-3">

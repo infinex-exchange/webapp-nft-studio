@@ -38,6 +38,14 @@ $(document).ready(function() {
         data['attributes'] = attributes;
         data['royalty_perc'] = royalty;
         
+        var utData = $('#nft-data').data('ticket');
+        if(typeof utData != 'undefined')
+            data['data_ut'] = utData;
+        
+        var utLicense = $('#nft-license').data('ticket')
+        if(typeof utLicense != 'undefined')
+            data['license_ut'] = utLicense;
+        
         var endpoint = 'add';
         if(window.editSnftid)
             endpoint = 'update';
@@ -81,6 +89,8 @@ $(document).on('authChecked', function() {
     if(snftid == 'add') {
         $('.title-create').removeClass('d-none');
         document.title = 'Create NFT | ' + document.title;
+        initUpload('#nft-data', 'nft', true, null);
+        initUpload('#nft-license', 'nft-license', false, null);
         
         var addScolid = urlParams.get('col');
         
@@ -160,6 +170,9 @@ $(document).on('authChecked', function() {
                 
                 if(data.attributes)
                     setAttributes(data.attributes);
+                
+                initUpload('#nft-data', 'nft', true, data.data_url);
+                initUpload('#nft-license', 'nft-license', false, data.license_url);
                 
                 $(document).trigger('renderingStage');
             }
