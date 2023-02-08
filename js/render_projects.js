@@ -39,7 +39,7 @@ function renderCollection(data) {
 		`;
     }
     
-    var preview = '/nft/img/no_preview.png';
+    var preview = data.preview ? data.preview : '/nft/img/no_preview.png';
     
     var badgeNet = '';
     
@@ -102,7 +102,7 @@ function renderNft(data, back = null) {
 		`;
     }
     
-    var preview = '/nft/img/no_preview.png';
+    var preview = data.preview ? data.preview : '/nft/img/no_preview.png';
     
     var badgeNet = '';
     
