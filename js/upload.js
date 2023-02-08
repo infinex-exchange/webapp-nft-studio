@@ -110,7 +110,7 @@ function initUpload(elem, utType, isImage, currentUrl) {
         
 	    btnUpload.prop('disabled', true);
         $(elem).find('.preview-any').addClass('d-none');
-        $(elem).find('.progress').removeClass('d-none');
+        $(elem).find('.progress-wrapper').removeClass('d-none');
         
         var ticket = fileInput.data('ticket-fresh');
         
@@ -131,20 +131,20 @@ function initUpload(elem, utType, isImage, currentUrl) {
             if(data.success) {
                 $(elem).data('ticket', ticket);
         	    fileInput.removeData('ticket-fresh');
-                $(elem).find('.progress').addClass('d-none');
+                $(elem).find('.progress-wrapper').addClass('d-none');
                 $(elem).find('.preview-any').removeClass('d-none');
         	    btnUpload.prop('disabled', false);
             }
             else {
                 msgBox(data.error);
-                $(elem).find('.progress').addClass('d-none');
+                $(elem).find('.progress-wrapper').addClass('d-none');
                 $(elem).find('.preview-any').removeClass('d-none');
         	    btnUpload.prop('disabled', false);
             }
         })
         .fail(function (jqXHR, textStatus, errorThrown) {
             msgBoxNoConn();
-            $(elem).find('.progress').addClass('d-none');
+            $(elem).find('.progress-wrapper').addClass('d-none');
             $(elem).find('.preview-any').removeClass('d-none');
     	    btnUpload.prop('disabled', false);
         });
