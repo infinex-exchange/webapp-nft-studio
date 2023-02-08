@@ -45,6 +45,12 @@
                 </div>
                 
                 <div class="col-12 pt-3 pb-1">
+                    <h5 class="secondary">NFT file:</h5>
+                </div>
+                <div id="nft-data" class="col-12">
+                </div>
+                
+                <div class="col-12 pt-3 pb-1">
                     <h5 class="secondary">Collection:</h5>
                 </div>
                 <div class="col-12 col-lg-6">
@@ -86,12 +92,6 @@
                 <div class="col-12"></div>
                 <div class="col-12 col-lg-6">
                     <span class="small secondary range-value" for="nft-royalty-perc" suffix=" %"></span>
-                </div>
-                
-                <div class="col-12 pt-3 pb-1">
-                    <h5 class="secondary">NFT file:</h5>
-                </div>
-                <div id="nft-data" class="col-12 col-lg-6">
                 </div>
                 
                 <div class="col-12 pt-3 pb-1">
