@@ -111,9 +111,39 @@ function initUpload(elem, utType, isImage, currentUrl) {
 	    btnUpload.prop('disabled', true);
         $(elem).find('.preview-any').addClass('d-none');
         $(elem).find('.progress').removeClass('d-none');
-	    
-	    var ticket = $(this).data('ticket-fresh');
-	    alert('uploading as ' + ticket);
+        
+        var ticket = fileInput.data('ticket-fresh');
+        
+        var fd = new FormData();
+        fd.append('file', fileInput[0].files[0]);
+        fd.append('upload_ticket', ticket);
+        
+        $.ajax({
+            url: studioConfig.cdnUrl + '/nft/studio/start_upload',
+            type: 'POST',
+            data: JSON.stringify({
+                api_key: window.apiKey,
+                type: utType
+            }),
+            contentType: "application/json",
+            dataType: "json",
+        })
+        .retry(config.retry)
+        .done(function (data) {
+            if(data.success) {
+                 fileInput.data('ticket-fresh', data.ticket)
+                          .trigger('click');
+                 btnUpload.prop('disabled', false);
+            }
+            else {
+                msgBox(data.error);
+                btnUpload.prop('disabled', false);
+            }
+        })
+        .fail(function (jqXHR, textStatus, errorThrown) {
+            msgBoxNoConn();
+            btnUpload.prop('disabled', false);
+        });
 	    
 	    $(elem).data('ticket', ticket);
 	    fileInput.removeData('ticket-fresh');
