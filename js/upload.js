@@ -77,7 +77,7 @@ function initUpload(elem, utType, isImage, currentUrl) {
 		btnUpload.prop('disabled', true);
 		
 		$.ajax({
-            url: config.apiUrl + '/upload',
+            url: config.apiUrl + '/nft/studio/start_upload',
             type: 'POST',
             data: JSON.stringify({
                 api_key: window.apiKey,
@@ -119,7 +119,7 @@ function initUpload(elem, utType, isImage, currentUrl) {
         fd.append('upload_ticket', ticket);
         
         $.ajax({
-            url: studioConfig.cdnUrl + '/nft/studio/start_upload',
+            url: studioConfig.cdnUrl + '/upload',
             type: 'POST',
             data: fd,
             contentType: false,
