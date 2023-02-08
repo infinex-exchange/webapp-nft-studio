@@ -77,7 +77,7 @@ function initUpload(elem, utType, isImage, currentUrl) {
 		btnUpload.prop('disabled', true);
 		
 		$.ajax({
-            url: config.apiUrl + '/nft/studio/start_upload',
+            url: config.apiUrl + '/upload',
             type: 'POST',
             data: JSON.stringify({
                 api_key: window.apiKey,
