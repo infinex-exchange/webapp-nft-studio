@@ -37,6 +37,14 @@ $(document).ready(function() {
         data['website'] = website;
         data['twitter'] = twitter;
         
+        var utIcon = $('#col-icon').data('ticket');
+        if(typeof utIcon != 'undefined')
+            data['icon_ut'] = utIcon;
+        
+        var utBanner = $('#col-banner').data('ticket')
+        if(typeof utBanner != 'undefined')
+            data['banner_ut'] = utBanner;
+        
         var endpoint = 'add';
         if(window.editScolid)
             endpoint = 'update';
