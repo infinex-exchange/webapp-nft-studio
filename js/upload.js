@@ -135,7 +135,7 @@ function initUpload(elem, utType, isImage, currentUrl) {
                 
                 if(isImage)
                     $(elem).find('.preview-img').attr('src', studioConfig.cdnUrl + data.url)
-			                                    .removeClas('d-none');
+			                                    .removeClass('d-none');
                 
                 else {
                     var extension = data.url.split('.').pop().toUpperCase();
