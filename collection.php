@@ -81,7 +81,7 @@
                 <div class="col-12 pt-3 pb-1">
                     <h5 class="secondary">Banner:</h5>
                 </div>
-                <div id="col-banner" class="col-9">
+                <div id="col-banner" class="col-12">
                 </div>
                 
                 <div class="col-12 pt-3">
