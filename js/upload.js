@@ -118,7 +118,7 @@ function initUpload(elem, utType, isImage, currentUrl) {
         fd.append('file', fileInput[0].files[0]);
         fd.append('upload_ticket', ticket);
         
-        $.ajax({
+        /*$.ajax({
             url: studioConfig.cdnUrl + '/nft/studio/start_upload',
             type: 'POST',
             data: fd,
@@ -147,7 +147,7 @@ function initUpload(elem, utType, isImage, currentUrl) {
             $(elem).find('.progress').addClass('d-none');
             $(elem).find('.preview-any').removeClass('d-none');
     	    btnUpload.prop('disabled', false);
-        });
+        });*/
     });
     
     $(elem).find('.btn-remove').click(function() {
