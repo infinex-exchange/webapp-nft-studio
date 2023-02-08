@@ -137,6 +137,7 @@ function initUpload(elem, utType, isImage, currentUrl) {
             }
             else {
                 msgBox(data.error);
+                fileInput.removeData('ticket-fresh');
                 $(elem).find('.progress-wrapper').addClass('d-none');
                 $(elem).find('.preview-any').removeClass('d-none');
         	    btnUpload.prop('disabled', false);
@@ -144,6 +145,7 @@ function initUpload(elem, utType, isImage, currentUrl) {
         })
         .fail(function (jqXHR, textStatus, errorThrown) {
             msgBoxNoConn();
+            fileInput.removeData('ticket-fresh');
             $(elem).find('.progress-wrapper').addClass('d-none');
             $(elem).find('.preview-any').removeClass('d-none');
     	    btnUpload.prop('disabled', false);
