@@ -25,7 +25,7 @@ function initUpload(elem, utType, isImage, currentUrl) {
 				<div class="col-12 text-center preview-any">
 					${preview}
 				</div>
-                <div class="col-12 py-4">
+                <div class="col-12 py-4 d-none progress">
                     <div class="indet-progress-bar">
                         <div class="indet-progress-bar-value"></div>
                     </div>
@@ -106,12 +106,16 @@ function initUpload(elem, utType, isImage, currentUrl) {
     
     fileInput.on('change', function() {
 	    btnUpload.prop('disabled', true);
+        $(elem).find('.preview-any').addClass('d-none');
+        $(elem).find('.progress').removeClass('d-none');
 	    
 	    var ticket = $(this).data('ticket-fresh');
 	    alert('uploading as ' + ticket);
 	    
 	    $(elem).data('ticket', ticket);
 	    fileInput.removeData('ticket-fresh');
+        $(elem).find('.progress').addClass('d-none');
+        $(elem).find('.preview-any').removeClass('d-none');
 	    btnUpload.prop('disabled', false);
     });
     
