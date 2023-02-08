@@ -37,7 +37,7 @@
             
             
             <div class="row">               
-                <div class="col-12 pb-1">
+                <div class="col-12 pt-4 pb-1">
                     <h5 class="secondary">NFT name:</h5>
                 </div>
                 <div class="col-12 col-lg-6">
