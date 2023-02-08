@@ -25,7 +25,7 @@ function initUpload(elem, utType, isImage, currentUrl) {
 				<div class="col-12 text-center preview-any">
 					${preview}
 				</div>
-                <div class="col-12 py-4 d-none progress">
+                <div class="col-12 py-4 d-none progress-wrapper">
                     <div class="indet-progress-bar">
                         <div class="indet-progress-bar-value"></div>
                     </div>
