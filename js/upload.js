@@ -105,6 +105,9 @@ function initUpload(elem, utType, isImage, currentUrl) {
     });
     
     fileInput.on('change', function() {
+        if(fileInput.val() == '')
+            return;
+        
 	    btnUpload.prop('disabled', true);
         $(elem).find('.preview-any').addClass('d-none');
         $(elem).find('.progress').removeClass('d-none');
