@@ -44,34 +44,34 @@
                     <input id="nft-name" type="text" class="form-control">
                 </div>
                 
-                <div class="col-12 pt-3 pb-1">
+                <div class="col-12 pt-5 pb-1">
                     <h5 class="secondary">NFT file:</h5>
                 </div>
                 <div id="nft-data" class="col-12">
                 </div>
                 
-                <div class="col-12 pt-3 pb-1">
+                <div class="col-12 pt-5 pb-1">
                     <h5 class="secondary">Collection:</h5>
                 </div>
                 <div class="col-12 col-lg-6">
                     <?php include('../templates/select_col.php'); ?>
                 </div>
                 
-                <div class="col-12 pt-3 pb-1">
+                <div class="col-12 pt-5 pb-1">
                     <h5 class="secondary">Network:</h5>
                 </div>
                 <div class="col-12 col-lg-6">
                     <?php include('../../../templates/select_net.php'); ?>
                 </div>
     
-                <div class="col-12 pt-3 pb-1">
+                <div class="col-12 pt-5 pb-1">
                     <h5 class="secondary">Description:</h5>
                 </div>
                 <div class="col-12">
                     <textarea id="nft-description" class="w-100" rows="10"></textarea>
                 </div>
                 
-                <div class="col-12 pt-3 pb-1">
+                <div class="col-12 pt-5 pb-1">
                     <h5 class="secondary">Attributes:</h5>
                 </div>
                 <div class="col-12 col-lg-9" id="attributes">
@@ -83,7 +83,7 @@
 		            </button>
 	            </div>
                 
-                <div class="col-12 pt-3 pb-1">
+                <div class="col-12 pt-5 pb-1">
                     <h5 class="secondary">Royalty percentage:</h5>
                 </div>
                 <div class="col-12 col-lg-6">
@@ -94,13 +94,13 @@
                     <span class="small secondary range-value" for="nft-royalty-perc" suffix=" %"></span>
                 </div>
                 
-                <div class="col-12 pt-3 pb-1">
+                <div class="col-12 pt-5 pb-1">
                     <h5 class="secondary">License file:</h5>
                 </div>
                 <div id="nft-license" class="col-12 col-lg-6">
                 </div>
                 
-                <div class="col-12 pt-3">
+                <div class="col-12 pt-5">
                     <button id="nft-submit" type="button" class="btn btn-primary">
                         <i class="fa-solid fa-floppy-disk"></i>
                         Save changes
