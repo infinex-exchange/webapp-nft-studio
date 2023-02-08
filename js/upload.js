@@ -66,15 +66,15 @@ function initUpload(elem, utType, isImage, currentUrl) {
 	}
 	
 	var fileInput = $(elem).find('.file-input');
-	var btnUpload = $(elem).find('.btn-upload');
+	var buttons = $(elem).find('.btn-upload, .btn-remove');
 	
-	btnUpload.click(function() {
+	$(elem).find('.btn-upload').click(function() {
 		if(typeof fileInput.data('ticket-fresh') != 'undefined') {
 			fileInput.trigger('click');
 		    return;
 		}
 		
-		btnUpload.prop('disabled', true);
+		buttons.prop('disabled', true);
 		
 		$.ajax({
             url: config.apiUrl + '/nft/studio/start_upload',
@@ -91,16 +91,16 @@ function initUpload(elem, utType, isImage, currentUrl) {
             if(data.success) {
                  fileInput.data('ticket-fresh', data.ticket)
                           .trigger('click');
-                 btnUpload.prop('disabled', false);
+                 buttons.prop('disabled', false);
             }
             else {
                 msgBox(data.error);
-                btnUpload.prop('disabled', false);
+                buttons.prop('disabled', false);
             }
         })
         .fail(function (jqXHR, textStatus, errorThrown) {
             msgBoxNoConn();
-            btnUpload.prop('disabled', false);
+            buttons.prop('disabled', false);
         });
     });
     
@@ -108,7 +108,7 @@ function initUpload(elem, utType, isImage, currentUrl) {
         if(fileInput.val() == '')
             return;
         
-	    btnUpload.prop('disabled', true);
+	    buttons.prop('disabled', true);
         $(elem).find('.preview-any').addClass('d-none');
         $(elem).find('.progress-wrapper').removeClass('d-none');
         
@@ -132,15 +132,28 @@ function initUpload(elem, utType, isImage, currentUrl) {
                 $(elem).data('ticket', ticket);
         	    fileInput.removeData('ticket-fresh');
                 $(elem).find('.progress-wrapper').addClass('d-none');
-                $(elem).find('.preview-any').removeClass('d-none');
-        	    btnUpload.prop('disabled', false);
+                
+                if(isImage)
+                    $(elem).find('.preview-img').attr('src', studioConfig.cdnUrl + data.url)
+			                                    .removeClas('d-none');
+                
+                else {
+                    var extension = data.url.split('.').pop().toUpperCase();
+        			$(elem).find('.preview-ext').html(extension);
+        			$(elem).find('.preview-link').attr('href', studioConfig.cdnUrl + data.url)
+        			                             .removeClass('d-none');
+                }
+                
+                $(elem).find('.text-upload, .preview-empty').addClass('d-none');
+                $(elem).find('.text-replace, .preview-any, .btn-remove').removeClass('d-none');
+        	    buttons.prop('disabled', false);
             }
             else {
                 msgBox(data.error);
                 fileInput.removeData('ticket-fresh');
                 $(elem).find('.progress-wrapper').addClass('d-none');
                 $(elem).find('.preview-any').removeClass('d-none');
-        	    btnUpload.prop('disabled', false);
+        	    buttons.prop('disabled', false);
             }
         })
         .fail(function (jqXHR, textStatus, errorThrown) {
@@ -148,7 +161,7 @@ function initUpload(elem, utType, isImage, currentUrl) {
             fileInput.removeData('ticket-fresh');
             $(elem).find('.progress-wrapper').addClass('d-none');
             $(elem).find('.preview-any').removeClass('d-none');
-    	    btnUpload.prop('disabled', false);
+    	    buttons.prop('disabled', false);
         });
     });
     
@@ -158,5 +171,7 @@ function initUpload(elem, utType, isImage, currentUrl) {
     
     $(elem).find('.btn-remove').click(function() {
 	    $(elem).data('ticket', null);
+        $(elem).find('.btn-remove, .preview-img, .preview-link, .text-replace').addClass('d-none');
+        $(elem).find('.preview-empty, .text-upload').removeClass('d-none');
     });
 }
