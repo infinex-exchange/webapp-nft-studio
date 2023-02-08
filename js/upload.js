@@ -150,6 +150,10 @@ function initUpload(elem, utType, isImage, currentUrl) {
         });
     });
     
+    fileInput.on('click', function() {
+        fileInput.val('');
+    });
+    
     $(elem).find('.btn-remove').click(function() {
 	    $(elem).data('ticket', null);
     });
