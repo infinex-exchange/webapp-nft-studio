@@ -121,35 +121,33 @@ function initUpload(elem, utType, isImage, currentUrl) {
         $.ajax({
             url: studioConfig.cdnUrl + '/nft/studio/start_upload',
             type: 'POST',
-            data: JSON.stringify({
-                api_key: window.apiKey,
-                type: utType
-            }),
-            contentType: "application/json",
+            data: fd,
+            contentType: false,
+            processData: false,
             dataType: "json",
         })
         .retry(config.retry)
         .done(function (data) {
             if(data.success) {
-                 fileInput.data('ticket-fresh', data.ticket)
-                          .trigger('click');
-                 btnUpload.prop('disabled', false);
+                $(elem).data('ticket', ticket);
+        	    fileInput.removeData('ticket-fresh');
+                $(elem).find('.progress').addClass('d-none');
+                $(elem).find('.preview-any').removeClass('d-none');
+        	    btnUpload.prop('disabled', false);
             }
             else {
                 msgBox(data.error);
-                btnUpload.prop('disabled', false);
+                $(elem).find('.progress').addClass('d-none');
+                $(elem).find('.preview-any').removeClass('d-none');
+        	    btnUpload.prop('disabled', false);
             }
         })
         .fail(function (jqXHR, textStatus, errorThrown) {
             msgBoxNoConn();
-            btnUpload.prop('disabled', false);
+            $(elem).find('.progress').addClass('d-none');
+            $(elem).find('.preview-any').removeClass('d-none');
+    	    btnUpload.prop('disabled', false);
         });
-	    
-	    $(elem).data('ticket', ticket);
-	    fileInput.removeData('ticket-fresh');
-        $(elem).find('.progress').addClass('d-none');
-        $(elem).find('.preview-any').removeClass('d-none');
-	    btnUpload.prop('disabled', false);
     });
     
     $(elem).find('.btn-remove').click(function() {
