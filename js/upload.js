@@ -21,11 +21,11 @@ function initUpload(elem, utType, isImage, currentUrl) {
 	
 	$(elem).append(`
 		<div class="upload-control ui-card-light border p-2">
-			<div class="row">
+			<div class="row pb-3">
 				<div class="col-12 text-center preview-any">
 					${preview}
 				</div>
-                <div class="col-12 py-4 d-none progress-wrapper">
+                <div class="col-12 py-3 d-none progress-wrapper">
                     <div class="indet-progress-bar">
                         <div class="indet-progress-bar-value"></div>
                     </div>
