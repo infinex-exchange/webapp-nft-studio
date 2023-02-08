@@ -22,9 +22,14 @@ function initUpload(elem, utType, isImage, currentUrl) {
 	$(elem).append(`
 		<div class="upload-control ui-card-light border p-2">
 			<div class="row">
-				<div class="col-12 text-center">
+				<div class="col-12 text-center preview-any">
 					${preview}
 				</div>
+                <div class="col-12">
+                    <div class="indet-progress-bar">
+                        <div class="indet-progress-bar-value"></div>
+                    </div>
+                </div>
 				<div class="col-auto mx-auto">
 					<button type="button" class="btn-upload btn btn-primary btn-sm">
 				        <i class="fa-solid fa-upload"></i>
