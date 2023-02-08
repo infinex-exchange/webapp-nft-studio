@@ -122,8 +122,8 @@ $(document).on('authChecked', function() {
                 
                 $('#btn-add-nft').attr('href', '/nft/studio/nft/add?col=' + window.editScolid + '&back=col');
                 
-                initUpload('#col-icon', 'nft-col-icon', true, data.icon_preview);
-		        initUpload('#col-banner', 'nft-col-banner', true, data.banner_preview);
+                initUpload('#col-icon', 'nft-col-icon', true, data.icon_url);
+		        initUpload('#col-banner', 'nft-col-banner', true, data.banner_url);
                 
                 $(document).trigger('renderingStage');
             }
