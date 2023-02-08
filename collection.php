@@ -37,54 +37,54 @@
             
             
             <div class="row">               
-                <div class="col-12 pt-3 pb-1">
+                <div class="col-12 pt-4 pb-1">
                     <h5 class="secondary">Collection name:</h5>
                 </div>
                 <div class="col-12 col-lg-6">
                     <input id="col-name" type="text" class="form-control">
                 </div>
                 
-                <div class="col-12 pt-3 pb-1">
+                <div class="col-12 pt-4 pb-1">
                     <h5 class="secondary">Network:</h5>
                 </div>
                 <div class="col-12 col-lg-6">
                     <?php include('../../../templates/select_net.php'); ?>
                 </div>
     
-                <div class="col-12 pt-3 pb-1">
+                <div class="col-12 pt-4 pb-1">
                     <h5 class="secondary">Description:</h5>
                 </div>
                 <div class="col-12">
                     <textarea id="col-description" class="w-100" rows="10"></textarea>
                 </div>
                 
-                <div class="col-12 pt-3 pb-1">
+                <div class="col-12 pt-4 pb-1">
                     <h5 class="secondary">Website:</h5>
                 </div>
                 <div class="col-12 col-lg-6">
                     <input id="col-website" type="text" class="form-control">
                 </div>
                 
-                <div class="col-12 pt-3 pb-1">
+                <div class="col-12 pt-4 pb-1">
                     <h5 class="secondary">Twitter:</h5>
                 </div>
                 <div class="col-12 col-lg-6">
                     <input id="col-twitter" type="text" class="form-control">
                 </div>
                 
-                <div class="col-12 pt-3 pb-1">
+                <div class="col-12 pt-4 pb-1">
                     <h5 class="secondary">Icon:</h5>
                 </div>
                 <div id="col-icon" class="col-12 col-lg-6">
                 </div>
                 
-                <div class="col-12 pt-3 pb-1">
+                <div class="col-12 pt-4 pb-1">
                     <h5 class="secondary">Banner:</h5>
                 </div>
                 <div id="col-banner" class="col-12">
                 </div>
                 
-                <div class="col-12 pt-3">
+                <div class="col-12 pt-4">
                     <button id="col-submit" type="button" class="btn btn-primary">
                         <i class="fa-solid fa-floppy-disk"></i>
                         Save changes
@@ -98,7 +98,7 @@
         
         </div>
         
-        <div class="col-12 edit-only d-none">
+        <div class="col-12 edit-only pt-5 d-none">
             <div class="row">
                 <h3 class="pt-4">NFTs in this collection:</h3>
             </div>
