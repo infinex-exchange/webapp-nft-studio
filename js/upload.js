@@ -69,12 +69,16 @@ function initUpload(elem, utType, isImage, currentUrl) {
 	var buttons = $(elem).find('.btn-upload, .btn-remove');
 	
 	$(elem).find('.btn-upload').click(function() {
-		if(typeof fileInput.data('ticket-fresh') != 'undefined') {
-			fileInput.trigger('click');
-		    return;
-		}
-		
-		buttons.prop('disabled', true);
+		fileInput.val('').trigger('click');
+	});
+    
+    fileInput.on('change', function() {
+        if(fileInput.val() == '')
+            return;
+        
+        buttons.prop('disabled', true);
+        $(elem).find('.preview-any').addClass('d-none');
+        $(elem).find('.progress-wrapper').removeClass('d-none');
 		
 		$.ajax({
             url: config.apiUrl + '/nft/studio/start_upload',
@@ -89,84 +93,70 @@ function initUpload(elem, utType, isImage, currentUrl) {
         .retry(config.retry)
         .done(function (data) {
             if(data.success) {
-                 fileInput.data('ticket-fresh', data.ticket)
-                          .trigger('click');
-                 buttons.prop('disabled', false);
+	            
+	            var ticket = data.ticket;
+	            
+		        var fd = new FormData();
+		        fd.append('file', fileInput[0].files[0]);
+		        fd.append('upload_ticket', ticket);
+		        
+		        $.ajax({
+		            url: studioConfig.cdnUrl + '/upload',
+		            type: 'POST',
+		            data: fd,
+		            contentType: false,
+		            processData: false,
+		            dataType: "json",
+		        })
+		        .retry(config.retry)
+		        .done(function (data) {
+		            if(data.success) {
+		                $(elem).data('ticket', ticket);
+		                $(elem).find('.progress-wrapper').addClass('d-none');
+		                
+		                if(isImage)
+		                    $(elem).find('.preview-img').attr('src', studioConfig.cdnUrl + data.url)
+					                                    .removeClass('d-none');
+		                
+		                else {
+		                    var extension = data.url.split('.').pop().toUpperCase();
+		        			$(elem).find('.preview-ext').html(extension);
+		        			$(elem).find('.preview-link').attr('href', studioConfig.cdnUrl + data.url)
+		        			                             .removeClass('d-none');
+		                }
+		                
+		                $(elem).find('.text-upload, .preview-empty').addClass('d-none');
+		                $(elem).find('.text-replace, .preview-any, .btn-remove').removeClass('d-none');
+		        	    buttons.prop('disabled', false);
+		            }
+		            else {
+		                msgBox(data.error);
+		                $(elem).find('.progress-wrapper').addClass('d-none');
+		                $(elem).find('.preview-any').removeClass('d-none');
+		        	    buttons.prop('disabled', false);
+		            }
+		        })
+		        .fail(function (jqXHR, textStatus, errorThrown) {
+		            msgBoxNoConn();
+		            $(elem).find('.progress-wrapper').addClass('d-none');
+		            $(elem).find('.preview-any').removeClass('d-none');
+		    	    buttons.prop('disabled', false);
+		        });
+	            
             }
             else {
                 msgBox(data.error);
+                $(elem).find('.progress-wrapper').addClass('d-none');
+                $(elem).find('.preview-any').removeClass('d-none');
                 buttons.prop('disabled', false);
             }
         })
         .fail(function (jqXHR, textStatus, errorThrown) {
             msgBoxNoConn();
-            buttons.prop('disabled', false);
-        });
-    });
-    
-    fileInput.on('change', function() {
-        if(fileInput.val() == '')
-            return;
-        
-	    buttons.prop('disabled', true);
-        $(elem).find('.preview-any').addClass('d-none');
-        $(elem).find('.progress-wrapper').removeClass('d-none');
-        
-        var ticket = fileInput.data('ticket-fresh');
-        
-        var fd = new FormData();
-        fd.append('file', fileInput[0].files[0]);
-        fd.append('upload_ticket', ticket);
-        
-        $.ajax({
-            url: studioConfig.cdnUrl + '/upload',
-            type: 'POST',
-            data: fd,
-            contentType: false,
-            processData: false,
-            dataType: "json",
-        })
-        .retry(config.retry)
-        .done(function (data) {
-            if(data.success) {
-                $(elem).data('ticket', ticket);
-        	    fileInput.removeData('ticket-fresh');
-                $(elem).find('.progress-wrapper').addClass('d-none');
-                
-                if(isImage)
-                    $(elem).find('.preview-img').attr('src', studioConfig.cdnUrl + data.url)
-			                                    .removeClass('d-none');
-                
-                else {
-                    var extension = data.url.split('.').pop().toUpperCase();
-        			$(elem).find('.preview-ext').html(extension);
-        			$(elem).find('.preview-link').attr('href', studioConfig.cdnUrl + data.url)
-        			                             .removeClass('d-none');
-                }
-                
-                $(elem).find('.text-upload, .preview-empty').addClass('d-none');
-                $(elem).find('.text-replace, .preview-any, .btn-remove').removeClass('d-none');
-        	    buttons.prop('disabled', false);
-            }
-            else {
-                msgBox(data.error);
-                fileInput.removeData('ticket-fresh');
-                $(elem).find('.progress-wrapper').addClass('d-none');
-                $(elem).find('.preview-any').removeClass('d-none');
-        	    buttons.prop('disabled', false);
-            }
-        })
-        .fail(function (jqXHR, textStatus, errorThrown) {
-            msgBoxNoConn();
-            fileInput.removeData('ticket-fresh');
             $(elem).find('.progress-wrapper').addClass('d-none');
             $(elem).find('.preview-any').removeClass('d-none');
-    	    buttons.prop('disabled', false);
+            buttons.prop('disabled', false);
         });
-    });
-    
-    fileInput.on('click', function() {
-        fileInput.val('');
     });
     
     $(elem).find('.btn-remove').click(function() {
