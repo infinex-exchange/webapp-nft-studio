@@ -351,7 +351,7 @@ function intRemoveCollection(scolid, callback) {
                                     
                                     <div class="modal-body">
                                         <p>Collection "<strong>${data.name}</strong>" contains ${data.nfts_count} NFTs.<br>
-                                        Do you want to remove them or keep them unassigned to any collections?</p>
+                                        Do you want to remove them or keep them unassigned to any collection?</p>
                                     </div>
                                     
                                     <div class="modal-footer">
