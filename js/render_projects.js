@@ -78,14 +78,14 @@ function renderCollection(data) {
   `;
 }
 
-function renderNft(data, back = null) {
+function renderNft(data, back = null, readonly = false) {
     var backSuffix = '';
     if(back)
         backSuffix = '?back=' + back;
     
     var buttons = '';
     
-    if(data.status == 'DRAFT') {
+    if(data.status == 'DRAFT' || readonly) {
         buttons += `
             <a href="/nft/studio/nft/${data.snftid}${backSuffix}" class="btn btn-primary btn-sm ms-0">
 				<i class="fa-solid fa-pen-to-square"></i>
@@ -209,7 +209,7 @@ function intRemoveNft(snftid, callback) {
                             
                             <div class="modal-body">
                             
-                                ${renderNft(data)}
+                                ${renderNft(data, null, true)}
                                 
                             </div>
                             
