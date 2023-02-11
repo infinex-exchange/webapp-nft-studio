@@ -208,14 +208,13 @@ function intRemoveNft(snftid, callback) {
                     <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="ps-1 modal-title">Confirm remove</h5>
+                                <h5 class="ps-1 modal-title">Remove NFT</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             
                             <div class="modal-body">
-                            
+                                <p>Are you sure you want to remove this NFT?</p>
                                 ${renderNft(data, null, true)}
-                                
                             </div>
                             
                             <div class="modal-footer">
