@@ -216,7 +216,7 @@ function intRemoveNft(snftid, callback) {
                             
                             <div class="modal-footer">
                                 <button type="button" class="modal-close btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                                <button id="mrn-submit" type="button" class="modal-close btn btn-primary" data-bs-dismiss="modal">Remove</button>
+                                <button id="mrn-submit" type="button" class="btn btn-primary">Remove</button>
                             </div>
                         </div>
                     </div>
@@ -224,6 +224,8 @@ function intRemoveNft(snftid, callback) {
             `);
             
             $('#mrn-submit').click(function() {
+                $('#modal-remove-nft').modal('close');
+                
                 $.ajax({
                     url: config.apiUrl + '/nft/studio/nfts/remove',
                     type: 'POST',
