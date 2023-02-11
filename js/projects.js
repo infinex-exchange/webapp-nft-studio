@@ -26,7 +26,7 @@ $(document).on('authChecked', function() {
             .done(function (data) {
                 if(data.success) {
                     $.each(data.projects, function(k, v) {
-                        thisAS.append(renderProject(v));
+                        thisAS.append(renderProject(v, 'onRemoveProject'));
                     });
                     
                     thisAS.done();
@@ -52,3 +52,7 @@ $(document).on('authChecked', function() {
         true
     );
 });
+
+function onRemoveProject() {
+    window.projects.reset();
+}

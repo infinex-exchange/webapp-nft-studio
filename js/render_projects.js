@@ -12,13 +12,13 @@ var mapStatusToText = {
 	MINTED: 'Minted'
 };
 
-function renderProject(data) {
+function renderProject(data, removeCallback = null) {
     if(data.type == 'COLLECTION')
-        return renderCollection(data);
-    return renderNft(data);
+        return renderCollection(data, false, removeCallback);
+    return renderNft(data, null, false, removeCallback);
 }
 
-function renderCollection(data, readonly = false) {
+function renderCollection(data, readonly = false, removeCallback = null) {
     var buttons = '';
     
     if(!readonly) {
@@ -31,7 +31,7 @@ function renderCollection(data, readonly = false) {
     
         if(data.status == 'DRAFT') {
             buttons += `
-                <button type="button" class="btn btn-primary btn-sm" onClick="removeCollection(${data.scolid})">
+                <button type="button" class="btn btn-primary btn-sm" onClick="removeCollection(${data.scolid}, ${removeCallback})">
     				<i class="fa-solid fa-trash-can"></i>
     				Remove
     			</button>
@@ -82,7 +82,7 @@ function renderCollection(data, readonly = false) {
   `;
 }
 
-function renderNft(data, back = null, readonly = false) {
+function renderNft(data, back = null, readonly = false, removeCallback = null) {
     var backSuffix = '';
     if(back)
         backSuffix = '?back=' + back;
@@ -95,7 +95,7 @@ function renderNft(data, back = null, readonly = false) {
 				<i class="fa-solid fa-pen-to-square"></i>
 				Edit
 			</a>
-			<button type="button" class="btn btn-primary btn-sm" onClick="removeNft(${data.snftid})">
+			<button type="button" class="btn btn-primary btn-sm" onClick="removeNft(${data.snftid}, ${removeCallback})">
 				<i class="fa-solid fa-trash-can"></i>
 				Remove
 			</button>
@@ -186,7 +186,7 @@ function enqueueNft(snftid) {
     );
 }
 
-function intRemoveNft(snftid, callback) {
+function removeNft(snftid, callback) {
     $.ajax({
         url: config.apiUrl + '/nft/studio/nfts/get',
         type: 'POST',
@@ -265,7 +265,7 @@ function intRemoveNft(snftid, callback) {
     });
 }
 
-function intAjaxRemoveCollection(scolid, callback, cascade) {
+function intRemoveCollection(scolid, callback, cascade) {
     $.ajax({
         url: config.apiUrl + '/nft/studio/collections/remove',
         type: 'POST',
@@ -291,7 +291,7 @@ function intAjaxRemoveCollection(scolid, callback, cascade) {
     });
 }
 
-function intRemoveCollection(scolid, callback) {
+function removeCollection(scolid, callback) {
     $.ajax({
         url: config.apiUrl + '/nft/studio/collections/get',
         type: 'POST',
@@ -335,7 +335,7 @@ function intRemoveCollection(scolid, callback) {
                 $('#modal-remove-col').modal('hide');
                 
                 if(data.nfts_count == 0)
-                    intAjaxRemoveCollection(scolid, callback, false);
+                    intRemoveCollection(scolid, callback, false);
                 
                 else {
                     $('#modal-remove-col-cascade').remove();
@@ -366,7 +366,7 @@ function intRemoveCollection(scolid, callback) {
                     
                     $('#mrcc-submit-cascade').click(function() {
                         $('#modal-remove-col-cascade').modal('hide');
-                        intAjaxRemoveCollection(scolid, callback, true);
+                        intRemoveCollection(scolid, callback, true);
                     });
                     
                     $('#mrcc-submit').click(function() {
