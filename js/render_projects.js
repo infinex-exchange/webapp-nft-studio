@@ -336,10 +336,13 @@ function intRemoveCollection(scolid, callback) {
             $('#mrc-submit').click(function() {
                 $('#modal-remove-col').modal('hide');
                 
-                if(data.nfts_count == 0)
+                if(data.nfts_count == 0) {
+                    alert(1);
                     intAjaxRemoveCollection(scolid, callback, false);
+                }
                 
                 else {
+                alert(2);
                     $('#modal-remove-col-cascade').remove();
             
                     $('body').append(`
