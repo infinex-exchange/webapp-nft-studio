@@ -165,7 +165,7 @@ $(document).on('authChecked', function() {
                 .done(function (data) {
                     if(data.success) {
                         $.each(data.nfts, function(k, v) {
-                            thisAS.append(renderNft(v, 'col'));
+                            thisAS.append(renderNft(v, 'col', false, 'onNftRemove'));
                         });
                         
                         thisAS.done();
@@ -195,3 +195,7 @@ $(document).on('authChecked', function() {
         );
     }
 });
+
+function onNftRemove() {
+	window.nftsAs.reset();
+}
