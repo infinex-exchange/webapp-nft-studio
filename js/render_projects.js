@@ -18,7 +18,7 @@ function renderProject(data) {
     return renderNft(data);
 }
 
-function renderCollection(data) {
+function renderCollection(data, readonly = false) {
     var buttons = `
 		<a href="/nft/studio/collection/${data.scolid}" class="btn btn-primary btn-sm ms-0">
 			<i class="fa-solid fa-pen-to-square"></i>
@@ -26,7 +26,7 @@ function renderCollection(data) {
 		</a>
 	`;
     
-    if(data.status == 'DRAFT') {
+    if(data.status == 'DRAFT' && !readonly) {
         buttons += `
             <button type="button" class="btn btn-primary btn-sm" onClick="removeCollection(${data.scolid})">
 				<i class="fa-solid fa-trash-can"></i>
@@ -252,6 +252,130 @@ function intRemoveNft(snftid, callback) {
             
             $('#modal-remove-nft').modal('show');
             
+            
+        } else {
+            msgBox(data.error);
+        }
+    })
+    .fail(function (jqXHR, textStatus, errorThrown) {
+        msgBoxNoConn(false);
+    });
+}
+
+function intAjaxRemoveCollection(scolid, callback, cascade) {
+    $.ajax({
+        url: config.apiUrl + '/nft/studio/collections/remove',
+        type: 'POST',
+        data: JSON.stringify({
+            api_key: window.apiKey,
+            scolid: scolid,
+            cascade: cascade
+        }),
+        contentType: "application/json",
+        dataType: "json",
+    })
+    .retry(config.retry)
+    .done(function (data) {
+        if(data.success) {
+            if(callback)
+                callback();
+        } else {
+            msgBox(data.error);
+        }
+    })
+    .fail(function (jqXHR, textStatus, errorThrown) {
+        msgBoxNoConn(false);
+    });
+}
+
+function intRemoveCollection(scolid, callback) {
+    $.ajax({
+        url: config.apiUrl + '/nft/studio/collections/get',
+        type: 'POST',
+        data: JSON.stringify({
+            api_key: window.apiKey,
+            scolid: scolid
+        }),
+        contentType: "application/json",
+        dataType: "json",
+    })
+    .retry(config.retry)
+    .done(function (data) {
+        if(data.success) {
+            
+            $('#modal-remove-col').remove();
+            
+            $('body').append(`
+                <div class="modal fade" tabindex="-1" role="dialog" id="modal-remove-col">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="ps-1 modal-title">Confirm remove</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            
+                            <div class="modal-body">
+                            
+                                ${renderCollection(data, true)}
+                                
+                            </div>
+                            
+                            <div class="modal-footer">
+                                <button type="button" class="modal-close btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                <button id="mrc-submit" type="button" class="btn btn-primary">Remove</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `);
+            
+            $('#mrc-submit').click(function() {
+                $('#modal-remove-col').modal('close');
+                
+                if(data.nfts_count == 0)
+                    intAjaxRemoveCollection(scolid, callback, false);
+                
+                else {
+                    $('#modal-remove-col-cascade').remove();
+            
+                    $('body').append(`
+                        <div class="modal fade" tabindex="-1" role="dialog" id="modal-remove-col-cascade">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="ps-1 modal-title">Confirm remove</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    
+                                    <div class="modal-body">
+                                    
+                                        <p>The collection contains ${data.nfts_count} NFTs</p>
+                                        
+                                    </div>
+                                    
+                                    <div class="modal-footer">
+                                        <button type="button" class="modal-close btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                        <button id="mrcc-submit-cascade" type="button" class="btn btn-primary">Remove</button>
+                                        <button id="mrcc-submit" type="button" class="btn btn-primary">Keep</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `);
+                    
+                    $('#mrcc-submit-cascade').click(function() {
+                        $('#modal-remove-col-cascade').modal('close');
+                        intAjaxRemoveCollection(scolid, callback, true);
+                    });
+                    
+                    $('#mrcc-submit').click(function() {
+                        $('#modal-remove-col-cascade').modal('close');
+                        intAjaxRemoveCollection(scolid, callback, false);
+                    });
+                }
+            });
+            
+            $('#modal-remove-col').modal('show');
             
         } else {
             msgBox(data.error);
