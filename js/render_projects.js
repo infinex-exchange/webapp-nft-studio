@@ -197,6 +197,7 @@ function intRemoveNft(snftid, callback) {
     .done(function (data) {
         if(data.success) {
             
+            $('#modal-remove-nft').remove();
             
             $('body').append(`
                 <div class="modal fade" tabindex="-1" role="dialog" id="modal-remove-nft">
@@ -215,12 +216,37 @@ function intRemoveNft(snftid, callback) {
                             
                             <div class="modal-footer">
                                 <button type="button" class="modal-close btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                                <button type="button" class="modal-close btn btn-primary" data-bs-dismiss="modal">Remove</button>
+                                <button id="mrn-submit" type="button" class="modal-close btn btn-primary" data-bs-dismiss="modal">Remove</button>
                             </div>
                         </div>
                     </div>
                 </div>
             `);
+            
+            $('#mrn-submit').click(function() {
+                $.ajax({
+                    url: config.apiUrl + '/nft/studio/nfts/remove',
+                    type: 'POST',
+                    data: JSON.stringify({
+                        api_key: window.apiKey,
+                        snftid: snftid
+                    }),
+                    contentType: "application/json",
+                    dataType: "json",
+                })
+                .retry(config.retry)
+                .done(function (data) {
+                    if(data.success) {
+                        if(callback)
+                            callback();
+                    } else {
+                        msgBox(data.error);
+                    }
+                })
+                .fail(function (jqXHR, textStatus, errorThrown) {
+                    msgBoxNoConn(false);
+                });
+            });
             
             $('#modal-remove-nft').modal('show');
             
