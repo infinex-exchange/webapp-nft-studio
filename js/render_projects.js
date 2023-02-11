@@ -336,13 +336,10 @@ function intRemoveCollection(scolid, callback) {
             $('#mrc-submit').click(function() {
                 $('#modal-remove-col').modal('hide');
                 
-                if(data.nfts_count == 0) {
-                    alert(1);
+                if(data.nfts_count == 0)
                     intAjaxRemoveCollection(scolid, callback, false);
-                }
                 
                 else {
-                alert(2);
                     $('#modal-remove-col-cascade').remove();
             
                     $('body').append(`
@@ -379,6 +376,8 @@ function intRemoveCollection(scolid, callback) {
                         $('#modal-remove-col-cascade').modal('hide');
                         intAjaxRemoveCollection(scolid, callback, false);
                     });
+                    
+                    $('#modal-remove-col-cascade').modal('show');
                 }
             });
             
