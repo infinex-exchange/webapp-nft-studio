@@ -224,7 +224,7 @@ function intRemoveNft(snftid, callback) {
             `);
             
             $('#mrn-submit').click(function() {
-                $('#modal-remove-nft').modal('close');
+                $('#modal-remove-nft').modal('hide');
                 
                 $.ajax({
                     url: config.apiUrl + '/nft/studio/nfts/remove',
@@ -330,7 +330,7 @@ function intRemoveCollection(scolid, callback) {
             `);
             
             $('#mrc-submit').click(function() {
-                $('#modal-remove-col').modal('close');
+                $('#modal-remove-col').modal('hide');
                 
                 if(data.nfts_count == 0)
                     intAjaxRemoveCollection(scolid, callback, false);
@@ -364,12 +364,12 @@ function intRemoveCollection(scolid, callback) {
                     `);
                     
                     $('#mrcc-submit-cascade').click(function() {
-                        $('#modal-remove-col-cascade').modal('close');
+                        $('#modal-remove-col-cascade').modal('hide');
                         intAjaxRemoveCollection(scolid, callback, true);
                     });
                     
                     $('#mrcc-submit').click(function() {
-                        $('#modal-remove-col-cascade').modal('close');
+                        $('#modal-remove-col-cascade').modal('hide');
                         intAjaxRemoveCollection(scolid, callback, false);
                     });
                 }
