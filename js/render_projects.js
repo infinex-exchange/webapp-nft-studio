@@ -19,24 +19,28 @@ function renderProject(data) {
 }
 
 function renderCollection(data, readonly = false) {
-    var buttons = `
-		<a href="/nft/studio/collection/${data.scolid}" class="btn btn-primary btn-sm ms-0">
-			<i class="fa-solid fa-pen-to-square"></i>
-			Edit
-		</a>
-	`;
+    var buttons = '';
     
-    if(data.status == 'DRAFT' && !readonly) {
+    if(!readonly) {
         buttons += `
-            <button type="button" class="btn btn-primary btn-sm" onClick="removeCollection(${data.scolid})">
-				<i class="fa-solid fa-trash-can"></i>
-				Remove
-			</button>
-			<button type="button" class="btn btn-primary btn-sm" onClick="enqueueCollection(${data.scolid})">
-				<i class="fa-solid fa-check"></i>
-				To mint
-			</button>
-		`;
+		    <a href="/nft/studio/collection/${data.scolid}" class="btn btn-primary btn-sm ms-0">
+			   <i class="fa-solid fa-pen-to-square"></i>
+			   Edit
+            </a>
+	    `;
+    
+        if(data.status == 'DRAFT') {
+            buttons += `
+                <button type="button" class="btn btn-primary btn-sm" onClick="removeCollection(${data.scolid})">
+    				<i class="fa-solid fa-trash-can"></i>
+    				Remove
+    			</button>
+    			<button type="button" class="btn btn-primary btn-sm" onClick="enqueueCollection(${data.scolid})">
+    				<i class="fa-solid fa-check"></i>
+    				To mint
+    			</button>
+    		`;
+        }
     }
     
     var preview = data.preview ? data.preview : '/nft/img/no_preview.png';
