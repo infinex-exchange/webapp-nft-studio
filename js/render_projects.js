@@ -181,3 +181,55 @@ function enqueueNft(snftid) {
         }
     );
 }
+
+function intRemoveNft(snftid, callback) {
+    $.ajax({
+        url: config.apiUrl + '/nft/studio/nfts/get',
+        type: 'POST',
+        data: JSON.stringify({
+            api_key: window.apiKey,
+            snftid: snftid
+        }),
+        contentType: "application/json",
+        dataType: "json",
+    })
+    .retry(config.retry)
+    .done(function (data) {
+        if(data.success) {
+            
+            
+            $('body').append(`
+                <div class="modal fade" tabindex="-1" role="dialog" id="modal-remove-nft">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="ps-1 modal-title">Confirm remove</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            
+                            <div class="modal-body">
+                            
+                                ${renderNft(data)}
+                                
+                            </div>
+                            
+                            <div class="modal-footer">
+                                <button type="button" class="modal-close btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                <button type="button" class="modal-close btn btn-primary" data-bs-dismiss="modal">Remove</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `);
+            
+            $('#modal-remove-nft').modal('show');
+            
+            
+        } else {
+            msgBox(data.error);
+        }
+    })
+    .fail(function (jqXHR, textStatus, errorThrown) {
+        msgBoxNoConn(false);
+    });
+}
