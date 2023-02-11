@@ -85,7 +85,7 @@ function renderNft(data, back = null, readonly = false) {
     
     var buttons = '';
     
-    if(data.status == 'DRAFT' || readonly) {
+    if(data.status == 'DRAFT' && !readonly) {
         buttons += `
             <a href="/nft/studio/nft/${data.snftid}${backSuffix}" class="btn btn-primary btn-sm ms-0">
 				<i class="fa-solid fa-pen-to-square"></i>
