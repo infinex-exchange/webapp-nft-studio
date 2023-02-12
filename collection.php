@@ -89,19 +89,19 @@
         
         <div class="col-12 pt-4">
             <div class="row">
-	            <div class="col-6 col-lg-auto m-1">
+	            <div class="col-6 col-lg-auto p-1">
 		            <button id="col-submit" type="button" class="btn btn-primary w-100">
                         <i class="fa-solid fa-floppy-disk"></i>
                         Save changes
                     </button>
 	            </div>
-	            <div class="col-6 col-lg-auto m-1">
+	            <div class="col-6 col-lg-auto p-1">
 		            <button id="col-submit-and-mint" type="button" class="btn btn-primary w-100">
                         <i class="fa-solid fa-check"></i>
                         Save and mint
                     </button>
 	            </div>
-	            <div class="col-6 col-lg-auto m-1 edit-only d-none">
+	            <div class="col-6 col-lg-auto p-1 edit-only d-none">
 		            <button id="col-remove" type="button" class="btn btn-primary w-100">
                         <i class="fa-solid fa-trash-can"></i>
                         Remove collection
