@@ -43,7 +43,7 @@ function renderCollection(data, readonly = false, removeCallback = null) {
         }
     }
     
-    var preview = data.preview ? data.preview : '/nft/img/no_preview.png';
+    var preview = data.icon_url ? data.icon_url : '/nft/img/no_preview.png';
     
     var badgeNet = '';
     
@@ -106,7 +106,7 @@ function renderNft(data, back = null, readonly = false, removeCallback = null) {
 		`;
     }
     
-    var preview = data.preview ? data.preview : '/nft/img/no_preview.png';
+    var preview = data.data_url ? data.data_url : '/nft/img/no_preview.png';
     
     var badgeNet = '';
     
