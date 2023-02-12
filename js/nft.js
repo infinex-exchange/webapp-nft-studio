@@ -238,11 +238,11 @@ function addAttribute(key = '', value = '') {
             </div>
             <div class="attribute-key-invalid small text-red pt-1 d-none">
                 <i class="fa-solid fa-triangle-exclamation"></i>
-                Attribute key contains forbidden characters
+                Invalid key
             </div>
             <div class="attribute-value-invalid small text-red pt-1 d-none">
                 <i class="fa-solid fa-triangle-exclamation"></i>
-                Attribute value contains forbidden characters
+                Invalid value
             </div>
         </div>
     `);
