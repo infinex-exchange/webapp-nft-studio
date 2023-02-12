@@ -261,11 +261,17 @@ function addAttribute(key = '', value = '') {
 		    return;
 	    }
 	    
-	    if(validateAttrKey(key) && validateAttrValue(value))
-	        $('#nft-description-invalid').addClass('d-none');
+	    if(validateAttrKey(key))
+	        parent.find('.attribute-key-invalid').addClass('d-none');
 	    
 	    else
-		    $('#nft-description-invalid').removeClass('d-none');
+		    parent.find('.attribute-key-invalid').removeClass('d-none');
+		    
+		if(validateAttrValue(value))
+	        parent.find('.attribute-value-invalid').addClass('d-none');
+	    
+	    else
+		    parent.find('.attribute-value-invalid').removeClass('d-none');
     });
 }
 
