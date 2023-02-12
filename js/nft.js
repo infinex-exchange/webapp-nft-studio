@@ -261,13 +261,13 @@ function addAttribute(key = '', value = '') {
 		    return;
 	    }
 	    
-	    if(validateAttrKey(key))
+	    if(validateAttrKey(k))
 	        parent.find('.attribute-key-invalid').addClass('d-none');
 	    
 	    else
 		    parent.find('.attribute-key-invalid').removeClass('d-none');
 		    
-		if(validateAttrValue(value))
+		if(validateAttrValue(v))
 	        parent.find('.attribute-value-invalid').addClass('d-none');
 	    
 	    else
