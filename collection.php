@@ -101,7 +101,7 @@
                         Save and mint
                     </button>
 	            </div>
-	            <div class="col-6 col-lg-auto edit-only d-none">
+	            <div class="col-6 col-lg-auto pt-1 edit-only d-none">
 		            <button id="col-remove" type="button" class="btn btn-primary w-100">
                         <i class="fa-solid fa-trash-can"></i>
                         Remove collection
