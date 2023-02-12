@@ -99,25 +99,33 @@
                 </div>
                 <div id="nft-license" class="col-12 col-lg-6">
                 </div>
-                
-                <div class="col-12 pt-4">
-                    <button id="nft-submit" type="button" class="btn btn-primary">
+            </div>
+        </div>
+        
+        <div class="col-12 pt-4">
+            <div class="row">
+	            <div class="col-6 col-lg-auto pe-1">
+		            <button id="nft-submit" type="button" class="btn btn-primary">
                         <i class="fa-solid fa-floppy-disk"></i>
                         Save changes
                     </button>
-                    <button id="nft-submit-and-mint" type="button" class="btn btn-primary">
+	            </div>
+	            <div class="col-6 col-lg-auto ps-1 pe-1">
+		            <button id="nft-submit-and-mint" type="button" class="btn btn-primary">
                         <i class="fa-solid fa-check"></i>
                         Save and mint
                     </button>
-                    <button id="nft-remove" type="button" class="btn btn-primary edit-only d-none">
+	            </div>
+	            <div class="col-6 col-lg-auto ps-lg-1 pe-1 pt-2 pt-lg-0 edit-only d-none">
+		            <button id="nft-remove" type="button" class="btn btn-primary">
                         <i class="fa-solid fa-trash-can"></i>
                         Remove NFT
                     </button>
-                </div>
+	            </div>
             </div>
+        </div>
         
         <!-- / Main column -->
-        </div>
         </div>
         </div>
             
