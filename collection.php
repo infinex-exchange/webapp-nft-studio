@@ -52,6 +52,20 @@
                         <div class="col-12">
                             <?php include('../../../templates/select_net.php'); ?>
                         </div>
+                        
+                        <div class="col-12 pt-4 pb-1">
+                            <h5 class="secondary">Website:</h5>
+                        </div>
+                        <div class="col-12">
+                            <input id="col-website" type="text" class="form-control">
+                        </div>
+                        
+                        <div class="col-12 pt-4 pb-1">
+                            <h5 class="secondary">Twitter:</h5>
+                        </div>
+                        <div class="col-12">
+                            <input id="col-twitter" type="text" class="form-control">
+                        </div>
                     </div>
                 </div>
                 
@@ -70,20 +84,6 @@
                 </div>
                 <div class="col-12">
                     <textarea id="col-description" class="w-100" rows="10"></textarea>
-                </div>
-                
-                <div class="col-12 pt-4 pb-1">
-                    <h5 class="secondary">Website:</h5>
-                </div>
-                <div class="col-12 col-lg-6">
-                    <input id="col-website" type="text" class="form-control">
-                </div>
-                
-                <div class="col-12 pt-4 pb-1">
-                    <h5 class="secondary">Twitter:</h5>
-                </div>
-                <div class="col-12 col-lg-6">
-                    <input id="col-twitter" type="text" class="form-control">
                 </div>
                 
                 <div class="col-12 pt-4 pb-1">
