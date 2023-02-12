@@ -254,7 +254,7 @@ function addAttribute(key = '', value = '') {
     $('.attribute-key, .attribute-value').off('input').on('input', function() {
 	    var parent = $(this).closest('.attribute-item');
 	    var k = parent.find('.attribute-key').val();
-	    var v = parent.find('.attributes-value').val();
+	    var v = parent.find('.attribute-value').val();
 	    
 	    if(k == '' && v == '') {
 		    parent.find('.attribute-key-invalid, .attribute-value-invalid').addClass('d-none');
