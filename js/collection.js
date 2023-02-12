@@ -21,6 +21,7 @@ $(document).ready(function() {
             (website != '' && !validateVotingWebsite(website)) ||
             (twitter != '' && !validateTwitter(twitter))
         ) {
+            $('#col-name').trigger('input');
             msgBox('Please fill in the form correctly')
             return;
         }
@@ -74,6 +75,54 @@ $(document).ready(function() {
     
     $('#col-remove').click(function() {
 	    removeCollection(window.editScolid, onCurrentColRemove);
+    });
+    
+    $('#col-name').on('input', function() {
+        var name = $(this).val();
+        
+        if(name == '') {
+	        $('#col-name-invalid').addClass('d-none');
+	        $('#col-name-required').removeClass('d-none');
+	        return;
+	    }
+	    
+	    if(!validateNftName(name)) {
+		    $('#col-name-invalid').removeClass('d-none');
+		    $('#col-name-required').addClass('d-none');
+		    return;
+	    }
+	    
+	    $('#col-name-invalid, #col-name-required').addClass('d-none');
+    });
+    
+    $('#col-description').on('input', function() {
+	    var description = $(this).val();
+	    
+        if(description == '' || validateNftDesc(description))
+	        $('#col-description-invalid').addClass('d-none');
+	    
+	    else
+		    $('#col-description-invalid').removeClass('d-none');
+    });
+    
+    $('#col-website').on('input', function() {
+	    var website = $(this).val();
+	    
+        if(website == '' || validateVotingWebsite(website))
+	        $('#col-website-invalid').addClass('d-none');
+	    
+	    else
+		    $('#col-website-invalid').removeClass('d-none');
+    });
+    
+    $('#col-twitter').on('input', function() {
+	    var twitter = $(this).val();
+	    
+        if(twitter == '' || validateTwitter(twitter))
+	        $('#col-twitter-invalid').addClass('d-none');
+	    
+	    else
+		    $('#col-twitter-invalid').removeClass('d-none');
     });
 });
 
