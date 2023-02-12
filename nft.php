@@ -43,6 +43,14 @@
                 <div class="col-12 col-lg-6">
                     <input id="nft-name" type="text" class="form-control">
                 </div>
+                <div id="nft-name-invalid" class="small text-red pt-1 d-none">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    Invalid NFT name format
+                </div>
+                <div id="nft-name-mandatory" class="small text-red pt-1 d-none">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    NFT name is mandatory
+                </div>
 
                 <div class="col-12 pt-4 pb-1">
                     <h5 class="secondary">NFT file:</h5>
@@ -76,6 +84,10 @@
                 </div>
                 <div class="col-12">
                     <textarea id="nft-description" class="w-100" rows="10"></textarea>
+                </div>
+                <div id="nft-description-invalid" class="small text-red pt-1 d-none">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    Description contains forbidden characters
                 </div>
                 
                 <div class="col-12 pt-4 pb-1">

@@ -45,6 +45,14 @@
                         <div class="col-12">
                             <input id="col-name" type="text" class="form-control">
                         </div>
+                        <div id="col-name-invalid" class="small text-red pt-1 d-none">
+	                        <i class="fa-solid fa-triangle-exclamation"></i>
+	                        Invalid collection name format
+                        </div>
+                        <div id="col-name-mandatory" class="small text-red pt-1 d-none">
+	                        <i class="fa-solid fa-triangle-exclamation"></i>
+	                        Collection name is mandatory
+                        </div>
                 
                         <div class="col-12 pt-4 pb-1">
                             <h5 class="secondary">Network:</h5>
@@ -59,12 +67,20 @@
                         <div class="col-12">
                             <input id="col-website" type="text" class="form-control">
                         </div>
+                        <div id="col-name-invalid" class="small text-red pt-1 d-none">
+	                        <i class="fa-solid fa-triangle-exclamation"></i>
+	                        Invalid URL format
+                        </div>
                         
                         <div class="col-12 pt-4 pb-1">
                             <h5 class="secondary">Twitter:</h5>
                         </div>
                         <div class="col-12">
                             <input id="col-twitter" type="text" class="form-control">
+                        </div>
+                        <div id="col-twitter-invalid" class="small text-red pt-1 d-none">
+	                        <i class="fa-solid fa-triangle-exclamation"></i>
+	                        Invalid format. Please enter only the Twitter username without "@", not the profile link
                         </div>
                     </div>
                 </div>
@@ -84,6 +100,10 @@
                 </div>
                 <div class="col-12">
                     <textarea id="col-description" class="w-100" rows="10"></textarea>
+                </div>
+                <div id="col-description-invalid" class="small text-red pt-1 d-none">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    Description contains forbidden characters
                 </div>
                 
                 <div class="col-12 pt-4 pb-1">
