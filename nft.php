@@ -47,7 +47,7 @@
                     <i class="fa-solid fa-triangle-exclamation"></i>
                     Invalid NFT name format
                 </div>
-                <div id="nft-name-mandatory" class="small text-red pt-1 d-none">
+                <div id="nft-name-required" class="small text-red pt-1 d-none">
                     <i class="fa-solid fa-triangle-exclamation"></i>
                     NFT name is mandatory
                 </div>

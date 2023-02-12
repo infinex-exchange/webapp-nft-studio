@@ -21,6 +21,7 @@ $(document).ready(function() {
             (description != '' && !validateNftDesc(description)) ||
             attributes === false
         ) {
+	        $('#nft-name').trigger('input');
             msgBox('Please fill in the form correctly')
             return;
         }
@@ -75,6 +76,34 @@ $(document).ready(function() {
     
     $('#nft-remove').click(function() {
 	    removeNft(window.editSnftid, onCurrentNftRemove);
+    });
+    
+    $('#nft-name').on('input', function() {
+        var name = $(this).val();
+        
+        if(name == '') {
+	        $('#nft-name-invalid').addClass('d-none');
+	        $('#nft-name-required').removeClass('d-none');
+	        return;
+	    }
+	    
+	    if(!validateNftName(name)) {
+		    $('#nft-name-invalid').removeClass('d-none');
+		    $('#nft-name-required').addClass('d-none');
+		    return;
+	    }
+	    
+	    $('#nft-name-invalid, #nft-name-required').addClass('d-none');
+    });
+    
+    $('#nft-description').on('input', function() {
+	    var description = $(this).val();
+	    
+        if(description == '' || validateNftDesc(description))
+	        $('#nft-description-invalid').addClass('d-none');
+	    
+	    else
+		    $('#nft-description-invalid').removeClass('d-none');
     });
 });
 
