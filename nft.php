@@ -109,7 +109,7 @@
                         <i class="fa-solid fa-check"></i>
                         Save and mint
                     </button>
-                    <button id="nft-remove" type="button" class="btn btn-primary edit-only">
+                    <button id="nft-remove" type="button" class="btn btn-primary edit-only d-none">
                         <i class="fa-solid fa-trash-can"></i>
                         Remove NFT
                     </button>
