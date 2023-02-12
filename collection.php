@@ -83,23 +83,31 @@
                 </div>
                 <div id="col-banner" class="col-12">
                 </div>
-                
-                <div class="col-12 pt-4">
-                    <button id="col-submit" type="button" class="btn btn-primary">
+            </div>
+        
+        </div>
+        
+        <div class="col-12 pt-4">
+            <div class="row">
+	            <div class="col-6 col-lg-auto">
+		            <button id="col-submit" type="button" class="btn btn-primary">
                         <i class="fa-solid fa-floppy-disk"></i>
                         Save changes
                     </button>
-                    <button id="col-submit-and-mint" type="button" class="btn btn-primary">
+	            </div>
+	            <div class="col-6 col-lg-auto">
+		            <button id="col-submit-and-mint" type="button" class="btn btn-primary">
                         <i class="fa-solid fa-check"></i>
                         Save and mint
                     </button>
-                    <button id="col-remove" type="button" class="btn btn-primary edit-only d-none">
+	            </div>
+	            <div class="col-6 col-lg-auto edit-only d-none">
+		            <button id="col-remove" type="button" class="btn btn-primary edit-only d-none">
                         <i class="fa-solid fa-trash-can"></i>
                         Remove collection
                     </button>
-                </div>
+	            </div>
             </div>
-        
         </div>
         
         <div class="col-12 edit-only pt-5 d-none">
