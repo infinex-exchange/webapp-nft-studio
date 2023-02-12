@@ -49,7 +49,7 @@
 	                        <i class="fa-solid fa-triangle-exclamation"></i>
 	                        Invalid collection name format
                         </div>
-                        <div id="col-name-mandatory" class="small text-red pt-1 d-none">
+                        <div id="col-name-required" class="small text-red pt-1 d-none">
 	                        <i class="fa-solid fa-triangle-exclamation"></i>
 	                        Collection name is mandatory
                         </div>
