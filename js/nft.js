@@ -72,6 +72,10 @@ $(document).ready(function() {
             msgBoxNoConn(false);
         });
     });
+    
+    $('#nft-remove').click(function() {
+	    removeNft(window.editSnftid, onCurrentNftRemove);
+    });
 });
 
 $(document).on('authChecked', function() {
@@ -129,7 +133,7 @@ $(document).on('authChecked', function() {
     }
     
     else {
-        $('.title-edit').removeClass('d-none');
+        $('.edit-only').removeClass('d-none');
         document.title = 'Edit NFT | ' + document.title;
         
         $.ajax({
@@ -245,4 +249,8 @@ function getAttributes() {
         return false;
     
     return attributes;
+}
+
+function onCurrentNftRemove() {
+	location.href = window.backUrl;
 }

@@ -31,7 +31,7 @@
             
             <div class="row">
                 <h3 class="title-create d-none">Create NFT</h3>
-                <h3 class="title-edit d-none">Edit NFT</h3>
+                <h3 class="edit-only d-none">Edit NFT</h3>
             </div>
             
             
@@ -108,6 +108,10 @@
                     <button id="nft-submit-and-mint" type="button" class="btn btn-primary">
                         <i class="fa-solid fa-check"></i>
                         Save and mint
+                    </button>
+                    <button id="nft-remove" type="button" class="btn btn-primary edit-only">
+                        <i class="fa-solid fa-trash-can"></i>
+                        Remove NFT
                     </button>
                 </div>
             </div>
