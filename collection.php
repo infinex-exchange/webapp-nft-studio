@@ -69,7 +69,7 @@
                     </div>
                 </div>
                 
-                <div class="col-12 col-lg-6">
+                <div class="col-12 col-lg-6 my-auto">
                     <div class="row">
                         <div class="col-12 pt-4 pb-1">
                             <h5 class="secondary">Icon:</h5>
