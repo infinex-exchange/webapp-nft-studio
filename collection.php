@@ -67,7 +67,7 @@
                         <div class="col-12">
                             <input id="col-website" type="text" class="form-control">
                         </div>
-                        <div id="col-name-invalid" class="small text-red pt-1 d-none">
+                        <div id="col-website-invalid" class="small text-red pt-1 d-none">
 	                        <i class="fa-solid fa-triangle-exclamation"></i>
 	                        Invalid URL format
                         </div>
