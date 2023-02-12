@@ -250,6 +250,23 @@ function addAttribute(key = '', value = '') {
     $('.attribute-remove').off('click').on('click', function() {
         $(this).closest('.attribute-item').remove();
     });
+    
+    $('.attribute-key, .attribute-value').off('input').on('input', function() {
+	    var parent = $(this).closest('.attribute-item');
+	    var k = parent.find('.attribute-key').val();
+	    var v = parent.find('.attributes-value').val();
+	    
+	    if(k == '' && v == '') {
+		    parent.find('.attribute-key-invalid, .attribute-value-invalid').addClass('d-none');
+		    return;
+	    }
+	    
+	    if(validateAttrKey(key) && validateAttrValue(value))
+	        $('#nft-description-invalid').addClass('d-none');
+	    
+	    else
+		    $('#nft-description-invalid').removeClass('d-none');
+    });
 }
 
 function setAttributes(attributes) {
@@ -271,7 +288,7 @@ function getAttributes() {
             return;
         }
         
-        if(key == '' || value == '') {
+        if(!validateAttrKey(key) || !validateAttrValue(value)) {
             error = true;
             return;
         }
