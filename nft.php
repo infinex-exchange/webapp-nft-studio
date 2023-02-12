@@ -43,25 +43,32 @@
                 <div class="col-12 col-lg-6">
                     <input id="nft-name" type="text" class="form-control">
                 </div>
-                
+
                 <div class="col-12 pt-4 pb-1">
                     <h5 class="secondary">NFT file:</h5>
                 </div>
                 <div id="nft-data" class="col-12">
                 </div>
                 
-                <div class="col-12 pt-4 pb-1">
-                    <h5 class="secondary">Collection:</h5>
+                <div class="col-12 col-lg-6">
+                    <div class="row">
+                        <div class="col-12 pt-4 pb-1">
+                            <h5 class="secondary">Collection:</h5>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <?php include('../templates/select_col.php'); ?>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-12 col-lg-6">
-                    <?php include('../templates/select_col.php'); ?>
-                </div>
-                
-                <div class="col-12 pt-4 pb-1">
-                    <h5 class="secondary">Network:</h5>
-                </div>
-                <div class="col-12 col-lg-6">
-                    <?php include('../../../templates/select_net.php'); ?>
+                    <div class="row">
+                        <div class="col-12 pt-4 pb-1">
+                            <h5 class="secondary">Network:</h5>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <?php include('../../../templates/select_net.php'); ?>
+                        </div>
+                    </div>
                 </div>
     
                 <div class="col-12 pt-4 pb-1">
@@ -83,21 +90,28 @@
 		            </button>
 	            </div>
                 
-                <div class="col-12 pt-4 pb-1">
-                    <h5 class="secondary">Royalty percentage:</h5>
+                <div class="col-12 col-lg-6">
+                    <div class="row">
+                        <div class="col-12 pt-4 pb-1">
+                            <h5 class="secondary">Royalty percentage:</h5>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <input id="nft-royalty-perc" type="range" class="form-range" min="0" max="90" step="0.5" value="0">
+                        </div>
+                        <div class="col-12"></div>
+                        <div class="col-12 col-lg-6">
+                            <span class="small secondary range-value" for="nft-royalty-perc" suffix=" %"></span>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-12 col-lg-6">
-                    <input id="nft-royalty-perc" type="range" class="form-range" min="0" max="90" step="0.5" value="0">
-                </div>
-                <div class="col-12"></div>
-                <div class="col-12 col-lg-6">
-                    <span class="small secondary range-value" for="nft-royalty-perc" suffix=" %"></span>
-                </div>
-                
-                <div class="col-12 pt-4 pb-1">
-                    <h5 class="secondary">License file:</h5>
-                </div>
-                <div id="nft-license" class="col-12 col-lg-6">
+                    <div class="row">
+                        <div class="col-12 pt-4 pb-1">
+                            <h5 class="secondary">License file:</h5>
+                        </div>
+                        <div id="nft-license" class="col-12 col-lg-6">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
