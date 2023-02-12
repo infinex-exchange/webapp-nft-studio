@@ -71,6 +71,10 @@ $(document).ready(function() {
             msgBoxNoConn(false);
         });
     });
+    
+    $('#col-remove').click(function() {
+	    removeCollection(window.editScolid, onCurrentColRemove);
+    });
 });
 
 $(document).on('authChecked', function() {
@@ -198,4 +202,8 @@ $(document).on('authChecked', function() {
 
 function onNftRemove() {
 	window.nftsAs.reset();
+}
+
+function onCurrentColRemove() {
+	location.href = '/nft/studio/projects';
 }
