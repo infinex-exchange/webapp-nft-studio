@@ -244,6 +244,14 @@ function addAttribute(key = '', value = '') {
                 <i class="fa-solid fa-triangle-exclamation"></i>
                 Attribute value contains forbidden characters
             </div>
+            <div class="attribute-key-required small text-red pt-1 d-none">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                Missing key name
+            </div>
+            <div class="attribute-value-required small text-red pt-1 d-none">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                Missing value
+            </div>
         </div>
     `);
     
@@ -256,22 +264,20 @@ function addAttribute(key = '', value = '') {
 	    var k = parent.find('.attribute-key').val();
 	    var v = parent.find('.attribute-value').val();
 	    
-	    if(k == '' && v == '') {
-		    parent.find('.attribute-key-invalid, .attribute-value-invalid').addClass('d-none');
+	    parent.find('.attribute-key-invalid, .attribute-value-invalid, .attribute-key-required, .attribute-value-required').addClass('d-none');
+	    
+	    if(k == '' && v == '')
 		    return;
-	    }
 	    
-	    if(validateAttrKey(k))
-	        parent.find('.attribute-key-invalid').addClass('d-none');
-	    
-	    else
-		    parent.find('.attribute-key-invalid').removeClass('d-none');
+	    if(k == '')
+		    parent.find('.attribute-key-required').removeClass('d-none');
+	    else if(!validateAttrKey(k))
+	        parent.find('.attribute-key-invalid').removeClass('d-none');
 		    
-		if(validateAttrValue(v))
-	        parent.find('.attribute-value-invalid').addClass('d-none');
-	    
-	    else
-		    parent.find('.attribute-value-invalid').removeClass('d-none');
+		if(v == '')
+			parent.find('.attribute-value-required').removeClass('d-none');
+		else if(!validateAttrValue(v))
+	        parent.find('.attribute-value-invalid').removeClass('d-none');
     });
 }
 
