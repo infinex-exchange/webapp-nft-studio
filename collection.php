@@ -36,19 +36,33 @@
             
             
             
-            <div class="row">               
-                <div class="col-12 pt-4 pb-1">
-                    <h5 class="secondary">Collection name:</h5>
-                </div>
+            <div class="row">
                 <div class="col-12 col-lg-6">
-                    <input id="col-name" type="text" class="form-control">
+                    <div class="row">               
+                        <div class="col-12 pt-4 pb-1">
+                            <h5 class="secondary">Collection name:</h5>
+                        </div>
+                        <div class="col-12">
+                            <input id="col-name" type="text" class="form-control">
+                        </div>
+                
+                        <div class="col-12 pt-4 pb-1">
+                            <h5 class="secondary">Network:</h5>
+                        </div>
+                        <div class="col-12">
+                            <?php include('../../../templates/select_net.php'); ?>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="col-12 pt-4 pb-1">
-                    <h5 class="secondary">Network:</h5>
-                </div>
                 <div class="col-12 col-lg-6">
-                    <?php include('../../../templates/select_net.php'); ?>
+                    <div class="row">
+                        <div class="col-12 pt-4 pb-1">
+                            <h5 class="secondary">Icon:</h5>
+                        </div>
+                        <div id="col-icon" class="col-12">
+                        </div>
+                    </div>
                 </div>
     
                 <div class="col-12 pt-4 pb-1">
@@ -70,12 +84,6 @@
                 </div>
                 <div class="col-12 col-lg-6">
                     <input id="col-twitter" type="text" class="form-control">
-                </div>
-                
-                <div class="col-12 pt-4 pb-1">
-                    <h5 class="secondary">Icon:</h5>
-                </div>
-                <div id="col-icon" class="col-12 col-lg-6">
                 </div>
                 
                 <div class="col-12 pt-4 pb-1">
