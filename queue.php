@@ -33,7 +33,7 @@
 					<div class="row">
 						<div class="col-12">
 							<h5>Minting in progress...</h5>
-							<p>
+							<p class="secondary">
 							    Your tasks are being processed. Once completed, created NFTs will
 							    appear in your main NFT wallet.
 							</p>
