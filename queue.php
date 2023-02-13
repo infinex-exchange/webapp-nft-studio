@@ -21,7 +21,7 @@
         <div class="row m-0 h-rest">
         
         <!-- Main column -->
-        <div class="col-12 p-0 ui-card ui-column">
+        <div class="col-12 ui-card ui-column">
             
             <div class="row">
                 <h3>Minting queue</h3>
@@ -30,14 +30,14 @@
             <div class="row">
                 <div id="queue-running" class="col-12 ui-card-light">
 					<div class="row">
-						<div class="col-12 p-2">
+						<div class="col-12">
 							<h5>Minting in progress...</h5>
 							<p>
 							    Your tasks are being processed. Once completed, created NFTs will
 							    appear in your main NFT wallet.
 							</p>
 						</div>
-		                <div class="col-12 p-2">
+		                <div class="col-12">
 		                    <div class="indet-progress-bar">
 		                        <div class="indet-progress-bar-value"></div>
 		                    </div>
