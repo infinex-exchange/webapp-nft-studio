@@ -168,7 +168,7 @@ function intEnqueue(endpoint, data) {
 
 function enqueueCollection(scolid) {
     intEnqueue(
-        '/nft/studio/collection/queue',
+        '/nft/studio/collections/queue',
         {
             api_key: window.apiKey,
             scolid: scolid
@@ -178,7 +178,7 @@ function enqueueCollection(scolid) {
 
 function enqueueNft(snftid) {
     intEnqueue(
-        '/nft/studio/nft/queue',
+        '/nft/studio/nfts/queue',
         {
             api_key: window.apiKey,
             snftid: snftid
