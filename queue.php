@@ -24,7 +24,7 @@
         <div class="col-12 p-0 ui-card ui-column">
             
             <div class="row">
-                <div id="queue-running" class="col-12">
+                <div id="queue-running" class="col-12 pb-4">
 	                <div class="ui-card-light p-3">
 					<div class="row">
 						<div class="col-12">
