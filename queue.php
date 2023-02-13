@@ -28,7 +28,7 @@
             </div>
             
             <div class="row">
-                <div id="queue-running" class="col-12 ui-card-light">
+                <div id="queue-running" class="col-12 ui-card-light m-2">
 					<div class="row">
 						<div class="col-12 p-2">
 							<h5>Minting in progress...</h5>
