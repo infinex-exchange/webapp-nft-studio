@@ -186,7 +186,7 @@ function intEnqueue(endpoint, data) {
 				        </div>
 				    </div>
 				</div>
-			`;
+			`);
 			
 			$('#modal-enqueue-errors').modal('show');
         }
