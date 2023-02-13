@@ -28,20 +28,22 @@
             </div>
             
             <div class="row">
-                <div id="queue-running" class="col-12 ui-card-light m-2">
+                <div id="queue-running" class="col-12">
+	                <div class="ui-card-light p-3">
 					<div class="row">
-						<div class="col-12 p-2">
+						<div class="col-12">
 							<h5>Minting in progress...</h5>
 							<p>
 							    Your tasks are being processed. Once completed, created NFTs will
 							    appear in your main NFT wallet.
 							</p>
 						</div>
-		                <div class="col-12 p-2">
+		                <div class="col-12">
 		                    <div class="indet-progress-bar">
 		                        <div class="indet-progress-bar-value"></div>
 		                    </div>
 		                </div>
+				    </div>
 				    </div>
                 </div>
             </div>
