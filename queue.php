@@ -24,10 +24,6 @@
         <div class="col-12 p-0 ui-card ui-column">
             
             <div class="row">
-                <h3>Minting queue</h3>
-            </div>
-            
-            <div class="row">
                 <div id="queue-running" class="col-12">
 	                <div class="ui-card-light p-3">
 					<div class="row">
@@ -45,6 +41,10 @@
 		                </div>
 				    </div>
 				    </div>
+                </div>
+                
+                <div class="col-12">
+	                <h3>Minting queue</h3>
                 </div>
             </div>
             
