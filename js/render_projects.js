@@ -158,7 +158,37 @@ function intEnqueue(endpoint, data) {
         if(data.success) {
             location.href = '/nft/studio/queue';
         } else {
-            msgBox(data.error);
+	        $('#modal-enqueue-errors').remove();
+	        
+	        var htmlErrors = '';
+	        
+	        $.each(data.errors, function(k, v) {
+		        htmlErrors += '<li>' + v + '</li>';
+	        });
+	        
+	        $(body).append(`
+	            <div class="modal fade" tabindex="-1" role="dialog" id="modal-enqueue-errors">
+				    <div class="modal-dialog modal-dialog-centered" role="document">
+				        <div class="modal-content">
+				            <div class="modal-header">
+				                <h5 class="modal-title">Error</h5>
+				                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				            </div>
+				            <div class="modal-body">
+				                <p>The following errors occurred while adding a job to the minting queue:</p>
+				                <ul>
+					                ${htmlErrors}
+				                </ul>
+				            </div>
+				            <div class="modal-footer">
+				                <button type="button" class="modal-close btn btn-secondary" data-bs-dismiss="modal">Close</button>
+				            </div>
+				        </div>
+				    </div>
+				</div>
+			`;
+			
+			$('#modal-enqueue-errors').modal('show');
         }
     })
     .fail(function (jqXHR, textStatus, errorThrown) {
