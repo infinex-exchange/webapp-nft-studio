@@ -166,7 +166,7 @@ function intEnqueue(endpoint, data) {
 		        htmlErrors += '<li>' + v + '</li>';
 	        });
 	        
-	        $(body).append(`
+	        $('body').append(`
 	            <div class="modal fade" tabindex="-1" role="dialog" id="modal-enqueue-errors">
 				    <div class="modal-dialog modal-dialog-centered" role="document">
 				        <div class="modal-content">
