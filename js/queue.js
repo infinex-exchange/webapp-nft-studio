@@ -72,7 +72,7 @@ function renderQueueTask(data) {
 	if(data.status == 'QUEUED' || data.status == 'DONE') {
 		htmlRemove = `
 			<div class="col-2 col-lg-1 my-auto text-center">
-				<a href="#_" class="nav-link" onClick="removeTask({data.taskid}, ${data.depend_slave_count})">
+				<a href="#_" class="nav-link" onClick="removeTask(${data.taskid}, ${data.depend_slave_count})">
                     <i class="fa-solid fa-xmark"></i>
                 </a>
 			</div>
