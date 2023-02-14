@@ -88,11 +88,7 @@ function renderQueueTask(data) {
 				    <i class="fa-solid ${dictTaskStatusIcon[data.status]} fa-2x"></i>
 			    </div>
 				<div class="col-${mainCol} my-auto">
-					<h5>${dictTaskTypeTitle[data.type]} ${data.name}</h5>
-					<p class="secondary">
-					    Your tasks are being processed. Once completed, created NFTs will
-					    appear in your main NFT wallet.
-					</p>
+					${dictTaskTypeTitle[data.type]} ${data.name}
 				</div>
 				${htmlRemove}
 		    </div>
