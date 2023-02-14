@@ -49,7 +49,7 @@
                 
                 <div class="col-6 col-lg-auto pb-2 pe-1">
 	                <button id="queue-start" type="button" class="btn btn-danger w-100">
-                        <img src="/nft/studio/img/start.svg" width="16" height="16">
+                        <img src="/nft/studio/img/start_action.svg" width="16" height="16">
                         Start minting
                     </button>
                 </div>
