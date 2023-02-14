@@ -89,6 +89,9 @@ function renderQueueTask(data) {
 			    </div>
 				<div class="col-${mainCol} my-auto">
 					${dictTaskTypeTitle[data.type]} ${data.name}
+					<span class="small secondary pt-2">
+						Price: 0.5 USDT
+					</span>
 				</div>
 				${htmlRemove}
 		    </div>
