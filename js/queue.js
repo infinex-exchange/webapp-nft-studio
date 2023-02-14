@@ -1,6 +1,6 @@
 var dictTaskStatusIcon = {
 	QUEUED: 'fa-bars-progress',
-	PENDING: 'fa-circle-notch fa-rotate',
+	PENDING: 'fa-circle-notch fa-spin',
 	DONE: 'fa-check'
 };
 
