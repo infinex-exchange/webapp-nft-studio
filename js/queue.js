@@ -88,10 +88,14 @@ function renderQueueTask(data) {
 				    <i class="fa-solid ${dictTaskStatusIcon[data.status]} fa-2x"></i>
 			    </div>
 				<div class="col-${mainCol} my-auto">
-					${dictTaskTypeTitle[data.type]} ${data.name}
-					<span class="small secondary pt-2">
-						Price: 0.5 USDT
-					</span>
+					<div class="row">
+						<div class="col-12">
+							${dictTaskTypeTitle[data.type]} ${data.name}
+						</div>
+						<div class="col-12 small secondary pt-2">
+							Price: 0.5 USDT
+						</div>
+					</div>
 				</div>
 				${htmlRemove}
 		    </div>
