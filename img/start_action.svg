@@ -7,15 +7,41 @@
    viewBox="0 0 78.425201 78.425201"
    version="1.1"
    id="svg5973"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   sodipodi:docname="start_action.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview5975"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.0444209"
+     inkscape:cx="130.69443"
+     inkscape:cy="151.28"
+     inkscape:window-width="2560"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
   <defs
      id="defs5970" />
   <g
+     inkscape:label="Warstwa 1"
+     inkscape:groupmode="layer"
      id="layer1"
      transform="translate(-65.787402,-109.28741)">
     <rect
-       style="fill:none;stroke:#000000;stroke-width:6;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
+       style="fill:none;stroke:#ffffff;stroke-width:6;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
        id="rect8378"
        width="49.45499"
        height="49.45499"
@@ -23,7 +49,7 @@
        y="6.0316525"
        transform="rotate(45)" />
     <path
-       style="color:#000000;fill:#000000;stroke-width:1.04942;-inkscape-stroke:none"
+       style="color:#000000;fill:#ffffff;stroke-width:1.04942;-inkscape-stroke:none"
        d="m 102.25,131 v 35 h 5.5 v -35 z"
        id="path8380" />
   </g>
