@@ -92,8 +92,8 @@ function renderQueueTask(data) {
 						<div class="col-12">
 							${dictTaskTypeTitle[data.type]} ${data.name}
 						</div>
-						<div class="col-12 small secondary pt-2">
-							Price: 0.5 USDT
+						<div class="col-12 small secondary pt-1">
+							Price: ${data.price}
 						</div>
 					</div>
 				</div>
