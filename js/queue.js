@@ -67,27 +67,27 @@ $(document).on('authChecked', function() {
 
 function renderQueueTask(data) {
 	var htmlRemove = '';
-	var mainCol = '10';
+	var mainCol = 'col-10 col-lg-11';
 	
 	if(data.status == 'QUEUED' || data.status == 'DONE') {
 		htmlRemove = `
-			<div class="col-2 my-auto text-center">
+			<div class="col-2 col-lg-1 my-auto text-center">
 				<a href="#_" class="nav-link">
                     <i class="fa-solid fa-xmark"></i>
                 </a>
 			</div>
 		`;
-		mainCol = '8';
+		mainCol = 'col-8 col-lg-10';
 	}
 	
 	return `
 		<div class="col-12 py-1">
             <div class="ui-card-light hoverable p-2">
 			<div class="row">
-			    <div class="col-2 my-auto text-center">
+			    <div class="col-2 col-lg-1 my-auto text-center">
 				    <i class="fa-solid ${dictTaskStatusIcon[data.status]} fa-2x"></i>
 			    </div>
-				<div class="col-${mainCol} my-auto">
+				<div class="${mainCol} my-auto">
 					<div class="row">
 						<div class="col-12">
 							${dictTaskTypeTitle[data.type]} ${data.name}
