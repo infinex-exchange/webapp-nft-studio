@@ -72,7 +72,7 @@ function renderQueueTask(data) {
 	if(data.status == 'QUEUED' || data.status == 'DONE') {
 		htmlRemove = `
 			<div class="col-2 col-lg-1 my-auto text-center">
-				<a href="#_" class="nav-link" onClick="alert(1)">
+				<a href="#_" class="nav-link" onClick="removeTask({data.taskid}, ${data.depend_slave_count})">
                     <i class="fa-solid fa-xmark"></i>
                 </a>
 			</div>
@@ -102,4 +102,66 @@ function renderQueueTask(data) {
 		    </div>
         </div>
 	`;
+}
+
+function intRemoveTask(taskid, cascade) {
+    $.ajax({
+        url: config.apiUrl + '/nft/studio/queue/remove',
+        type: 'POST',
+        data: JSON.stringify({
+            api_key: window.apiKey,
+            taskid: taskid,
+            cascade: cascade
+        }),
+        contentType: "application/json",
+        dataType: "json",
+    })
+    .retry(config.retry)
+    .done(function (data) {
+        if(data.success) {
+            window.queueAS.reset();
+        } else {
+            msgBox(data.error);
+        }
+    })
+    .fail(function (jqXHR, textStatus, errorThrown) {
+        msgBoxNoConn(false);
+    });
+}
+
+function removeTask(taskid, depend) {
+    if(depend == 0) {
+        intRemoveTask(taskid, false);
+        return;
+    }
+        
+    $('#modal-remove-task').remove();
+    
+    $('body').append(`
+        <div class="modal fade" tabindex="-1" role="dialog" id="modal-remove-task">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="ps-1 modal-title">Cancel task</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <p>${depend} other tasks dependent on this task will also be cancelled. Do you want to continue?</p>
+                    </div>
+                    
+                    <div class="modal-footer">
+                        <button type="button" class="modal-close btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <button id="mrt-submit" type="button" class="btn btn-primary">Remove</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `);
+            
+    $('#mrt-submit').click(function() {
+        intRemoveTask(taskid, true);
+    });
+    
+    $('#modal-remove-task').modal('show');
 }
