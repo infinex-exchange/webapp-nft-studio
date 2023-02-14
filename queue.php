@@ -47,7 +47,7 @@
 	                <h3>Minting queue</h3>
                 </div>
                 
-                <div class="col-12">
+                <div class="col-12 pb-2">
 	                <button id="queue-start" type="button" class="btn btn-danger">
                         <img src="/nft/studio/img/start.svg" width="16" height="16">
                         Start minting
