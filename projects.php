@@ -40,7 +40,7 @@
                 </div>
             </div>
             
-            <div id="projects-data">
+            <div id="projects-data" class="row">
             </div>
         
         <!-- / Main column -->

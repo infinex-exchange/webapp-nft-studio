@@ -152,7 +152,7 @@
 	            </div>
             </div>
             
-            <div id="nfts-data">
+            <div id="nfts-data" class="row">
             </div>
         </div>
         
