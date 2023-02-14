@@ -23,7 +23,7 @@ function initUpload(elem, utType, isImage, currentUrl, readOnly = false) {
 	
 	if(!readOnly)
 		buttons = `
-			<div class="col-auto mx-auto">
+			<div class="col-auto mx-auto pt-3">
 				<button type="button" class="btn-upload btn btn-primary btn-sm">
 			        <i class="fa-solid fa-upload"></i>
 		            <span class="text-upload d-none">Upload</span>
@@ -39,10 +39,10 @@ function initUpload(elem, utType, isImage, currentUrl, readOnly = false) {
 	$(elem).append(`
 		<div class="upload-control ui-card-light p-3">
 			<div class="row">
-				<div class="col-12 pb-3 text-center preview-any">
+				<div class="col-12 text-center preview-any">
 					${preview}
 				</div>
-                <div class="col-12 py-3 d-none progress-wrapper">
+                <div class="col-12 pt-5 d-none progress-wrapper">
                     <div class="indet-progress-bar">
                         <div class="indet-progress-bar-value"></div>
                     </div>
