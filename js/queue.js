@@ -1,3 +1,9 @@
+var dictTaskStatusIcon = {
+	QUEUED: 'fa-bars-progress',
+	PENDING: 'fa-circle-notch fa-rotate',
+	DONE: 'fa-check'
+};
+
 $(document).ready(function() {
 	window.renderingStagesTarget = 1;
 });
@@ -54,5 +60,22 @@ $(document).on('authChecked', function() {
 });
 
 function renderQueueTask(data) {
-	return 'task ' + data.type;
+	return `
+		<div class="col-12">
+            <div class="ui-card-light p-2">
+			<div class="row">
+			    <div class="col-2 my-auto text-center">
+				    <i class="fa-solid ${dictTaskStatusIcon[data.status]} fa-2x"></i>
+			    </div>
+				<div class="col-10 my-auto">
+					<h5>Minting in progress...</h5>
+					<p class="secondary">
+					    Your tasks are being processed. Once completed, created NFTs will
+					    appear in your main NFT wallet.
+					</p>
+				</div>
+		    </div>
+		    </div>
+        </div>
+	`;
 }

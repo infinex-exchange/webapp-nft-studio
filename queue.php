@@ -55,7 +55,7 @@
                 </div>
             </div>
             
-            <div id="queue-data">
+            <div id="queue-data" class="row">
             </div>
         
         <!-- / Main column -->
