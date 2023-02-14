@@ -1,4 +1,4 @@
-function initUpload(elem, utType, isImage, currentUrl) {
+function initUpload(elem, utType, isImage, currentUrl, readOnly = false) {
 	var preview = `
 		<span class="preview-empty d-none">
 		    <i class="fa-solid fa-file-circle-xmark"></i>

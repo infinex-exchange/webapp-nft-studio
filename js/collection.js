@@ -178,8 +178,14 @@ $(document).on('authChecked', function() {
                 
                 $('#btn-add-nft').attr('href', '/nft/studio/nft/add?col=' + window.editScolid + '&back=col');
                 
-                initUpload('#col-icon', 'nft-col-icon', true, data.icon_url);
-		        initUpload('#col-banner', 'nft-col-banner', true, data.banner_url);
+                var ro = (data.status != 'DRAFT');
+                
+                if(ro)
+	                $('#col-name, #select-net, #col-description, #col-website, #col-twitter, ' +
+	                  '#col-save, #col-save-and-mint, #col-remove').prop('disabled', true);
+                
+                initUpload('#col-icon', 'nft-col-icon', true, data.icon_url, ro);
+		        initUpload('#col-banner', 'nft-col-banner', true, data.banner_url, ro);
                 
                 $(document).trigger('renderingStage');
             }
