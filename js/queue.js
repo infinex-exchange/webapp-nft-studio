@@ -12,6 +12,29 @@ var dictTaskTypeTitle = {
 
 $(document).ready(function() {
 	window.renderingStagesTarget = 1;
+	
+	$('#queue-start').click(function() {
+		$.ajax({
+	        url: config.apiUrl + '/nft/studio/queue/start',
+	        type: 'POST',
+	        data: JSON.stringify({
+	            api_key: window.apiKey
+	        }),
+	        contentType: "application/json",
+	        dataType: "json",
+	    })
+	    .retry(config.retry)
+	    .done(function (data) {
+	        if(data.success) {
+		        window.queueAS.reset();
+	        } else {
+	            msgBox(data.error);
+	        }
+	    })
+	    .fail(function (jqXHR, textStatus, errorThrown) {
+	        msgBoxNoConn(false);
+	    });
+	});
 });
 
 $(document).on('authChecked', function() {
