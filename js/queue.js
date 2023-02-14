@@ -66,6 +66,17 @@ $(document).on('authChecked', function() {
 });
 
 function renderQueueTask(data) {
+	var htmlRemove = '';
+	
+	if(data.status == 'QUEUED' || data.status == 'DONE')
+		htmlRemove = `
+			<div class="col-1 my-auto text-center">
+				<a href="#_" class="nav-link">
+                    <i class="fa-solid fa-xmark"></i>
+                </a>
+			</div>
+	`;
+	
 	return `
 		<div class="col-12 py-1">
             <div class="ui-card-light hoverable p-2">
@@ -80,6 +91,7 @@ function renderQueueTask(data) {
 					    appear in your main NFT wallet.
 					</p>
 				</div>
+				${htmlRemove}
 		    </div>
 		    </div>
         </div>
