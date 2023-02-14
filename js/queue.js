@@ -5,7 +5,7 @@ var dictTaskStatusIcon = {
 };
 
 var dictTaskTypeTitle = {
-	AUTHOR: 'Create author wallet',
+	AUTHOR: 'Create author wallet for network',
 	COLLECTION: 'Mint collection',
 	NFT: 'Mint NFT'
 };
