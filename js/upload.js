@@ -19,6 +19,23 @@ function initUpload(elem, utType, isImage, currentUrl, readOnly = false) {
 			</a>
 		`;
 	
+	var buttons = '';
+	
+	if(!ro)
+		buttons = `
+			<div class="col-auto mx-auto">
+				<button type="button" class="btn-upload btn btn-primary btn-sm">
+			        <i class="fa-solid fa-upload"></i>
+		            <span class="text-upload d-none">Upload</span>
+		            <span class="text-replace d-none">Replace</span>
+		        </button>
+		        <button type="button" class="btn-remove d-none btn btn-primary btn-sm">
+			        <i class="fa-solid fa-trash-can"></i>
+			        Remove
+		        </button>
+	        </div>
+		`;
+	
 	$(elem).append(`
 		<div class="upload-control ui-card-light p-3">
 			<div class="row">
@@ -30,17 +47,7 @@ function initUpload(elem, utType, isImage, currentUrl, readOnly = false) {
                         <div class="indet-progress-bar-value"></div>
                     </div>
                 </div>
-				<div class="col-auto mx-auto">
-					<button type="button" class="btn-upload btn btn-primary btn-sm">
-				        <i class="fa-solid fa-upload"></i>
-			            <span class="text-upload d-none">Upload</span>
-			            <span class="text-replace d-none">Replace</span>
-			        </button>
-			        <button type="button" class="btn-remove d-none btn btn-primary btn-sm">
-				        <i class="fa-solid fa-trash-can"></i>
-				        Remove
-			        </button>
-		        </div>
+                ${buttons}
 		    </div>
 	        <input class="file-input d-none" type="file">
         </div>
@@ -64,6 +71,9 @@ function initUpload(elem, utType, isImage, currentUrl, readOnly = false) {
 	else {
 	    $(elem).find('.preview-empty, .text-upload').removeClass('d-none');
 	}
+	
+	if(ro)
+		return;
 	
 	var fileInput = $(elem).find('.file-input');
 	var buttons = $(elem).find('.btn-upload, .btn-remove');

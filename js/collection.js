@@ -182,7 +182,7 @@ $(document).on('authChecked', function() {
                 
                 if(ro)
 	                $('#col-name, #select-net, #col-description, #col-website, #col-twitter, ' +
-	                  '#col-save, #col-save-and-mint, #col-remove').prop('disabled', true);
+	                  '#col-submit, #col-submit-and-mint, #col-remove').prop('disabled', true);
                 
                 initUpload('#col-icon', 'nft-col-icon', true, data.icon_url, ro);
 		        initUpload('#col-banner', 'nft-col-banner', true, data.banner_url, ro);
