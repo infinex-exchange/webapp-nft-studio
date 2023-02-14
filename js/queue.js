@@ -152,7 +152,7 @@ function removeTask(taskid, depend) {
                     
                     <div class="modal-footer">
                         <button type="button" class="modal-close btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                        <button id="mrt-submit" type="button" class="btn btn-primary">Remove</button>
+                        <button id="mrt-submit" type="button" class="btn btn-primary">Continue</button>
                     </div>
                 </div>
             </div>
