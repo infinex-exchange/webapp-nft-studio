@@ -21,7 +21,7 @@ function initUpload(elem, utType, isImage, currentUrl, readOnly = false) {
 	
 	var buttons = '';
 	
-	if(!ro)
+	if(!readOnly)
 		buttons = `
 			<div class="col-auto mx-auto">
 				<button type="button" class="btn-upload btn btn-primary btn-sm">
@@ -72,7 +72,7 @@ function initUpload(elem, utType, isImage, currentUrl, readOnly = false) {
 	    $(elem).find('.preview-empty, .text-upload').removeClass('d-none');
 	}
 	
-	if(ro)
+	if(readOnly)
 		return;
 	
 	var fileInput = $(elem).find('.file-input');
