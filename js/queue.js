@@ -71,13 +71,13 @@ function renderQueueTask(data) {
 	
 	if(data.status == 'QUEUED' || data.status == 'DONE') {
 		htmlRemove = `
-			<div class="col-1 my-auto text-center">
+			<div class="col-2 my-auto text-center">
 				<a href="#_" class="nav-link">
                     <i class="fa-solid fa-xmark"></i>
                 </a>
 			</div>
 		`;
-		mainCol = '9';
+		mainCol = '8';
 	}
 	
 	return `
