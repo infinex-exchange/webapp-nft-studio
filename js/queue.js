@@ -37,6 +37,11 @@ $(document).on('authChecked', function() {
             .retry(config.retry)
             .done(function (data) {
                 if(data.success) {
+	                if(data.running)
+		                $('#queue-running').show();
+		            else
+			            $('#queue-running').hide();
+	                
                     $.each(data.queue, function(k, v) {
                         thisAS.append(renderQueueTask(v));
                     });
