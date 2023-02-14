@@ -7,8 +7,8 @@
    viewBox="0 0 78.425201 78.425201"
    version="1.1"
    id="svg5973"
-   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
    sodipodi:docname="start_action.svg"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -49,8 +49,8 @@
        y="6.0316525"
        transform="rotate(45)" />
     <path
-       style="color:#000000;fill:#ffffff;stroke-width:1.04942;-inkscape-stroke:none"
-       d="m 102.25,131 v 35 h 5.5 v -35 z"
+       style="color:#000000;fill:#ffffff;stroke-width:1.00628;-inkscape-stroke:none"
+       d="m 102,133.75001 v 29.5 h 6 v -29.5 z"
        id="path8380" />
   </g>
 </svg>
