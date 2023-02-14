@@ -160,11 +160,6 @@ $(document).on('authChecked', function() {
         .retry(config.retry)
         .done(function (data) {
             if(data.success) {
-                if(data.status != 'DRAFT') {
-                    msgBoxRedirect('Cannot edit this collection');
-                    return;
-                }
-                
                 window.editScolid = data.scolid;
                 
                 $('#col-name').val(data.name);
