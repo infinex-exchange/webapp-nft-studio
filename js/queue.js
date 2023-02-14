@@ -160,6 +160,7 @@ function removeTask(taskid, depend) {
     `);
             
     $('#mrt-submit').click(function() {
+        $('#modal-remove-task').modal('hide');
         intRemoveTask(taskid, true);
     });
     
