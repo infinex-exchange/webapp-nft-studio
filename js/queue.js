@@ -4,6 +4,12 @@ var dictTaskStatusIcon = {
 	DONE: 'fa-check'
 };
 
+var dictTaskTypeTitle = {
+	AUTHOR: 'Create author wallet',
+	COLLECTION: 'Mint collection',
+	NFT: 'Mint NFT'
+};
+
 $(document).ready(function() {
 	window.renderingStagesTarget = 1;
 });
@@ -68,7 +74,7 @@ function renderQueueTask(data) {
 				    <i class="fa-solid ${dictTaskStatusIcon[data.status]} fa-2x"></i>
 			    </div>
 				<div class="col-10 my-auto">
-					<h5>Minting in progress...</h5>
+					<h5>${dictTaskTypeTitle[data.type]} ${data.name}</h5>
 					<p class="secondary">
 					    Your tasks are being processed. Once completed, created NFTs will
 					    appear in your main NFT wallet.
