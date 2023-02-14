@@ -47,10 +47,16 @@
 	                <h3>Minting queue</h3>
                 </div>
                 
-                <div class="col-12 pb-2">
-	                <button id="queue-start" type="button" class="btn btn-danger">
+                <div class="col-6 col-lg-auto pb-2">
+	                <button id="queue-start" type="button" class="btn btn-danger w-100">
                         <img src="/nft/studio/img/start.svg" width="16" height="16">
                         Start minting
+                    </button>
+                </div>
+                <div class="col-6 col-lg-auto pb-2">
+	                <button id="queue-clear" type="button" class="btn btn-primary w-100">
+                        <i class="fa-solid fa-trash-can"></i>
+                        Clear the queue
                     </button>
                 </div>
             </div>
