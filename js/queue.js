@@ -141,8 +141,8 @@ function renderQueueTask(data) {
 	
 	if(dictTaskTypeDisclaimer[data.type])
 		disclaimer = `
-			<div class="col-12 small pt-1">
-				<strong>${dictTaskTypeDisclaimer[data.type]}</strong>
+			<div class="col-12 small secondary pt-1">
+				${dictTaskTypeDisclaimer[data.type]}
 			</div>
 		`;
 	
