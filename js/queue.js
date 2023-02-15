@@ -160,7 +160,7 @@ function renderQueueTask(data) {
 						</div>
 						${disclaimer}
 						<div class="col-12 small secondary pt-1">
-							Fee: ${data.fee} ${data.fee_assetid}
+							<strong>Fee:</strong> ${data.fee} ${data.fee_assetid}
 						</div>
 					</div>
 				</div>
