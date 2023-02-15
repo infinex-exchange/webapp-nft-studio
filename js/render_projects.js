@@ -412,7 +412,7 @@ function removeCollection(scolid, callback) {
                     
                     $('#mrcc-submit').click(function() {
                         $('#modal-remove-col-cascade').modal('hide');
-                        intAjaxRemoveCollection(scolid, callback, false);
+                        intRemoveCollection(scolid, callback, false);
                     });
                     
                     $('#modal-remove-col-cascade').modal('show');
