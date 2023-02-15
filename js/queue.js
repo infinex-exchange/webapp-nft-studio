@@ -141,7 +141,7 @@ function renderQueueTask(data) {
 	
 	if(dictTaskTypeDisclaimer[data.type])
 		disclaimer = `
-			<div class="col-12 small secondary pt-1">
+			<div class="col-12 small pt-1">
 				<strong>${dictTaskTypeDisclaimer[data.type]}</strong>
 			</div>
 		`;
@@ -159,7 +159,7 @@ function renderQueueTask(data) {
 							<strong>${dictTaskTypeTitle[data.type]} ${data.name}</strong>
 						</div>
 						${disclaimer}
-						<div class="col-12 small pt-1">
+						<div class="col-12 small secondary pt-1">
 							Fee: ${data.fee} ${data.fee_assetid}
 						</div>
 					</div>
