@@ -5,9 +5,15 @@ var dictTaskStatusIcon = {
 };
 
 var dictTaskTypeTitle = {
-	AUTHOR: 'Create author wallet for network',
+	AUTHOR: 'Activate creator wallet for',
 	COLLECTION: 'Mint collection',
 	NFT: 'Mint NFT'
+};
+
+var dictTaskTypeDisclaimer = {
+	AUTHOR: 'This task must be performed when using NFT Studio for the first time on the selected network and will not occur during subsequent mintings',
+	COLLECTION: null,
+	NFT: null
 };
 
 $(document).ready(function() {
@@ -131,6 +137,15 @@ function renderQueueTask(data) {
 		mainCol = 'col-8 col-lg-10';
 	}
 	
+	var disclaimer = '';
+	
+	if(dictTaskTypeDisclaimer[data.type])
+		disclaimer = `
+			<div class="col-12 small secondary pt-1">
+				<strong>${dictTaskTypeDisclaimer[data.type]}</strong>
+			</div>
+		`;
+	
 	return `
 		<div class="col-12 py-1">
             <div class="ui-card-light hoverable p-2">
@@ -143,6 +158,7 @@ function renderQueueTask(data) {
 						<div class="col-12">
 							${dictTaskTypeTitle[data.type]} ${data.name}
 						</div>
+						${disclaimer}
 						<div class="col-12 small secondary pt-1">
 							Fee: ${data.fee} ${data.fee_assetid}
 						</div>
