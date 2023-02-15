@@ -139,7 +139,7 @@ function renderQueueTask(data) {
 	
 	var disclaimer = '';
 	
-	if(dictTaskTypeDisclaimer[data.type])
+	if(data.status == 'QUEUED' && dictTaskTypeDisclaimer[data.type])
 		disclaimer = `
 			<div class="col-12 small secondary pt-1">
 				${dictTaskTypeDisclaimer[data.type]}
