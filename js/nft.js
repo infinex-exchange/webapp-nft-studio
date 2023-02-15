@@ -111,7 +111,7 @@ $(document).on('authChecked', function() {
     if(!window.loggedIn) return;
     
     initSelectCol('/nft/studio/collections');
-    initSelectNet(null, '/nft/wallet/networks', false);
+    initSelectNet(null, '/nft/studio/networks', false);
     
     var pathArray = window.location.pathname.split('/');
     var snftid = pathArray[pathArray.length - 1];

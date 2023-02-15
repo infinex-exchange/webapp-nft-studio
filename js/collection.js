@@ -129,7 +129,7 @@ $(document).ready(function() {
 $(document).on('authChecked', function() {
     if(!window.loggedIn) return;
     
-    initSelectNet(null, '/nft/wallet/networks', false);
+    initSelectNet(null, '/nft/studio/networks', false);
     
     var pathArray = window.location.pathname.split('/');
     var scolid = pathArray[pathArray.length - 1];
