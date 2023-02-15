@@ -165,7 +165,7 @@ function intEnqueue(endpoint, data) {
     .done(function (data) {
         if(data.success) {
             location.href = '/nft/studio/queue';
-        } else {
+        } else if(typeof data.errors !== 'undefined') {
 	        $('#modal-enqueue-errors').remove();
 	        
 	        var htmlErrors = '';
@@ -198,6 +198,8 @@ function intEnqueue(endpoint, data) {
 			
 			$('#modal-enqueue-errors').modal('show');
         }
+        else
+	        msgBox(data.error);
     })
     .fail(function (jqXHR, textStatus, errorThrown) {
         msgBoxNoConn(false);
