@@ -11,7 +11,7 @@ var dictTaskTypeTitle = {
 };
 
 var dictTaskTypeDisclaimer = {
-	AUTHOR: 'This task must be performed when using NFT Studio for the first time on the selected network and will not occur during subsequent mintings',
+	AUTHOR: 'This task must be performed when using NFT Studio for the first time with each network and will not occur during subsequent mintings',
 	COLLECTION: null,
 	NFT: null
 };
