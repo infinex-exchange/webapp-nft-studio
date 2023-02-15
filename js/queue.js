@@ -35,6 +35,29 @@ $(document).ready(function() {
 	        msgBoxNoConn(false);
 	    });
 	});
+    
+    $('#queue-clear').click(function() {
+		$.ajax({
+	        url: config.apiUrl + '/nft/studio/queue/clear',
+	        type: 'POST',
+	        data: JSON.stringify({
+	            api_key: window.apiKey
+	        }),
+	        contentType: "application/json",
+	        dataType: "json",
+	    })
+	    .retry(config.retry)
+	    .done(function (data) {
+	        if(data.success) {
+		        window.queueAS.reset();
+	        } else {
+	            msgBox(data.error);
+	        }
+	    })
+	    .fail(function (jqXHR, textStatus, errorThrown) {
+	        msgBoxNoConn(false);
+	    });
+	});
 });
 
 $(document).on('authChecked', function() {
