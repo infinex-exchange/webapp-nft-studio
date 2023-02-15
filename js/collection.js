@@ -180,9 +180,10 @@ $(document).on('authChecked', function() {
                 
                 var ro = (data.status != 'DRAFT');
                 
-                if(ro)
+                if(ro) {
 	                $('#col-name,  #col-description, #col-website, #col-twitter').prop('readonly', true);
 	                $('#select-net, #col-submit, #col-submit-and-mint, #col-remove').prop('disabled', true);
+	            }
                 
                 initUpload('#col-icon', 'nft-col-icon', true, data.icon_url, ro);
 		        initUpload('#col-banner', 'nft-col-banner', true, data.banner_url, ro);
