@@ -209,7 +209,8 @@ function enqueueCollection(scolid) {
         '/nft/studio/collections/queue',
         {
             api_key: window.apiKey,
-            scolid: scolid
+            scolid: scolid,
+            cascade: true
         }
     );
 }
