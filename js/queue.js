@@ -156,10 +156,10 @@ function renderQueueTask(data) {
 				<div class="${mainCol} my-auto">
 					<div class="row">
 						<div class="col-12">
-							${dictTaskTypeTitle[data.type]} ${data.name}
+							<strong>${dictTaskTypeTitle[data.type]} ${data.name}</strong>
 						</div>
 						${disclaimer}
-						<div class="col-12 small secondary pt-1">
+						<div class="col-12 small pt-1">
 							Fee: ${data.fee} ${data.fee_assetid}
 						</div>
 					</div>
