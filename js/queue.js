@@ -18,6 +18,7 @@ var dictTaskTypeDisclaimer = {
 
 $(document).ready(function() {
 	window.renderingStagesTarget = 1;
+    window.refreshingInterval = null;
 	
 	$('#queue-start').click(function() {
 		$.ajax({
@@ -89,10 +90,17 @@ $(document).on('authChecked', function() {
             .retry(config.retry)
             .done(function (data) {
                 if(data.success) {
-	                if(data.running)
+	                if(data.running && !window.refreshingInterval) {
 		                $('#queue-running').show();
-		            else
+                        window.refreshingInterval = setInterval(function() {
+                            window.queueAS.reset();
+                        }, 10000);
+                    }
+		            else if(!data.running && window.refreshingInterval) {
 			            $('#queue-running').hide();
+                        clearInterval(window.refreshingInterval);
+                        window.refreshingInterval = null;
+                    }
 	                
                     $.each(data.queue, function(k, v) {
                         thisAS.append(renderQueueTask(v));
