@@ -110,7 +110,7 @@ $(document).ready(function() {
 $(document).on('authChecked', function() {
     if(!window.loggedIn) return;
     
-    initSelectCol('/nft/studio/collections');
+    initSelectCol('/nft/studio/collections', true);
     initSelectNet(null, '/nft/studio/networks', false);
     
     var pathArray = window.location.pathname.split('/');
