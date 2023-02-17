@@ -91,13 +91,13 @@ $(document).on('authChecked', function() {
             .done(function (data) {
                 if(data.success) {
 	                if(data.running && !window.refreshingInterval) {
-		                $('#queue-running').show();
+		                $('#queue-running').removeClass('d-none');
                         window.refreshingInterval = setInterval(function() {
                             window.queueAS.reset();
                         }, 10000);
                     }
 		            else if(!data.running && window.refreshingInterval) {
-			            $('#queue-running').hide();
+			            $('#queue-running').addClass('d-none');
                         clearInterval(window.refreshingInterval);
                         window.refreshingInterval = null;
                     }
