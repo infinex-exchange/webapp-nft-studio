@@ -4,6 +4,9 @@
             <ul class="navbar-nav">
                 <?php include(__DIR__.'/menu_inner.html'); ?>
             </ul>
+            <ul class="navbar-nav ms-auto">
+                <?php include(__DIR__.'/../../templates/menu_inner_right.php'); ?>
+            </ul>
         </div> 
     </div>
 </nav>
