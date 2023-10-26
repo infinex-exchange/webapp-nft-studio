@@ -17,3 +17,8 @@ function validateAttrKey(key) {
 function validateAttrValue(val) {
     return val.match(/^[a-zA-Z0-9 .,\-_+=()@#%?]{1,1024}$/);
 }
+
+function validateVotingWebsite(website) {
+    if(website.length > 255) return false;
+    return website.match(/^(https?:\/\/)?([a-z0-9\-]+\.)+[a-z]{2,20}(\/[a-z0-9\-\.]+)*\/?$/);
+}
